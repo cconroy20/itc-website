@@ -15,12 +15,12 @@
   --line:          #e4e6ed;   /* hairlines */
   --line-strong:   #d2d6e0;
 
-  /* Accent — cosmic indigo → violet */
-  --accent:        #4f46e5;   /* indigo */
-  --accent-2:      #7c3aed;   /* violet */
-  --accent-ink:    #3f37c9;   /* darker, for hover/text */
-  --accent-soft:   #eeedfb;   /* tint */
-  --accent-line:   #d9d6f6;
+  /* Accent — deep violet */
+  --accent:        #6d28d9;   /* violet-700 */
+  --accent-2:      #9333ea;   /* purple-600, lighter end of gradient */
+  --accent-ink:    #581c9c;   /* deeper, for hover/text */
+  --accent-soft:   #f1ecfb;   /* tint */
+  --accent-line:   #ddd2f4;
   --grad: linear-gradient(100deg, var(--accent), var(--accent-2));
 
   /* Type */
