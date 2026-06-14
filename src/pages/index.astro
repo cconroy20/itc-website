@@ -1,0 +1,140 @@
+---
+import Base from "../layouts/Base.astro";
+import NewsCard from "../components/NewsCard.astro";
+import news from "../data/news.json";
+import research from "../data/research.json";
+import people from "../data/people.json";
+
+const recentNews = news.items.slice(0, 3);
+const areas = research.areas;
+const memberCount = people.groups
+  .filter((g) => !/alumni/i.test(g.name))
+  .reduce((n, g) => n + g.people.length, 0);
+---
+<Base title={null}>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <p class="eyebrow">Center for Astrophysics · Harvard &amp; Smithsonian</p>
+      <h1 class="hero__title">Theoretical&nbsp;astrophysics, computed&nbsp;at scale.</h1>
+      <p class="hero__lead">
+        The Institute for Theory and Computation advances our understanding of the universe
+        through computation and analysis, creates a forum for discovery in theoretical
+        astrophysics, and trains the next generation of astrophysicists.
+      </p>
+      <div class="hero__actions">
+        <a href="/opportunities" class="btn btn--primary">Fellowships &amp; openings</a>
+        <a href="/research" class="btn btn--ghost">Explore our research</a>
+      </div>
+    </div>
+    <div class="hero__glow" aria-hidden="true"></div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats container">
+    <div class="stat"><span class="stat__num">2004</span><span class="stat__label">Founded</span></div>
+    <div class="stat"><span class="stat__num">{memberCount}+</span><span class="stat__label">Members &amp; fellows</span></div>
+    <div class="stat"><span class="stat__num">5</span><span class="stat__label">Research areas</span></div>
+    <div class="stat"><span class="stat__num">200+</span><span class="stat__label">Alumni worldwide</span></div>
+  </section>
+
+  <!-- Research areas -->
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Research</p>
+        <h2>What we work on</h2>
+        <p>From the formation of galaxies to the physics of black holes, ITC research spans the
+          theoretical and computational frontier of modern astrophysics.</p>
+      </div>
+      <div class="grid grid--3 areas">
+        {areas.map((a) => (
+          <a href={`/research#${a.slug}`} class="area card">
+            <h3>{a.name}</h3>
+            <p>{a.body.split("\n\n")[0].slice(0, 130)}{a.body.length > 130 ? "…" : ""}</p>
+            <span class="arrow-link">Learn more</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- News -->
+  <section class="section">
+    <div class="container">
+      <div class="section__head section__head--row">
+        <div>
+          <p class="eyebrow">News</p>
+          <h2>Recent highlights</h2>
+        </div>
+        <a href="/news" class="arrow-link">All news</a>
+      </div>
+      <div class="grid grid--3">
+        {recentNews.map((item) => <NewsCard item={item} />)}
+      </div>
+    </div>
+  </section>
+
+  <!-- Recruiting CTA -->
+  <section class="cta">
+    <div class="container cta__inner">
+      <div>
+        <h2 class="cta__title">Build your research career at the ITC.</h2>
+        <p class="cta__lead">
+          Our prize postdoctoral and predoctoral fellowships bring outstanding early-career
+          scientists into one of the world's leading centers for theoretical astrophysics.
+        </p>
+      </div>
+      <div class="cta__actions">
+        <a href="/opportunities" class="btn btn--primary">View opportunities</a>
+        <a href="/people" class="btn btn--ghost btn--ghost-dark">Meet the people</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  /* Hero */
+  .hero { position: relative; overflow: hidden; background: var(--bg); }
+  .hero__inner { position: relative; z-index: 1; padding-block: clamp(3.5rem, 9vw, 7rem) clamp(2.5rem, 5vw, 3.5rem); max-width: 820px; }
+  .hero__title { font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1.05; margin-bottom: 1.25rem; }
+  .hero__lead { font-size: clamp(1.05rem, 1.6vw, 1.3rem); color: var(--ink-soft); max-width: 640px; }
+  .hero__actions { display: flex; gap: .75rem; margin-top: 2rem; flex-wrap: wrap; }
+  .hero__glow {
+    position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background:
+      radial-gradient(60% 70% at 85% 10%, rgba(140,21,21,.06), transparent 70%),
+      radial-gradient(50% 60% at 10% 90%, rgba(31,78,140,.06), transparent 70%);
+  }
+
+  /* Stats */
+  .stats {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
+    padding-block: 1.5rem 2.5rem; border-bottom: 1px solid var(--line);
+  }
+  .stat { display: flex; flex-direction: column; gap: .15rem; }
+  .stat__num { font-family: var(--font-serif); font-size: clamp(1.6rem, 3vw, 2.3rem); font-weight: 700; color: var(--ink); }
+  .stat__label { color: var(--ink-faint); font-size: .85rem; }
+  @media (max-width: 560px) { .stats { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; } }
+
+  /* Research areas */
+  .areas .area { padding: 1.5rem; display: flex; flex-direction: column; gap: .5rem; color: inherit; }
+  .areas .area:hover { text-decoration: none; }
+  .areas .area h3 { margin: 0; }
+  .areas .area p { color: var(--ink-soft); font-size: .92rem; margin: 0; flex: 1; }
+  .areas .area .arrow-link { font-size: .9rem; margin-top: .25rem; }
+
+  .section__head--row { display: flex; align-items: flex-end; justify-content: space-between; max-width: none; }
+
+  /* CTA */
+  .cta { background: var(--ink); color: #e7e9ee; }
+  .cta__inner {
+    display: flex; align-items: center; justify-content: space-between; gap: 2.5rem;
+    padding-block: clamp(2.5rem, 5vw, 4rem); flex-wrap: wrap;
+  }
+  .cta__title { color: #fff; max-width: 18ch; }
+  .cta__lead { color: #b8bcc6; max-width: 46ch; margin: 0; }
+  .cta__actions { display: flex; gap: .75rem; flex-wrap: wrap; }
+  .btn--ghost-dark { color: #fff; border-color: rgba(255,255,255,.25); }
+  .btn--ghost-dark:hover { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.4); }
+</style>

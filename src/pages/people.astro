@@ -1,0 +1,56 @@
+---
+import Base from "../layouts/Base.astro";
+import PageHero from "../components/PageHero.astro";
+import PersonCard from "../components/PersonCard.astro";
+import people from "../data/people.json";
+
+// Show current members on this page; alumni get their own page.
+const groups = people.groups.filter((g) => !/alumni/i.test(g.name));
+const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+---
+<Base title="People" description="Faculty, fellows, postdocs, and staff of the Institute for Theory and Computation.">
+  <PageHero
+    eyebrow="People"
+    title="The people of the ITC"
+    lead="A community of faculty, senior members, postdoctoral and predoctoral fellows, and staff working across theoretical and computational astrophysics."
+  />
+
+  <nav class="jump container" aria-label="Jump to group">
+    {groups.map((g) => <a href={`#${slug(g.name)}`} class="jump__link">{g.name}</a>)}
+    <a href="/people/alumni" class="jump__link">Alumni</a>
+  </nav>
+
+  {groups.map((g) => (
+    <section class="section people-group" id={slug(g.name)}>
+      <div class="container">
+        <h2 class="people-group__title">{g.name} <span class="people-group__count">{g.people.length}</span></h2>
+        <div class="grid grid--4">
+          {g.people.map((person) => <PersonCard person={person} />)}
+        </div>
+      </div>
+    </section>
+  ))}
+</Base>
+
+<style>
+  .jump {
+    display: flex; gap: .5rem; flex-wrap: wrap;
+    padding-block: 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 72px; background: rgba(255,255,255,.92);
+    backdrop-filter: blur(8px); z-index: 50;
+  }
+  .jump__link {
+    font-size: .85rem; font-weight: 600; color: var(--ink-soft);
+    padding: .35rem .75rem; border: 1px solid var(--line); border-radius: 100px;
+  }
+  .jump__link:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
+
+  .people-group { padding-block: clamp(2.5rem, 5vw, 3.5rem) 0; scroll-margin-top: 140px; }
+  .people-group:last-of-type { padding-bottom: 2rem; }
+  .people-group__title { display: flex; align-items: baseline; gap: .6rem; margin-bottom: 1.75rem; }
+  .people-group__count {
+    font-family: var(--font-sans); font-size: .9rem; font-weight: 600;
+    color: var(--ink-faint); background: var(--bg-soft);
+    padding: .1rem .55rem; border-radius: 100px; border: 1px solid var(--line);
+  }
+</style>

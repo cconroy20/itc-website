@@ -1,0 +1,25 @@
+---
+const { item } = Astro.props;
+const { title, date, url, excerpt } = item;
+const fmt = date
+  ? new Date(date + "T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })
+  : null;
+---
+<article class="news card">
+  <a href={url} class="news__link">
+    {fmt && <time class="news__date meta" datetime={date}>{fmt}</time>}
+    <h3 class="news__title">{title}</h3>
+    {excerpt && <p class="news__excerpt">{excerpt}</p>}
+    <span class="arrow-link news__more">Read more</span>
+  </a>
+</article>
+
+<style>
+  .news { height: 100%; }
+  .news__link { display: flex; flex-direction: column; height: 100%; padding: 1.4rem 1.4rem 1.5rem; color: inherit; }
+  .news__link:hover { text-decoration: none; }
+  .news__date { display: block; margin-bottom: .5rem; }
+  .news__title { font-size: 1.15rem; margin: 0 0 .5rem; }
+  .news__excerpt { color: var(--ink-soft); font-size: .92rem; margin: 0 0 1rem; flex: 1; }
+  .news__more { font-size: .9rem; }
+</style>

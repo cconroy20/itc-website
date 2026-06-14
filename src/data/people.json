@@ -1,0 +1,521 @@
+{
+  "groups": [
+    {
+      "name": "ITC Director",
+      "people": [
+        {
+          "name": "Charlie Conroy",
+          "email": "cconroy@cfa.harvard.edu",
+          "title": "Professor of Astronomy",
+          "roles": [
+            "Director, Institute for Theory and Computation (ITC)"
+          ],
+          "researchInterests": "Galaxy formation and evolution, connection between galaxies and dark matter halos, stellar population modeling, stellar evolution.",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2025-08/conroy.jpg?itok=WTgIQZLw",
+          "photo": "/people/charlie-conroy.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Senior ITC Members",
+      "people": [
+        {
+          "name": "Xingang Chen",
+          "email": "xingang.chen@cfa.harvard.edu",
+          "title": "Senior Lecturer in Astronomy",
+          "researchInterests": "Dr. Chen received his PhD from Columbia University in 2003 and held postdoc positions at the University of Florida, Cornell University, and MIT. From 2009 to 2013, he was a Stephen Hawking Advanced Fellow at the University of Cambridge. Dr. Chen was an...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/xingang-chen-utd.jpg?itok=vG4cjGdd",
+          "photo": "/people/xingang-chen.jpg"
+        },
+        {
+          "name": "Liam Connor",
+          "email": "liam.connor@cfa.harvard.edu",
+          "title": "Assistant Professor of Astronomy",
+          "researchInterests": "The origin of Fast Radio Bursts and their application to cosmology; the intersection of AI and astrophysics, in particular computer vision methods for astronomical imaging and ill-posed 3D reconstruction. To advance these subjects, I...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2026-06/ITC%20CONNOR%20Liam.jpg?itok=yhkbNHi0",
+          "photo": "/people/liam-connor.jpg"
+        },
+        {
+          "name": "Charlie Conroy",
+          "email": "cconroy@cfa.harvard.edu",
+          "title": "Professor of Astronomy",
+          "roles": [
+            "Director, Institute for Theory and Computation (ITC)"
+          ],
+          "researchInterests": "Galaxy formation and evolution, connection between galaxies and dark matter halos, stellar population modeling, stellar evolution.",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2025-08/conroy.jpg?itok=WTgIQZLw",
+          "photo": "/people/charlie-conroy.jpg"
+        },
+        {
+          "name": "Rosanne Di Stefano",
+          "email": "rdistefano@cfa.harvard.edu",
+          "title": "Lecturer in Astronomy",
+          "roles": [
+            "SAO Senior Astrophysicist"
+          ],
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2026-06/ITC%20DISEFANO%20Rosanne.jpg?itok=bZ-56qXP",
+          "photo": "/people/rosanne-di-stefano.jpg"
+        },
+        {
+          "name": "Daniel Eisenstein",
+          "email": "deisenstein@cfa.harvard.edu",
+          "title": "Paul C. Mangelsdorf Professor of Astronomy",
+          "researchInterests": "Cosmology and extragalactic astronomy with a mix of theoretical and observational methods; the development of the baryon acoustic oscillation method to measure the cosmic distance scale and study dark energy. Professor Eisenstein...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2026-06/ITC%20EISENSTEIN%20Daniel.jpg?itok=_KwUb_3i",
+          "photo": "/people/daniel-eisenstein.jpg"
+        },
+        {
+          "name": "Douglas Finkbeiner",
+          "email": "dfinkbeiner@cfa.harvard.edu",
+          "title": "Professor of Astronomy and of Physics",
+          "researchInterests": "Professor Finkbeiner was born in Ann Arbor, Michigan in 1971. He graduated from Pioneer High School in 1989, and enrolled in the College of Engineering at the University of Michigan. His Freshman year he helped build the legendary Sunrunner and was active...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2026-06/ITC%20FINKBEINER%20Douglas.jpg?itok=SSjuzlbN",
+          "photo": "/people/douglas-finkbeiner.jpg"
+        },
+        {
+          "name": "Alyssa  Goodman",
+          "email": "agoodman@cfa.harvard.edu",
+          "title": "Robert Wheeler Willson Professor of Applied Astronomy",
+          "researchInterests": "Alyssa Goodman is the Robert Wheeler Willson Professor of Applied Astronomy at Harvard University , and a Research Associate of the Smithsonian Institution. Goodman's research and teaching interests span astronomy, data visualization, prediction, and...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2026-06/ITC%20GOODMAN%20Alyssa.jpg?itok=WkuCIHLD",
+          "photo": "/people/alyssa-goodman.jpg"
+        },
+        {
+          "name": "Lars Hernquist",
+          "email": "lhernquist@cfa.harvard.edu",
+          "title": "Mallinckrodt Professor of Astrophysics",
+          "researchInterests": "Theoretical studies of dynamical processes in cosmology and galaxy formation/galaxy evolution. Numerical simulations of stellar dynamical and hydrodynamical systems. Investigations of the physics of compact objects, particularly...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2026-06/ITC%20HERNQUIST%20Lars.jpg?itok=IIC6_Uvg",
+          "photo": "/people/lars-hernquist.jpg"
+        },
+        {
+          "name": "Matthew Holman",
+          "email": "mholman@cfa.harvard.edu",
+          "title": "SAO Astrophysicist",
+          "roles": [
+            "Lecturer in Astronomy"
+          ],
+          "researchInterests": "Research Studies of the long-term dynamics of our solar system and extrasolar planetary systems. Observational surveys for Kuiper belt objects, Centaurs, and outer planet satellites using Kitt Peak National Observatory (KPNO), Cerro Tololo Inter-American...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2026-06/ITC%20HOLMAN%20Matthew.jpg?itok=4UI0WbMr",
+          "photo": "/people/matthew-holman.jpg"
+        },
+        {
+          "name": "John Asher Johnson",
+          "email": "jjohnson@cfa.harvard.edu",
+          "title": "Professor of Astronomy",
+          "researchInterests": "The detection and characterization of exoplanets. Received his Ph.D. and M.S. in Astronomy from UC Berkeley, and his B.S. in physics from the University of Missouri-Rolla (now known as the Missouri University of Science and Technology)...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2026-06/ITC%20JOHNSON%20John%20Asher.jpg?itok=x0blmMAu",
+          "photo": "/people/john-asher-johnson.jpg"
+        },
+        {
+          "name": "Lisa Kewley",
+          "email": "lisa.kewley@cfa.harvard.edu",
+          "title": "Director, Center for Astrophysics",
+          "researchInterests": "Lisa Kewley is Director of the Center for Astrophysics | Harvard & Smithsonian. She is Director of the Smithsonian Astrophysical Observatory, Director of the Harvard College Observatory, and Professor of Astrophysics at the Harvard Department of Astronomy...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/lisa-kewley-lores.jpg?itok=JyjIbYNy",
+          "photo": "/people/lisa-kewley.jpg"
+        },
+        {
+          "name": "Avi Loeb",
+          "email": "aloeb@cfa.harvard.edu",
+          "title": "Frank B. Baird Jr. Professor of Science",
+          "roles": [
+            "Former Director, Institute for Theory and Computation (ITC), (2007-2026)",
+            "Former Chair, Department of Astronomy, (2011-2020)"
+          ],
+          "researchInterests": "Avi Loeb is the Frank B. Baird Jr. Professor of Science at Harvard University. He is the Former Chair (2011-2020) of the Department of Astronomy; Founding Director of Harvard's Black Hole Initiative; and a Former Director of the Institute for Theory and...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2025-07/Avi%20Loeb%202025%20ITC%20Portrait.jpeg?itok=fT2lrmqU",
+          "photo": "/people/avi-loeb.jpg"
+        },
+        {
+          "name": "Morgan MacLeod",
+          "email": "morgan.macleod@cfa.harvard.edu",
+          "title": "Lecturer in Astronomy",
+          "researchInterests": "Morgan MacLeod is a Lecturer in Astronomy whose research focuses on stellar encounters in binary systems and their imprints on the transient night sky. Morgan uses computational and simulation methods to trace close encounters of stars and compact objects...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2026-06/ITC%20MACLEOD%20Morgan.jpg?itok=h0Tpa5pb",
+          "photo": "/people/morgan-macleod.jpg"
+        },
+        {
+          "name": "Ramesh Narayan",
+          "email": "rnarayan@cfa.harvard.edu",
+          "title": "Thomas Dudley Cabot Professor of the Natural Sciences",
+          "researchInterests": "Gravitational lensing; accretion disks; black holes; gamma-ray bursts. Publications: astro-ph , ADS Additional Contact: Fax: (617) 495-7093",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2026-06/ITC%20NARAYAN%20Ramesh.jpg?itok=_1f-iu4F",
+          "photo": "/people/ramesh-narayan.jpg"
+        },
+        {
+          "name": "Karin Öberg",
+          "email": "koberg@cfa.harvard.edu",
+          "title": "Professor of Astronomy",
+          "roles": [
+            "Thomas Dudley Cabot Professor of the Natural Sciences",
+            "Senior Vice Provost for Faculty"
+          ],
+          "researchInterests": "The Öberg Astrochemistry Lab pursues laboratory ice experiments and astronomical observations that address how astrochemically important molecules form, and how they may evolve into larger molecules associated with the origins of life. An important aspect...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2026-06/ITC%20O%CC%88BERG%20Karin.jpg?itok=f_OPhjN5",
+          "photo": "/people/karin-berg.jpg"
+        },
+        {
+          "name": "Fabio Pacucci",
+          "email": "fabio.pacucci@cfa.harvard.edu",
+          "title": "Senior ITC Member",
+          "roles": [
+            "Staff Astrophysicist, the Center for Astrophysics | Harvard & Smithsonian"
+          ],
+          "researchInterests": "Theoretical and observational studies of black holes, including supermassive black holes, quasars, black hole seeds, intermediate-mass black holes, and wandering black holes. I am also involved in the development of next-generation...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2026-06/ITC%20PACUCCI%20Fabio.jpg?itok=iOfBtIB7",
+          "photo": "/people/fabio-pacucci.jpg"
+        },
+        {
+          "name": "Christopher Stubbs",
+          "email": "stubbs@physics.harvard.edu",
+          "title": "Dean of Science",
+          "roles": [
+            "Samuel C. Moncher Professor of Physics and of Astronomy"
+          ],
+          "researchInterests": "Foundations of gravitational physics, searches for dark matter, and observational cosmology. Christopher Stubbs is an experimental physicist working at the interface between particle physics, cosmology and gravitation. His interests...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/stubbs.jpg?itok=E2LZ-e3f",
+          "photo": "/people/christopher-stubbs.jpg"
+        },
+        {
+          "name": "Ashley Villar",
+          "email": "ashleyvillar@cfa.harvard.edu",
+          "title": "Faculty",
+          "researchInterests": "Theoretical and observational studies of extragalactic transients, including core-collapse supernovae and kilonovae. Development of statistical and deep learning methodologies for wide-field surveys, such as the Vera C. Rubin...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/ashley_villar_headshot_3.jpg?itok=Y_PaYBeJ",
+          "photo": "/people/ashley-villar.jpg"
+        },
+        {
+          "name": "Catherine Zucker",
+          "title": "Lecturer / SAO Astrophysicist",
+          "researchInterests": "I am currently an astrophysicist at the Center for Astrophysics | Harvard & Smithsonian. Formerly, I was a NASA Hubble Fellowship Program Hubble Fellow working in the ISM* group at the Space Telescope Science Institute. I received my PhD from Harvard...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2026-06/ITC%20Zucker%20Catherine.jpg?itok=_noAHOfG",
+          "photo": "/people/catherine-zucker.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Associate Senior ITC Members",
+      "people": [
+        {
+          "name": "Charles Alcock",
+          "email": "calcock@cfa.harvard.edu",
+          "title": "Professor of Astronomy, Harvard University",
+          "roles": [
+            "Former Director, Center for Astrophysics | Harvard & Smithsonian (2004-2022)"
+          ],
+          "researchInterests": "Charles Alcock is the former director of the Center for Astrophysics | Harvard & Smithsonian, a position he held for 17 years until January 2022. Charles remains a Professor of Astronomy at Harvard University and a Senior Scientist at the Smithsonian...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2026-06/charles-alcock-20180322-2B.jpg?itok=Y5mPsRfp",
+          "photo": "/people/charles-alcock.jpg"
+        },
+        {
+          "name": "Eric Keto",
+          "email": "eketo@cfa.harvard.edu",
+          "title": "Astrophysicist at the Smithsonian Astrophysical Observatory",
+          "roles": [
+            "Project Scientist for the Submillimeter Array"
+          ],
+          "researchInterests": "star formation, numerical simulations, extragalactic, instrumentation, The Eric R. Keto Prize Endowed with a generous donation by ITC Senior Member Eric Keto, the Keto Prize is awarded each year for the best thesis in theoretical...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/keto.2.crop_.jpg?itok=8gTj5E7a",
+          "photo": "/people/eric-keto.jpg"
+        },
+        {
+          "name": "John M. Kovac",
+          "email": "jmkovac@cfa.harvard.edu",
+          "title": "Professor of Astronomy and Physics",
+          "researchInterests": "His cosmology research focuses on observations of the cosmic microwave background (CMB) to reveal signatures of the physics that drove the birth of the universe, the creation of its structure, and its present-day expansion. His...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/kovac.jpg?itok=bKzoNYbX",
+          "photo": "/people/john-m-kovac.jpg"
+        },
+        {
+          "name": "Mark Reid",
+          "email": "mreid@cfa.harvard.edu",
+          "title": "Senior Radio Astronomer at the Smithsonian Astrophysical Observatory",
+          "researchInterests": "Mark Reid is Senior Radio Astronomer at the Smithsonian Astrophysical Observatory, part of the Harvard-Smithsonian Center for Astrophysics. Research interests include black holes, active galactic nuclei, galactic structure, star formation, evolved stars...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/mark_reid.jpg?itok=P0kxtFlg",
+          "photo": "/people/mark-reid.jpg"
+        },
+        {
+          "name": "Dimitar Sasselov",
+          "title": "Phillips Professor of Astronomy",
+          "roles": [
+            "Director, Origins of Life Initiative"
+          ],
+          "researchInterests": "Professor Sasselov studies the interaction between light and matter (radiative transfer) from stars and exoplanets to biomolecules at the origins of life, and astrobiology in general. He runs a photochemistry lab exploring the origins...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/2-dimitar_sasselov_1.jpg?itok=KzD0Sfiv",
+          "photo": "/people/dimitar-sasselov.jpg"
+        },
+        {
+          "name": "Alexey Vikhlinin",
+          "email": "avikhlinin@cfa.harvard.edu",
+          "title": "Lecturer / SAO Astrophysicist",
+          "researchInterests": "X-ray studies of galaxy clusters and their applications for cosmology and physics of the intergalactic medium. The main past projects in this area include: development of the efficient detection pipeline for extended X-ray sources --...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/vikhlinin_a.jpg?itok=ji6txagD",
+          "photo": "/people/alexey-vikhlinin.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Postdocs",
+      "people": [
+        {
+          "name": "Vishnu Balakrishnan",
+          "email": "vishnu.balakrishnan@cfa.harvard.edu",
+          "title": "ITC Post-Doc",
+          "researchInterests": "Vishnu Balakrishnan is a postdoctoral researcher in Liam Connor’s group, working in time-domain radio astronomy with a focus on pulsars, fast radio bursts (FRBs), and large-scale survey software. He joined the group in September 2025. He received his Ph.D...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2026-02/ITC%20Vishnu%20Balakrishnan_0.jpg?itok=ipR-pTxE",
+          "photo": "/people/vishnu-balakrishnan.jpg"
+        },
+        {
+          "name": "Jake Bennett",
+          "email": "jake.bennett@cfa.harvard.edu",
+          "title": "Lars Hernquist Research Group Fellow",
+          "researchInterests": "Jake Bennett is part of the Simons Foundation’s “Learning the Universe” collaboration, and is based at the Institute for Theory and Computation at the CfA. Jake uses cosmological simulations to investigate how galaxies grow and evolve, with a particular...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2025-11/Harvard%20Astrophysics%20Jake%20Bennett_100225_004.JPG?h=a4dbc954&itok=bmo2GzIS",
+          "photo": "/people/jake-bennett.jpg"
+        },
+        {
+          "name": "Kaley Brauer",
+          "email": "kaley.brauer@cfa.harvard.edu",
+          "title": "NSF Fellow",
+          "researchInterests": "Kaley develops and analyzes dwarf galaxy simulations in the early Universe to understand the first stars & galaxies and how they contributed to the Milky Way.",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/kaley.jpg?itok=h9PzzRbS",
+          "photo": "/people/kaley-brauer.jpg"
+        },
+        {
+          "name": "Carolina Cuesta-Lazaro",
+          "email": "carolina.cuesta-lazaro@cfa.harvard.edu",
+          "title": "IAIFI Fellow",
+          "researchInterests": "Carolina Cuesta is an IAIFI Fellow at the Institute for Artificial Intelligence and Fundamental Interactions, holding a shared position between MIT and the Theory and Computation at the Center for Astrophysics | Harvard & Smithsonian. Carolina is...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/img_0174.jpeg?itok=sVn39VTk",
+          "photo": "/people/carolina-cuesta-lazaro.jpg"
+        },
+        {
+          "name": "Paola Domínguez Fernández",
+          "title": "FFL Fellow",
+          "researchInterests": "Dr. Paola Domínguez Fernández studies large-scale magnetic fields and non-thermal phenomena in the Universe, with special interest in the magnetized cosmic web and galaxy clusters. Specifically, the areas related to her work are: primordial magnetic...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/paola_dominguez_fernandez_itc_headshots_102623_01.jpg?itok=OxPvmQJ1",
+          "photo": "/people/paola-dom-nguez-fern-ndez.jpg"
+        },
+        {
+          "name": "Monica  Gallegos-Garcia",
+          "title": "ITC Fellow",
+          "researchInterests": "Monica Gallegos-Garcia’s research aims to improve our understanding of binary evolution and the formation of gravitational wave sources. In her work, she incorporates a physics-focused and multi-messenger approach to the study of key stages in binary...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/monica.png?itok=oW6ip3kl",
+          "photo": "/people/monica-gallegos-garcia.jpg"
+        },
+        {
+          "name": "Cristhian Garcia Quintero",
+          "email": "cgarciaquintero@cfa.harvard.edu",
+          "title": "NASA Einstein Fellow",
+          "researchInterests": "Cristhian is a NASA Einstein Fellow working on large-scale structure analyses and tests of the standard model of cosmology. He obtained his PhD from the University of Texas at Dallas in 2024. His research focuses on improving our understanding of...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/cristhian_garcia_harvard_itc_group_photo_100324_06.jpg?itok=2vHnQFxq",
+          "photo": "/people/cristhian-garcia-quintero.jpg"
+        },
+        {
+          "name": "Cassi Lochhaas",
+          "title": "Hubble & ITC Fellow",
+          "researchInterests": "galaxy evolution, the circumgalactic medium, gas physics, galactic outflows",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/cassi_lochhaas_headshot.jpg?itok=pXjSvqev",
+          "photo": "/people/cassi-lochhaas.jpg"
+        },
+        {
+          "name": "Scott Lucchini",
+          "title": "ITC Fellow",
+          "researchInterests": "I study the evolution of gas around galaxies using computer simulations. By combining large-scale cosmological simulations with high-resolution isolated galaxy simulations, we can explore the formation and survival of small-scale, multiphase structures in...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/lucchini_headshot_square_small.png?itok=Yh10b3Ox",
+          "photo": "/people/scott-lucchini.jpg"
+        },
+        {
+          "name": "Devesh Nandal",
+          "email": "devesh.nandal@cfa.harvard.edu",
+          "title": "Swiss National Science Foundation Postdoctoral Fellow",
+          "researchInterests": "Devesh Nandal is a Swiss National Science Foundation Postdoctoral Fellow at the Center for Astrophysics | Harvard & Smithsonian. He builds next-generation stellar evolution models for massive and supermassive stars. His work develops the physics of...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2025-11/Devesh%20Nandal.jpeg?itok=w9lXabIo",
+          "photo": "/people/devesh-nandal.jpg"
+        },
+        {
+          "name": "Elia Pizzati",
+          "email": "elia.pizzati@cfa.harvard.edu",
+          "title": "NHFP Einstein Fellow",
+          "roles": [
+            "ITC Post-doc"
+          ],
+          "researchInterests": "I am broadly interested in a range of topics in astrophysics and cosmology, with a particular focus on the formation and evolution of galaxies and quasars. My current research combines numerical simulations and phenomenological...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2025-12/Elia%20Pizzati%20ITC.jpg?itok=0Q0-DeLX",
+          "photo": "/people/elia-pizzati.jpg"
+        },
+        {
+          "name": "Vadim Semenov",
+          "title": "ITC Fellow",
+          "researchInterests": "Vadim’s research is centered on understanding how galaxies form and evolve. He explores this problem by running and analyzing supercomputer simulations of galaxies. His previous and current work focuses on the origin of inefficient star formation in...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/vadim_semenov_harvard_itc_100324_03.jpg?itok=S10FbJxw",
+          "photo": "/people/vadim-semenov.jpg"
+        },
+        {
+          "name": "Dian Triani",
+          "title": "CfA Postdoc",
+          "researchInterests": "My study focused on modelling physics of galaxy formation and evolution. I am especially interested in the interaction between stars and the dust and metals in the interstellar medium. I got my PhD from Swinburne University in Melbourne, with a thesis...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2025-12/Dian%20Pipit%20Triani.jpeg?itok=lNSeTnFm",
+          "photo": "/people/dian-triani.jpg"
+        },
+        {
+          "name": "Oliver  Zier",
+          "title": "ITC Fellow",
+          "researchInterests": "Oliver Zier earned Bachelor`s degrees in physics and computer science from the University of Bayreuth in Germany and a Master’s degree in Theoretical and Mathematical Physics from the University of Munich. In 2023, under the advisory of Prof. Volker...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/oliver_zier_2.jpeg?itok=qYrjFzYX",
+          "photo": "/people/oliver-zier.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Alumni",
+      "people": [
+        {
+          "name": "Evan Bauer",
+          "email": "bauer39@llnl.gov",
+          "title": "Physicist at Lawrence Livermore National Laboratory",
+          "researchInterests": "Evan Bauer studies stars and how they evolve. He is especially interested in the physics of white dwarf stars, subdwarf stars, binary evolution, and interactions between stars in binaries. He also works on computational methods for stellar astrophysics as...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/evan_bauer.jpg?itok=hSw6MjD8",
+          "photo": "/people/evan-bauer.jpg"
+        },
+        {
+          "name": "Angus  Beane",
+          "title": "ITC Alum",
+          "researchInterests": "Junior Fellow, Simons Society of Fellows, New York University",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/beane.jpeg?itok=PFrhEQCu",
+          "photo": "/people/angus-beane.jpg"
+        },
+        {
+          "name": "James Cornelison",
+          "title": "ITC Alum",
+          "researchInterests": "Maria Goeppert Mayer Postdoctoral Fellow at Argonne National Laboratory",
+          "photo": null
+        },
+        {
+          "name": "Ana Maria Delgado",
+          "email": "ana_maria.delgado@cfa.harvard.edu",
+          "title": "Researcher, Postdoctoral Fellow at Johns Hopkins University",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/delgado_image.jpeg?itok=4PdYHgyh",
+          "photo": "/people/ana-maria-delgado.jpg"
+        },
+        {
+          "name": "Razieh Emami",
+          "email": "razieh.emami_meibody@cfa.harvard.edu",
+          "title": "ITC Alum",
+          "researchInterests": "Razi's research has recently focused on different topics in Astrophysics. She is particularly interested in various aspects of the observed gravitational waves by LIGO including the binary black holes and neutron stars mergers. She is also eager to probe...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/razieh_emami_harvard_itc_group_photo_100324_06.jpg?itok=JydRE-p0",
+          "photo": "/people/razieh-emami.jpg"
+        },
+        {
+          "name": "Michael Foley",
+          "title": "Climate Data Science Postdoctoral Fellow",
+          "researchInterests": "Massive stars, supernovae, stellar feedback",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/foley.png?itok=LpGqfWb2",
+          "photo": "/people/michael-foley.jpg"
+        },
+        {
+          "name": "Sarah Jeffreson",
+          "email": "sarah.jeffreson@cfa.harvard.edu",
+          "title": "Astronomer at the Institute of Theory and Computation",
+          "researchInterests": "I am interested in how galaxies convert their gas into stars. In particular, I am interested in the relative roles played by the large-scale galactic environment and the small-scale physics of star formation and stellar feedback in setting the star...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/sarah_jeffreson.jpg?itok=aYxVWLZN",
+          "photo": "/people/sarah-jeffreson.jpg"
+        },
+        {
+          "name": "Tanveer Karim",
+          "email": "Tanveer.Karim@cfa.harvard.edu",
+          "title": "Arts & Sciences Postdoctoral Fellow, University of Toronto",
+          "researchInterests": "Cosmology",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/tanveerk.jpg?itok=p-Af2v6i",
+          "photo": "/people/tanveer-karim.jpg"
+        },
+        {
+          "name": "Claire Lamman",
+          "email": "claire.lamman@cfa.harvard.edu",
+          "title": "Postdoctoral Researcher",
+          "researchInterests": "Cosmology",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/hh_portrait_-_copy.jpg?itok=djJozo-j",
+          "photo": "/people/claire-lamman.jpg"
+        },
+        {
+          "name": "Zachary Murray",
+          "title": "ITC Alum",
+          "researchInterests": "Excellence Fellow at the Université Côte d’Azur in Nice, France",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/murray.png?itok=TxdsOWVC",
+          "photo": "/people/zachary-murray.jpg"
+        },
+        {
+          "name": "Yueying Ni",
+          "researchInterests": "I am interested in various topics in astrophysics and cosmology. I develop large cosmological hydrodynamic simulations to study the evolution of quasars and galaxies over cosmic history. I am particularly interested in how the large scale structures...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/headshot.png?itok=kChPqVA1",
+          "photo": "/people/yueying-ni.jpg"
+        },
+        {
+          "name": "Minjung (MJ) Park",
+          "email": "minjung.park@cfa.harvard.edu",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/mj_park.jpg?itok=1rPSKv5Y",
+          "photo": "/people/minjung-mj-park.jpg"
+        },
+        {
+          "name": "Conor Ransome",
+          "researchInterests": "My research interest is observational astronomy with a focus on interacting transients--such as type IIn supernovae and supernova impostors and their host environments. Currently a Postdoctoral Research Associate at the Steward Observatory at the...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/conor_ransome_harvard_itc_100324_02.jpg?itok=ROr9tztR",
+          "photo": "/people/conor-ransome.jpg"
+        },
+        {
+          "name": "Michael Rashkovetskyi",
+          "email": "michael.rashkovetskyi@cfa.harvard.edu",
+          "title": "Center for Cosmology and AstroParticle Physics (CCAPP) Fellow at the Ohio State University",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/michael_r_01.jpg?itok=p40otzMY",
+          "photo": "/people/michael-rashkovetskyi.jpg"
+        },
+        {
+          "name": "Sophia Sánchez-Maes",
+          "email": "sophiasm@umd.edu",
+          "title": "Postdoctoral Research Associate",
+          "researchInterests": "Sophia Sánchez-Maes is a physicist whose work bridges observational, computational, and instrumental approaches to study plasma processes in extreme astrophysical environments. She develops high-cadence soft X-ray instrumentation for solar flare imaging...",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/sophia2.jpg?itok=VADec1Q9",
+          "photo": "/people/sophia-s-nchez-maes.jpg"
+        },
+        {
+          "name": "Magdalena Siwek",
+          "title": "Junior Fellow with the Simons Society of Fellows at Columbia University",
+          "researchInterests": "Supermassive black hole merger simulations",
+          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/siwek.png?itok=wh9pPYEv",
+          "photo": "/people/magdalena-siwek.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Staff and Administration",
+      "people": [
+        {
+          "name": "Paul Edmon",
+          "email": "pedmon@cfa.harvard.edu",
+          "title": "Research Computing Associate",
+          "researchInterests": "Paul earned his B.S. in Physics from the University of Washington in 2004. He received his Ph.D. in Astrophysics from the University of Minnesota in 2010. He then served as a postdoctoral researcher at the University of Manitoba for a year before joining...",
+          "photo": null
+        },
+        {
+          "name": "Abby Hayhurst",
+          "email": "abby.hayhurst@cfa.harvard.edu",
+          "title": "Administrative Coordinator",
+          "photo": null
+        },
+        {
+          "name": "TJ Martin",
+          "email": "thomas.martin@cfa.harvard.edu",
+          "title": "Division Administrator, Theory",
+          "photo": null
+        },
+        {
+          "name": "Uma Mirani",
+          "email": "umirani@cfa.harvard.edu",
+          "title": "Staff Assistant",
+          "photo": null
+        }
+      ]
+    }
+  ]
+}

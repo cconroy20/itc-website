@@ -1,0 +1,35 @@
+{
+  "intro": "The ITC is a locus for much of the most rigorous and exciting research being done in theoretical astrophysics. Through its seminars, colloquiua, luncheons, and conferences, leading scholars in the fields of astrophysics come from the world around to present their ideas and pursue their research.",
+  "areas": [
+    {
+      "name": "Galaxies & Cosmology",
+      "slug": "galaxies-cosmology",
+      "body": "Cosmic Microwave Background Radiation, Inflation, Formation and Evolution of Galaxies and their Nuclear Black Holes, Reionization in the Early Universe, First Stars and Galaxies, Gravitational Lensing, 21 cm Radiation in the Early Universe, Cosmological Parameters, Dark Matter and Dark Energy.\n\nCosmological Simulations produced at the ITC:\n\n- Moving Mesh Cosmology - M. Vogelsberger and D. Sijacki\n- Evolving Universe - P. Torrey and M. Vogelsberger\n- A physical model for cosmological simulations of galaxy formation - M. Vogelsberger et al.",
+      "people": [
+        "D. Sijacki",
+        "M. Vogelsberger",
+        "P. Torrey"
+      ]
+    },
+    {
+      "name": "Gravity",
+      "slug": "gravity",
+      "body": "Black Holes, Neutron Stars, White Dwarfs, Gravitational Wave Astronomy, Tests of Gravity, Equivalence Principle"
+    },
+    {
+      "name": "High Energy Astrophysics",
+      "slug": "high-energy-astrophysics",
+      "body": "Accretion Disks around Compact Objects, Stellar Mass Black Holes, Supermassive Black Holes, Gamma Ray Bursts, Fast Radio Bursts, Radiative Transfer around Compact Objects"
+    },
+    {
+      "name": "Planetary Astronomy",
+      "slug": "planetary-astronomy",
+      "body": "ExtraSolar Planets, ProtoPlanetary Disks, Kuiper Belt Objects, Outer Solar System, Planet Formation, Gravitational Dynamics, Search for Extra-terrestrial Life."
+    },
+    {
+      "name": "Stars",
+      "slug": "stars",
+      "body": "Stellar Atmospheres, Stellar Oscillations, Interactions between Stars and ProtoPlanetary Disks, Stellar Evolution and Stellar Populations"
+    }
+  ]
+}

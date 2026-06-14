@@ -1,0 +1,36 @@
+---
+const { person } = Astro.props;
+const { name, email, title, roles = [], researchInterests, photo } = person;
+const initials = name.split(/\s+/).map((n) => n[0]).slice(0, 2).join("").toUpperCase();
+---
+<article class="person card">
+  <div class="person__photo">
+    {photo
+      ? <img src={photo} alt={name} loading="lazy" width="320" height="400" />
+      : <div class="person__placeholder" aria-hidden="true">{initials}</div>}
+  </div>
+  <div class="person__body">
+    <h3 class="person__name">{name}</h3>
+    {title && <p class="person__title">{title}</p>}
+    {roles.map((r) => <p class="person__role">{r}</p>)}
+    {researchInterests && <p class="person__interests">{researchInterests}</p>}
+    {email && <a class="person__email" href={`mailto:${email}`}>{email}</a>}
+  </div>
+</article>
+
+<style>
+  .person { display: flex; flex-direction: column; }
+  .person__photo { aspect-ratio: 4 / 5; background: var(--bg-sky); overflow: hidden; }
+  .person__photo img { width: 100%; height: 100%; object-fit: cover; }
+  .person__placeholder {
+    width: 100%; height: 100%; display: grid; place-items: center;
+    font-family: var(--font-serif); font-size: 2.5rem; color: var(--ink-faint);
+    background: linear-gradient(135deg, var(--bg-sky), #e0e6ef);
+  }
+  .person__body { padding: 1.1rem 1.1rem 1.25rem; display: flex; flex-direction: column; gap: .15rem; }
+  .person__name { font-size: 1.1rem; margin: 0; }
+  .person__title { color: var(--ink-soft); font-size: .9rem; margin: .1rem 0 0; }
+  .person__role { color: var(--accent); font-size: .82rem; font-weight: 600; margin: 0; }
+  .person__interests { color: var(--ink-faint); font-size: .82rem; margin: .5rem 0 0; line-height: 1.45; }
+  .person__email { margin-top: .6rem; font-size: .82rem; word-break: break-word; }
+</style>

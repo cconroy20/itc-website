@@ -1,0 +1,55 @@
+---
+import Base from "../layouts/Base.astro";
+import PageHero from "../components/PageHero.astro";
+---
+<Base title="Contact" description="Contact and location for the Institute for Theory and Computation at the Center for Astrophysics.">
+  <PageHero eyebrow="Contact" title="Contact &amp; location" lead="The ITC is part of the Center for Astrophysics | Harvard & Smithsonian, on Garden Street in Cambridge, Massachusetts." />
+
+  <section class="section">
+    <div class="container contact">
+      <div class="contact__info">
+        <div class="contact__block">
+          <h3>Address</h3>
+          <p>
+            Institute for Theory and Computation<br />
+            Center for Astrophysics | Harvard &amp; Smithsonian<br />
+            60 Garden Street, MS-51<br />
+            Cambridge, MA 02138
+          </p>
+        </div>
+        <div class="contact__block">
+          <h3>Email</h3>
+          <p><a href="mailto:itcinfo@cfa.harvard.edu">itcinfo@cfa.harvard.edu</a></p>
+        </div>
+        <div class="contact__block">
+          <h3>Getting here</h3>
+          <p>The CfA is a short walk from Harvard Square. Visitor parking is limited; public
+            transit and the MBTA Red Line are recommended.</p>
+        </div>
+      </div>
+
+      <div class="contact__map card">
+        <iframe
+          title="Map to the Center for Astrophysics"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-71.1320%2C42.3790%2C-71.1240%2C42.3830&layer=mapnik&marker=42.3810%2C-71.1280"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <a class="contact__maplink" href="https://www.openstreetmap.org/?mlat=42.3810&mlon=-71.1280#map=17/42.3810/-71.1280" target="_blank" rel="noopener">
+          Open in maps →
+        </a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .contact { display: grid; grid-template-columns: 1fr 1.1fr; gap: 3rem; align-items: start; }
+  .contact__block + .contact__block { margin-top: 2rem; }
+  .contact__block h3 { margin: 0 0 .35rem; }
+  .contact__block p { color: var(--ink-soft); margin: 0; }
+  .contact__map { overflow: hidden; }
+  .contact__map iframe { width: 100%; height: 360px; border: 0; display: block; }
+  .contact__maplink { display: block; padding: .75rem 1rem; font-size: .9rem; font-weight: 600; border-top: 1px solid var(--line); }
+  @media (max-width: 800px) { .contact { grid-template-columns: 1fr; gap: 2rem; } }
+</style>

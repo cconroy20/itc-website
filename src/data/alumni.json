@@ -1,0 +1,1616 @@
+{
+  "alumni": [
+    {
+      "name": "Diana Powell",
+      "placement": "Assistant Professor, University of Chicago",
+      "yearOfDeparture": "2023",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "University of Chicago"
+    },
+    {
+      "name": "Jamie Law-Smith",
+      "placement": "Assistant Professor, University of Chicago",
+      "yearOfDeparture": "2023",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "University of Chicago"
+    },
+    {
+      "name": "Kareem El-Badry",
+      "placement": "Assistant Professor, Caltech",
+      "yearOfDeparture": "2023",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "Caltech"
+    },
+    {
+      "name": "Matthew Liska",
+      "placement": "Einstein Fellow and Research Faculty, Georgia Tech",
+      "yearOfDeparture": "2023",
+      "currentTitle": "Einstein Fellow and Research Faculty",
+      "currentInstitution": "Georgia Tech"
+    },
+    {
+      "name": "Aaron Smith",
+      "placement": "Assistant Professor, University of Texas Austin",
+      "yearOfDeparture": "2023",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "University of Texas Austin"
+    },
+    {
+      "name": "Rahul Kannan",
+      "placement": "Assistant Professor, Department of Physics and Astronomy, York University",
+      "yearOfDeparture": "2023",
+      "currentTitle": "Assistant Professor, Department of Physics and Astronomy",
+      "currentInstitution": "York University"
+    },
+    {
+      "name": "Kirk Barrow",
+      "placement": "Assistant Professor, University of Illinois at Urbana-Champaign.",
+      "yearOfDeparture": "2022",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "University of Illinois at Urbana-Champaign."
+    },
+    {
+      "name": "Bryan Terrazas",
+      "placement": "Postdoctoral Researcher, Columbia",
+      "yearOfDeparture": "2022",
+      "currentTitle": "Postdoctoral Researcher",
+      "currentInstitution": "Columbia"
+    },
+    {
+      "name": "Anna Rosen",
+      "placement": "Assistant Professor, UCSD",
+      "yearOfDeparture": "2022",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "UCSD"
+    },
+    {
+      "name": "Rainer Weinberger",
+      "placement": "CITA Postdoctoral Fellow, University of Toronto",
+      "yearOfDeparture": "2021",
+      "currentTitle": "CITA Postdoctoral Fellow",
+      "currentInstitution": "University of Toronto"
+    },
+    {
+      "name": "Sownak Bose",
+      "placement": "Assistant Professor, Durham University",
+      "yearOfDeparture": "2021",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "Durham University"
+    },
+    {
+      "name": "Ana Bonaca",
+      "placement": "Staff Scientist, Carnegie Observatories",
+      "yearOfDeparture": "2021",
+      "currentTitle": "Staff Scientist",
+      "currentInstitution": "Carnegie Observatories"
+    },
+    {
+      "name": "Shmuel Bialy",
+      "placement": "Assistant Professor, Technion University (Israel)",
+      "yearOfDeparture": "2021",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "Technion University (Israel)"
+    },
+    {
+      "name": "Paul Duffell",
+      "placement": "Assistant Professor, Purdue University",
+      "yearOfDeparture": "2020",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "Purdue University"
+    },
+    {
+      "name": "Erica Nelson",
+      "placement": "Assistant Professor, University of Colorado, Boulder",
+      "yearOfDeparture": "2020",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "University of Colorado, Boulder"
+    },
+    {
+      "name": "Carl Rodriguez",
+      "placement": "Assistant Professor, University of North Carolina",
+      "yearOfDeparture": "2020",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "University of North Carolina"
+    },
+    {
+      "name": "Daniel D'Orazio",
+      "placement": "Assistant Professor, University of Copenhagen",
+      "yearOfDeparture": "2020",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "University of Copenhagen"
+    },
+    {
+      "name": "Michelle Ntampaka",
+      "placement": "Data Scientist and Assistant Astronomer, STScI",
+      "yearOfDeparture": "2020",
+      "currentTitle": "Data Scientist and Assistant Astronomer",
+      "currentInstitution": "STScI"
+    },
+    {
+      "name": "Antonija Oklopcic",
+      "placement": "Assistant Professor, University of Amsterdam",
+      "yearOfDeparture": "2020",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "University of Amsterdam"
+    },
+    {
+      "name": "Laura Kreidberg",
+      "placement": "Director, Atmospheric Physics of Exoplanets, Max Planck Institute for Astronomy",
+      "yearOfDeparture": "2019",
+      "currentTitle": "Director, Atmospheric Physics of Exoplanets",
+      "currentInstitution": "Max Planck Institute for Astronomy"
+    },
+    {
+      "name": "John Forbes",
+      "placement": "Flatiron Research Fellow, Center for Computational Astrophysics",
+      "yearOfDeparture": "2019",
+      "currentTitle": "Flatiron Research Fellow",
+      "currentInstitution": "Center for Computational Astrophysics"
+    },
+    {
+      "name": "Benedikt Diemer",
+      "placement": "Assistant Professor, University of Maryland",
+      "yearOfDeparture": "2019",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "University of Maryland"
+    },
+    {
+      "name": "Anna Ijjas",
+      "placement": "Senior Research Scientist, New York University",
+      "yearOfDeparture": "2019",
+      "currentTitle": "Senior Research Scientist",
+      "currentInstitution": "New York University"
+    },
+    {
+      "name": "Manasvi Lingham",
+      "placement": "Assistant Professor, Florida Tech",
+      "yearOfDeparture": "2019",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "Florida Tech"
+    },
+    {
+      "name": "Anastasia Fialkov",
+      "placement": "Senior Research Fellow, Kavli Institute for Cosmology (Cambridge, UK)",
+      "yearOfDeparture": "2018",
+      "currentTitle": "Senior Research Fellow",
+      "currentInstitution": "Kavli Institute for Cosmology (Cambridge, UK)"
+    },
+    {
+      "name": "Federico Marinacci",
+      "placement": "Associate Professor, University of Bologna",
+      "yearOfDeparture": "2018",
+      "currentTitle": "Associate Professor",
+      "currentInstitution": "University of Bologna"
+    },
+    {
+      "name": "Blakesley Burkhart",
+      "placement": "Assistant Professor, Rutgers",
+      "yearOfDeparture": "2018",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "Rutgers"
+    },
+    {
+      "name": "Caroline Morley",
+      "placement": "Assistant Professor, Univ Texas at Austin",
+      "yearOfDeparture": "2018",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "Univ Texas at Austin"
+    },
+    {
+      "name": "Gongjie Li",
+      "placement": "Assistant Professor, Georgia Tech",
+      "yearOfDeparture": "2018",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "Georgia Tech"
+    },
+    {
+      "name": "Ilse Cleeves",
+      "placement": "Assistant Professor, University of Virginia",
+      "yearOfDeparture": "2018",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "University of Virginia"
+    },
+    {
+      "name": "Xuening Bai",
+      "placement": "Faculty (Associate Professor), Institute for Advanced Study at Tsinghua University (IASTU) and Tsinghua Center for Astrophysics (THCA).",
+      "yearOfDeparture": "2017",
+      "currentTitle": "Faculty (Associate Professor)",
+      "currentInstitution": "Institute for Advanced Study at Tsinghua University (IASTU) and Tsinghua Center for Astrophysics (THCA)."
+    },
+    {
+      "name": "Marion Dierickx",
+      "placement": "Research Associate, J. Kovac Lab, CfA",
+      "yearOfDeparture": "2017",
+      "currentTitle": "Research Associate, J. Kovac Lab",
+      "currentInstitution": "CfA"
+    },
+    {
+      "name": "Danny Milisavlevic",
+      "placement": "Assistant Professor, Purdue University",
+      "yearOfDeparture": "2017",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "Purdue University"
+    },
+    {
+      "name": "Sayan Chakraborti",
+      "placement": "Researcher, Renaissance Technologies LLC",
+      "yearOfDeparture": "2016",
+      "currentTitle": "Researcher",
+      "currentInstitution": "Renaissance Technologies LLC"
+    },
+    {
+      "name": "Cora Dvorkin",
+      "placement": "Associate Professor, Harvard University, Dept. of Physics",
+      "yearOfDeparture": "2016",
+      "currentTitle": "Associate Professor",
+      "currentInstitution": "Harvard University, Dept. of Physics"
+    },
+    {
+      "name": "Yanfei Jiang",
+      "placement": "Associate Research Scientist, Planet Formation, CCA, Flatiron Institute",
+      "yearOfDeparture": "2016",
+      "currentTitle": "Associate Research Scientist, Planet Formation",
+      "currentInstitution": "CCA, Flatiron Institute"
+    },
+    {
+      "name": "Lorenzo Sironi",
+      "placement": "Assistant Professor, Columbia University",
+      "yearOfDeparture": "2016",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "Columbia University"
+    },
+    {
+      "name": "Annalisa Pillepich",
+      "placement": "Independent Research Group Leader, G&C Theory, Max Planck Institute for Astronomy, Heidleberg, Germany",
+      "yearOfDeparture": "2015",
+      "currentTitle": "Independent Research Group Leader, G&C Theory",
+      "currentInstitution": "Max Planck Institute for Astronomy, Heidleberg, Germany"
+    },
+    {
+      "name": "Raffaella Margutti",
+      "placement": "Associate Professor, UC Berkeley",
+      "yearOfDeparture": "2015",
+      "currentTitle": "Associate Professor",
+      "currentInstitution": "UC Berkeley"
+    },
+    {
+      "name": "Cameron McBride",
+      "placement": "Vice President of Data Science, Engagement Analytics, Hydrow, Inc.",
+      "yearOfDeparture": "2015",
+      "currentTitle": "Vice President of Data Science, Engagement Analytics",
+      "currentInstitution": "Hydrow, Inc."
+    },
+    {
+      "name": "Michael McCourt",
+      "placement": "Principal Data Scientist, Invoca",
+      "yearOfDeparture": "2015",
+      "currentTitle": "Principal Data Scientist",
+      "currentInstitution": "Invoca"
+    },
+    {
+      "name": "Thomas Greif",
+      "placement": "Deceased",
+      "yearOfDeparture": "2015",
+      "currentInstitution": "Deceased"
+    },
+    {
+      "name": "Laura Sales",
+      "placement": "Associate Professor, UC, Riverside",
+      "yearOfDeparture": "2015",
+      "currentTitle": "Associate Professor",
+      "currentInstitution": "UC, Riverside"
+    },
+    {
+      "name": "Konstantin Batygin",
+      "placement": "Professor, Caltech",
+      "yearOfDeparture": "2014",
+      "currentTitle": "Professor",
+      "currentInstitution": "Caltech"
+    },
+    {
+      "name": "Simeon Bird",
+      "placement": "Professor, UC Riverside",
+      "yearOfDeparture": "2014",
+      "currentTitle": "Professor",
+      "currentInstitution": "UC Riverside"
+    },
+    {
+      "name": "Shy Genel",
+      "placement": "Associate Research Scientist, The Flatiron Institute Center for Computational Astrophysics",
+      "yearOfDeparture": "2014",
+      "currentTitle": "Associate Research Scientist",
+      "currentInstitution": "The Flatiron Institute Center for Computational Astrophysics"
+    },
+    {
+      "name": "Smadar Naoz",
+      "placement": "Associate Professor, UCLA",
+      "yearOfDeparture": "2014",
+      "currentTitle": "Associate Professor",
+      "currentInstitution": "UCLA"
+    },
+    {
+      "name": "Olek Sadowski",
+      "placement": "Senior Quantitative Researcher, Akuna Capital",
+      "yearOfDeparture": "2014",
+      "currentTitle": "Senior Quantitative Researcher",
+      "currentInstitution": "Akuna Capital"
+    },
+    {
+      "name": "Molly Swanson",
+      "placement": "Physics and Math Teacher, Art of Problem Solving Academy, Lexington",
+      "yearOfDeparture": "2014",
+      "currentTitle": "Physics and Math Teacher",
+      "currentInstitution": "Art of Problem Solving Academy, Lexington"
+    },
+    {
+      "name": "Mark Vogelsberger",
+      "placement": "Associate Professor, M.I.T.",
+      "yearOfDeparture": "2014",
+      "currentTitle": "Associate Professor",
+      "currentInstitution": "M.I.T."
+    },
+    {
+      "name": "Tassos Fragos",
+      "placement": "Assistant Professor, Geneva Observatory, University of Geneva",
+      "yearOfDeparture": "2013",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "Geneva Observatory, University of Geneva"
+    },
+    {
+      "name": "Bence Kocsis",
+      "placement": "Associate Professor, Oxford University",
+      "yearOfDeparture": "2013",
+      "currentTitle": "Associate Professor",
+      "currentInstitution": "Oxford University"
+    },
+    {
+      "name": "Marc Metchnik",
+      "yearOfDeparture": "2013"
+    },
+    {
+      "name": "Matthew Walker",
+      "placement": "Associate Professor, Carnegie Mellon University",
+      "yearOfDeparture": "2013",
+      "currentTitle": "Associate Professor",
+      "currentInstitution": "Carnegie Mellon University"
+    },
+    {
+      "name": "Charlie Conroy",
+      "placement": "Professor, Harvard University",
+      "yearOfDeparture": "2012",
+      "currentTitle": "Professor",
+      "currentInstitution": "Harvard University"
+    },
+    {
+      "name": "Elena D'Onghia",
+      "placement": "Professor, University of Wisconsin, Madison",
+      "yearOfDeparture": "2012",
+      "currentTitle": "Professor",
+      "currentInstitution": "University of Wisconsin, Madison"
+    },
+    {
+      "name": "Anna Frebel",
+      "placement": "Professor, M.I.T.",
+      "yearOfDeparture": "2012",
+      "currentTitle": "Professor",
+      "currentInstitution": "M.I.T."
+    },
+    {
+      "name": "Lijun Gou",
+      "placement": "Professor, National Astronomical Observatories of China",
+      "yearOfDeparture": "2012",
+      "currentTitle": "Professor",
+      "currentInstitution": "National Astronomical Observatories of China"
+    },
+    {
+      "name": "Patrik Jonsson",
+      "placement": "Senior GNC Engineer, Space-X",
+      "yearOfDeparture": "2012",
+      "currentTitle": "Senior GNC Engineer",
+      "currentInstitution": "Space-X"
+    },
+    {
+      "name": "Kaitlin Kratter",
+      "placement": "Associate Professor, Univ. of Arizona",
+      "yearOfDeparture": "2012",
+      "currentTitle": "Associate Professor",
+      "currentInstitution": "Univ. of Arizona"
+    },
+    {
+      "name": "Stella Offner",
+      "placement": "Associate Professor, University of Texas at Austin",
+      "yearOfDeparture": "2012",
+      "currentTitle": "Associate Professor",
+      "currentInstitution": "University of Texas at Austin"
+    },
+    {
+      "name": "Asaf Pe'er",
+      "placement": "Professor, University College Cork, Ireland",
+      "yearOfDeparture": "2012",
+      "currentTitle": "Professor",
+      "currentInstitution": "University College Cork, Ireland"
+    },
+    {
+      "name": "Hagai Perets",
+      "placement": "Associate Professor, Technion, Israel",
+      "yearOfDeparture": "2012",
+      "currentTitle": "Associate Professor",
+      "currentInstitution": "Technion, Israel"
+    },
+    {
+      "name": "Darin Raggozine",
+      "placement": "Associate Professor, BYU",
+      "yearOfDeparture": "2012",
+      "currentTitle": "Associate Professor",
+      "currentInstitution": "BYU"
+    },
+    {
+      "name": "Yue Shen",
+      "placement": "Associate Professor, University of Illinois",
+      "yearOfDeparture": "2012",
+      "currentTitle": "Associate Professor",
+      "currentInstitution": "University of Illinois"
+    },
+    {
+      "name": "Debora Sijacki",
+      "placement": "Assistant Professor, University of Cambridge, UK",
+      "yearOfDeparture": "2012",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "University of Cambridge, UK"
+    },
+    {
+      "name": "Svetlin Tassev",
+      "placement": "Physics Teacher, Braintree High School, MA",
+      "yearOfDeparture": "2012",
+      "currentTitle": "Physics Teacher",
+      "currentInstitution": "Braintree High School, MA"
+    },
+    {
+      "name": "Matija Cuk",
+      "placement": "Research Scientist, SETI Institute",
+      "yearOfDeparture": "2011",
+      "currentTitle": "Research Scientist",
+      "currentInstitution": "SETI Institute"
+    },
+    {
+      "name": "Eric Hallman",
+      "placement": "Internal Consultant, Ab Initio Software",
+      "yearOfDeparture": "2011",
+      "currentTitle": "Internal Consultant",
+      "currentInstitution": "Ab Initio Software"
+    },
+    {
+      "name": "Mario Juric",
+      "placement": "Professor, University of Washington",
+      "yearOfDeparture": "2011",
+      "currentTitle": "Professor",
+      "currentInstitution": "University of Washington"
+    },
+    {
+      "name": "Uri Keshet",
+      "placement": "Associate Professor, Ben-Gurion University",
+      "yearOfDeparture": "2011",
+      "currentTitle": "Associate Professor",
+      "currentInstitution": "Ben-Gurion University"
+    },
+    {
+      "name": "Akshay Kulkarni",
+      "placement": "Software Engineer, Microsoft, Inc",
+      "yearOfDeparture": "2011",
+      "currentTitle": "Software Engineer",
+      "currentInstitution": "Microsoft, Inc"
+    },
+    {
+      "name": "Jifeng Liu",
+      "placement": "Principal Astronomer, National Astronomical Observatories of China",
+      "yearOfDeparture": "2011",
+      "currentTitle": "Principal Astronomer",
+      "currentInstitution": "National Astronomical Observatories of China"
+    },
+    {
+      "name": "Jonathan Pritchard",
+      "placement": "Senior Lecturer, Imperial College London, England",
+      "yearOfDeparture": "2011",
+      "currentTitle": "Senior Lecturer",
+      "currentInstitution": "Imperial College London, England"
+    },
+    {
+      "name": "Yuval Birnboim",
+      "placement": "Associate Professor, Racah institute of Physics",
+      "yearOfDeparture": "2010",
+      "currentTitle": "Associate Professor",
+      "currentInstitution": "Racah institute of Physics"
+    },
+    {
+      "name": "Chi Kwan Chan",
+      "placement": "Associate Astronomer/Research Professor, University of Arizona",
+      "yearOfDeparture": "2010",
+      "currentTitle": "Associate Astronomer/Research Professor",
+      "currentInstitution": "University of Arizona"
+    },
+    {
+      "name": "Mark Dijkstra",
+      "placement": "Data Scientist, Stitch Fix",
+      "yearOfDeparture": "2010",
+      "currentTitle": "Data Scientist",
+      "currentInstitution": "Stitch Fix"
+    },
+    {
+      "name": "Daniel Fabrycky",
+      "placement": "Associate Professor, University of Chicago",
+      "yearOfDeparture": "2010",
+      "currentTitle": "Associate Professor",
+      "currentInstitution": "University of Chicago"
+    },
+    {
+      "name": "Alison Farmer",
+      "placement": "Associate Director of Global Engineering, Vertex Pharmaceuticals",
+      "yearOfDeparture": "2010",
+      "currentTitle": "Associate Director of Global Engineering",
+      "currentInstitution": "Vertex Pharmaceuticals"
+    },
+    {
+      "name": "Dusan Keres",
+      "placement": "Professor, UC San Diego",
+      "yearOfDeparture": "2010",
+      "currentTitle": "Professor",
+      "currentInstitution": "UC San Diego"
+    },
+    {
+      "name": "Ruth Murray - Clay",
+      "placement": "Professor, UC Santa Cruz",
+      "yearOfDeparture": "2010",
+      "currentTitle": "Professor",
+      "currentInstitution": "UC Santa Cruz"
+    },
+    {
+      "name": "Desika Narayanan",
+      "placement": "Professor, Haverford College",
+      "yearOfDeparture": "2010",
+      "currentTitle": "Professor",
+      "currentInstitution": "Haverford College"
+    },
+    {
+      "name": "Hiroshi Oda",
+      "placement": "Japan Aerospace Exploration Agency",
+      "yearOfDeparture": "2010",
+      "currentInstitution": "Japan Aerospace Exploration Agency"
+    },
+    {
+      "name": "Alicia Soderberg",
+      "yearOfDeparture": "2010"
+    },
+    {
+      "name": "Hy Trac",
+      "placement": "Professor, Carnegie Mellon University",
+      "yearOfDeparture": "2010",
+      "currentTitle": "Professor",
+      "currentInstitution": "Carnegie Mellon University"
+    },
+    {
+      "name": "Jaiyul Yoo",
+      "placement": "Professor, University of Zurich",
+      "yearOfDeparture": "2010",
+      "currentTitle": "Professor",
+      "currentInstitution": "University of Zurich"
+    },
+    {
+      "name": "Daniel Baumann",
+      "placement": "Professor, University of Amsterdam",
+      "yearOfDeparture": "2009",
+      "currentTitle": "Professor",
+      "currentInstitution": "University of Amsterdam"
+    },
+    {
+      "name": "Sukanya Chakrabarti",
+      "placement": "Professor, University of Alabama, Huntsville",
+      "yearOfDeparture": "2009",
+      "currentTitle": "Professor",
+      "currentInstitution": "University of Alabama, Huntsville"
+    },
+    {
+      "name": "Thomas (T.J.) Cox",
+      "placement": "Data Scientist, Apple",
+      "yearOfDeparture": "2009",
+      "currentTitle": "Data Scientist",
+      "currentInstitution": "Apple"
+    },
+    {
+      "name": "Gregory Dobler",
+      "placement": "Assistant Professor, University of Delaware",
+      "yearOfDeparture": "2009",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "University of Delaware"
+    },
+    {
+      "name": "Adam Lidz",
+      "placement": "Associate Professor, University of Pennsylvania",
+      "yearOfDeparture": "2009",
+      "currentTitle": "Associate Professor",
+      "currentInstitution": "University of Pennsylvania"
+    },
+    {
+      "name": "David Weldrake",
+      "placement": "Director, GIS & Spatial Services, MBDA (Australia)",
+      "yearOfDeparture": "2009",
+      "currentTitle": "Director, GIS & Spatial Services",
+      "currentInstitution": "MBDA (Australia)"
+    },
+    {
+      "name": "Amit Yadav",
+      "yearOfDeparture": "2009"
+    },
+    {
+      "name": "Beth Willman",
+      "placement": "CEO and Director for Science, LSST",
+      "yearOfDeparture": "2008",
+      "currentTitle": "CEO and Director for Science",
+      "currentInstitution": "LSST"
+    },
+    {
+      "name": "Niayesh Afshordi",
+      "placement": "Professor, University of Waterloo and Perimeter Institute",
+      "yearOfDeparture": "2007",
+      "currentTitle": "Professor",
+      "currentInstitution": "University of Waterloo and Perimeter Institute"
+    },
+    {
+      "name": "Joseph Barranco",
+      "placement": "Professor and Chair, San Francisco State University",
+      "yearOfDeparture": "2007",
+      "currentTitle": "Professor and Chair",
+      "currentInstitution": "San Francisco State University"
+    },
+    {
+      "name": "Avery Broderick",
+      "placement": "Associate Professor, University of Waterloo and Perimeter Institute",
+      "yearOfDeparture": "2007",
+      "currentTitle": "Associate Professor",
+      "currentInstitution": "University of Waterloo and Perimeter Institute"
+    },
+    {
+      "name": "Eric Ford",
+      "placement": "Professor, Penn State University",
+      "yearOfDeparture": "2007",
+      "currentTitle": "Professor",
+      "currentInstitution": "Penn State University"
+    },
+    {
+      "name": "Tommy Grav",
+      "placement": "Senior Staff Scientist, Lunar & Planetary Lab, University of Arizona",
+      "yearOfDeparture": "2007",
+      "currentTitle": "Senior Staff Scientist",
+      "currentInstitution": "Lunar & Planetary Lab, University of Arizona"
+    },
+    {
+      "name": "Yuexing Li",
+      "placement": "Professor, Penn State University",
+      "yearOfDeparture": "2007",
+      "currentTitle": "Professor",
+      "currentInstitution": "Penn State University"
+    },
+    {
+      "name": "Jonathan McKinney",
+      "placement": "Director of Research, H2O.ai",
+      "yearOfDeparture": "2007",
+      "currentTitle": "Director of Research",
+      "currentInstitution": "H2O.ai"
+    },
+    {
+      "name": "Yeshe Fenner",
+      "placement": "Chief Operating Officer, ARC Centre of Excellence for Gravitational Wave Discovery (OzGrav)",
+      "yearOfDeparture": "2006",
+      "currentTitle": "Chief Operating Officer",
+      "currentInstitution": "ARC Centre of Excellence for Gravitational Wave Discovery (OzGrav)"
+    },
+    {
+      "name": "Kazunori Kohri",
+      "placement": "Professor, National Astronomical Observatory of Japan (NAOJ)",
+      "yearOfDeparture": "2006",
+      "currentTitle": "Professor",
+      "currentInstitution": "National Astronomical Observatory of Japan (NAOJ)"
+    },
+    {
+      "name": "Miguel Morales",
+      "placement": "Professor, University of Washington",
+      "yearOfDeparture": "2006",
+      "currentTitle": "Professor",
+      "currentInstitution": "University of Washington"
+    },
+    {
+      "name": "Banibrata Mukhopadhyay",
+      "placement": "Professor, Indian Institute of Science",
+      "yearOfDeparture": "2006",
+      "currentTitle": "Professor",
+      "currentInstitution": "Indian Institute of Science"
+    },
+    {
+      "name": "Joshua Winn",
+      "placement": "Associate Professor, M.I.T.",
+      "yearOfDeparture": "2006",
+      "currentTitle": "Associate Professor",
+      "currentInstitution": "M.I.T."
+    },
+    {
+      "name": "Volker Bromm",
+      "placement": "Professor, University of Texas, Austin",
+      "yearOfDeparture": "2004",
+      "currentTitle": "Professor",
+      "currentInstitution": "University of Texas, Austin"
+    },
+    {
+      "name": "Ken Nagamine",
+      "placement": "Professor, Osaka University",
+      "yearOfDeparture": "2004",
+      "currentTitle": "Professor",
+      "currentInstitution": "Osaka University"
+    },
+    {
+      "name": "James Bullock",
+      "placement": "Professor, UC Irvine",
+      "yearOfDeparture": "2004",
+      "currentTitle": "Professor",
+      "currentInstitution": "UC Irvine"
+    },
+    {
+      "name": "Naoki Yoshida",
+      "placement": "Professor, University of Tokyo",
+      "yearOfDeparture": "2003",
+      "currentTitle": "Professor",
+      "currentInstitution": "University of Tokyo"
+    },
+    {
+      "name": "Rosalba Perna",
+      "placement": "Professor, Stony Brook Unuiversity",
+      "yearOfDeparture": "2003",
+      "currentTitle": "Professor",
+      "currentInstitution": "Stony Brook Unuiversity"
+    },
+    {
+      "name": "Feng Yuan",
+      "placement": "Professor and Director of Astrophysics Division, Shanghai Astronomical Observatory",
+      "yearOfDeparture": "2003",
+      "currentTitle": "Professor and Director of Astrophysics Division",
+      "currentInstitution": "Shanghai Astronomical Observatory"
+    },
+    {
+      "name": "Stuart Wyithe",
+      "placement": "Professor, University of Melbourne",
+      "yearOfDeparture": "2002",
+      "currentTitle": "Professor",
+      "currentInstitution": "University of Melbourne"
+    },
+    {
+      "name": "Tom Abel",
+      "placement": "Professor, Stanford",
+      "yearOfDeparture": "2001",
+      "currentTitle": "Professor",
+      "currentInstitution": "Stanford"
+    },
+    {
+      "name": "Robert Croft",
+      "placement": "Professor, Carnegie Mellon",
+      "yearOfDeparture": "2001",
+      "currentTitle": "Professor",
+      "currentInstitution": "Carnegie Mellon"
+    },
+    {
+      "name": "Tiziana Di Matteo",
+      "placement": "Professor, Carnegie Mellon",
+      "yearOfDeparture": "2001",
+      "currentTitle": "Professor",
+      "currentInstitution": "Carnegie Mellon"
+    },
+    {
+      "name": "Vicky Kalogera",
+      "placement": "Professor, Northwestern University",
+      "yearOfDeparture": "2001",
+      "currentTitle": "Professor",
+      "currentInstitution": "Northwestern University"
+    },
+    {
+      "name": "Dimitrios Psaltis",
+      "placement": "Professor, Georgia Tech",
+      "yearOfDeparture": "2000",
+      "currentTitle": "Professor",
+      "currentInstitution": "Georgia Tech"
+    },
+    {
+      "name": "Woong-Tae Kim",
+      "placement": "Professor, Seoul National University",
+      "yearOfDeparture": "2000",
+      "currentTitle": "Professor",
+      "currentInstitution": "Seoul National University"
+    },
+    {
+      "name": "Mikhail Medvedev",
+      "placement": "Professor, University of Kansas",
+      "yearOfDeparture": "2000",
+      "currentTitle": "Professor",
+      "currentInstitution": "University of Kansas"
+    },
+    {
+      "name": "Volker Springel",
+      "placement": "Director, Max Planck Institute for Astrophysics",
+      "yearOfDeparture": "2000",
+      "currentTitle": "Director",
+      "currentInstitution": "Max Planck Institute for Astrophysics"
+    },
+    {
+      "name": "Ue-Li Pen",
+      "placement": "Professor, Canadian Institute for Theoretical Astrophysics",
+      "yearOfDeparture": "1999",
+      "currentTitle": "Professor",
+      "currentInstitution": "Canadian Institute for Theoretical Astrophysics"
+    },
+    {
+      "name": "Charles Gammie",
+      "placement": "Professor, University of Illinois",
+      "yearOfDeparture": "1998",
+      "currentTitle": "Professor",
+      "currentInstitution": "University of Illinois"
+    },
+    {
+      "name": "Uros Seljak",
+      "placement": "Professor, UC Berkeley",
+      "yearOfDeparture": "1998",
+      "currentTitle": "Professor",
+      "currentInstitution": "UC Berkeley"
+    },
+    {
+      "name": "Eve Ostriker",
+      "placement": "Professor, Princeton University",
+      "yearOfDeparture": "1996",
+      "currentTitle": "Professor",
+      "currentInstitution": "Princeton University"
+    },
+    {
+      "name": "Shude Mao",
+      "placement": "Professor and Chair, Tsinghua University",
+      "yearOfDeparture": "1995",
+      "currentTitle": "Professor and Chair",
+      "currentInstitution": "Tsinghua University"
+    },
+    {
+      "name": "David Clarke",
+      "placement": "Professor, Saint Mary's University, Nova Scotia, Canada",
+      "yearOfDeparture": "1993",
+      "currentTitle": "Professor",
+      "currentInstitution": "Saint Mary's University, Nova Scotia, Canada"
+    },
+    {
+      "name": "B. Scott Gaudi",
+      "placement": "Professor, The Ohio State University",
+      "currentTitle": "Professor",
+      "currentInstitution": "The Ohio State University"
+    },
+    {
+      "name": "Christopher Kochanek",
+      "placement": "Professor, The Ohio State University",
+      "currentTitle": "Professor",
+      "currentInstitution": "The Ohio State University"
+    },
+    {
+      "name": "Ravi Pilla",
+      "placement": "Columbia University",
+      "currentInstitution": "Columbia University"
+    },
+    {
+      "name": "Eric Woods",
+      "placement": "Visiting Assistant Professor, State University of New York, Albany",
+      "currentTitle": "Visiting Assistant Professor",
+      "currentInstitution": "State University of New York, Albany"
+    },
+    {
+      "name": "Andrew Saydjari",
+      "placement": "Postdoctoral Fellow, Harvard College Observatory",
+      "yearOfDeparture": "2024",
+      "currentTitle": "Postdoctoral Fellow",
+      "currentInstitution": "Harvard College Observatory"
+    },
+    {
+      "name": "Magdalena Siwek",
+      "placement": "Postdoctoral Fellow, Harvard College Observatory",
+      "yearOfDeparture": "2024",
+      "currentTitle": "Postdoctoral Fellow",
+      "currentInstitution": "Harvard College Observatory"
+    },
+    {
+      "name": "Zachary Murray",
+      "placement": "Postdoctoral Fellow, Smithsonian Astrophysical Observatory",
+      "yearOfDeparture": "2024",
+      "currentTitle": "Postdoctoral Fellow",
+      "currentInstitution": "Smithsonian Astrophysical Observatory"
+    },
+    {
+      "name": "Michael Foley",
+      "yearOfDeparture": "2024"
+    },
+    {
+      "name": "Ana Maria Delgado",
+      "placement": "Postdoctoral Fellow, Harvard College Observatory",
+      "yearOfDeparture": "2024",
+      "currentTitle": "Postdoctoral Fellow",
+      "currentInstitution": "Harvard College Observatory"
+    },
+    {
+      "name": "Daniel Palumbo",
+      "placement": "Fellow, Harvard Black Hole Initiative",
+      "yearOfDeparture": "2023",
+      "currentTitle": "Fellow",
+      "currentInstitution": "Harvard Black Hole Initiative"
+    },
+    {
+      "name": "Tanveer Karim",
+      "placement": "FAS Fellow and Dunlap Fellow, University of Toronto",
+      "yearOfDeparture": "2023",
+      "currentTitle": "FAS Fellow and Dunlap Fellow",
+      "currentInstitution": "University of Toronto"
+    },
+    {
+      "name": "Floor Broekgaarden",
+      "placement": "Junior Fellow, Simons Society of Fellows",
+      "yearOfDeparture": "2023",
+      "currentTitle": "Junior Fellow",
+      "currentInstitution": "Simons Society of Fellows"
+    },
+    {
+      "name": "Chantanelle Nava",
+      "placement": "Assistant Professor in Astronomy & Physics, University of Montana",
+      "yearOfDeparture": "2022",
+      "currentTitle": "Assistant Professor in Astronomy & Physics",
+      "currentInstitution": "University of Montana"
+    },
+    {
+      "name": "Brandon Curd",
+      "placement": "Postdoctoral Fellow, UTSA",
+      "yearOfDeparture": "2022",
+      "currentTitle": "Postdoctoral Fellow",
+      "currentInstitution": "UTSA"
+    },
+    {
+      "name": "Nina Maksimova",
+      "placement": "David Foundation Scholar, St. Andrews University",
+      "yearOfDeparture": "2022",
+      "currentTitle": "David Foundation Scholar",
+      "currentInstitution": "St. Andrews University"
+    },
+    {
+      "name": "Boryana Hadzhiyska",
+      "placement": "Miller Postdoctoral Fellow, UC Berkeley",
+      "yearOfDeparture": "2022",
+      "currentTitle": "Miller Postdoctoral Fellow",
+      "currentInstitution": "UC Berkeley"
+    },
+    {
+      "name": "Xiaohan Wu",
+      "placement": "Postdoctoral Fellow, CITA",
+      "yearOfDeparture": "2022",
+      "currentTitle": "Postdoctoral Fellow",
+      "currentInstitution": "CITA"
+    },
+    {
+      "name": "Rohan Naidu",
+      "placement": "Papalardo Fellow, MIT",
+      "yearOfDeparture": "2022",
+      "currentTitle": "Papalardo Fellow",
+      "currentInstitution": "MIT"
+    },
+    {
+      "name": "Loana Zelko",
+      "placement": "Postdoctoral Fellow, CITA, University of Toronto",
+      "yearOfDeparture": "2021",
+      "currentTitle": "Postdoctoral Fellow",
+      "currentInstitution": "CITA, University of Toronto"
+    },
+    {
+      "name": "Ana-Roxana Pop",
+      "placement": "ML Research Scientist, Meta",
+      "yearOfDeparture": "2021",
+      "currentTitle": "ML Research Scientist",
+      "currentInstitution": "Meta"
+    },
+    {
+      "name": "Seth Gossage",
+      "placement": "CIERA PostDoctoral Fellow, Northwestern University",
+      "yearOfDeparture": "2021",
+      "currentTitle": "CIERA PostDoctoral Fellow",
+      "currentInstitution": "Northwestern University"
+    },
+    {
+      "name": "Sihan Yuan",
+      "placement": "KIPAC Postdoctoral Fellow, Stanford University",
+      "yearOfDeparture": "2021",
+      "currentTitle": "KIPAC Postdoctoral Fellow",
+      "currentInstitution": "Stanford University"
+    },
+    {
+      "name": "Ellen Price",
+      "placement": "51 Pegasi b PostDoctoral Fellow, University of Chicago",
+      "yearOfDeparture": "2021",
+      "currentTitle": "51 Pegasi b PostDoctoral Fellow",
+      "currentInstitution": "University of Chicago"
+    },
+    {
+      "name": "Josh Speagle",
+      "placement": "Dunlap Postdoctoral Fellowship, Univ Toronto",
+      "yearOfDeparture": "2020",
+      "currentTitle": "Dunlap Postdoctoral Fellowship",
+      "currentInstitution": "Univ Toronto"
+    },
+    {
+      "name": "Jane Huang",
+      "placement": "Sagan Fellow, Univ of Michigan",
+      "yearOfDeparture": "2020",
+      "currentTitle": "Sagan Fellow",
+      "currentInstitution": "Univ of Michigan"
+    },
+    {
+      "name": "Zoe Todd",
+      "placement": "Sagan Fellow, Univ of Washington",
+      "yearOfDeparture": "2020",
+      "currentTitle": "Sagan Fellow",
+      "currentInstitution": "Univ of Washington"
+    },
+    {
+      "name": "Peter Blanchard",
+      "placement": "Ciero Fellow, Northwestern",
+      "yearOfDeparture": "2019",
+      "currentTitle": "Ciero Fellow",
+      "currentInstitution": "Northwestern"
+    },
+    {
+      "name": "Benjamin Cook",
+      "placement": "Junior Quantitative Researcher, Akuna Capitol (Boston)",
+      "yearOfDeparture": "2019",
+      "currentTitle": "Junior Quantitative Researcher",
+      "currentInstitution": "Akuna Capitol (Boston)"
+    },
+    {
+      "name": "Lehman H. Garrison",
+      "placement": "Flatiron Research Fellow, CCA (Flatiron Institute)",
+      "yearOfDeparture": "2019",
+      "currentTitle": "Flatiron Research Fellow",
+      "currentInstitution": "CCA (Flatiron Institute)"
+    },
+    {
+      "name": "Yutong Shan",
+      "placement": "Postdoc Fellow, University of Goettingen",
+      "yearOfDeparture": "2019",
+      "currentTitle": "Postdoc Fellow",
+      "currentInstitution": "University of Goettingen"
+    },
+    {
+      "name": "Meng Gu",
+      "placement": "Russell Postdoc Fellow, Princeton",
+      "yearOfDeparture": "2019",
+      "currentTitle": "Russell Postdoc Fellow",
+      "currentInstitution": "Princeton"
+    },
+    {
+      "name": "Xiawei Wang",
+      "placement": "Consultant/Senior Data Scientist, Boston Consulting Group (BCG)",
+      "yearOfDeparture": "2019",
+      "currentTitle": "Consultant/Senior Data Scientist",
+      "currentInstitution": "Boston Consulting Group (BCG)"
+    },
+    {
+      "name": "Kate Alexander",
+      "placement": "Einstein Fellow, Northwestern",
+      "yearOfDeparture": "2018",
+      "currentTitle": "Einstein Fellow",
+      "currentInstitution": "Northwestern"
+    },
+    {
+      "name": "How-Huan Chen",
+      "placement": "CNS Fellow, Univ Texas Austin",
+      "yearOfDeparture": "2018",
+      "currentTitle": "CNS Fellow",
+      "currentInstitution": "Univ Texas Austin"
+    },
+    {
+      "name": "Jieun Choi",
+      "placement": "Sr Applied ML Scientist, Netflix",
+      "yearOfDeparture": "2018",
+      "currentTitle": "Sr Applied ML Scientist",
+      "currentInstitution": "Netflix"
+    },
+    {
+      "name": "Kunting Chua",
+      "placement": "Research Scientist, Institute of High Performing Computing (Singapore)",
+      "yearOfDeparture": "2018",
+      "currentTitle": "Research Scientist",
+      "currentInstitution": "Institute of High Performing Computing (Singapore)"
+    },
+    {
+      "name": "Philip S. Cowperthwaite",
+      "placement": "Hubble Fellow, Carnegie Observatories",
+      "yearOfDeparture": "2018",
+      "currentTitle": "Hubble Fellow",
+      "currentInstitution": "Carnegie Observatories"
+    },
+    {
+      "name": "Christopher Faesi",
+      "placement": "NSF Fellow, UMass Amherst",
+      "yearOfDeparture": "2018",
+      "currentTitle": "NSF Fellow",
+      "currentInstitution": "UMass Amherst"
+    },
+    {
+      "name": "Pierre Christian",
+      "placement": "Physics Faculty, Fairfield University",
+      "yearOfDeparture": "2018",
+      "currentTitle": "Physics Faculty",
+      "currentInstitution": "Fairfield University"
+    },
+    {
+      "name": "Ryan Loomis",
+      "placement": "Jansky Fellow, NRAO",
+      "yearOfDeparture": "2018",
+      "currentTitle": "Jansky Fellow",
+      "currentInstitution": "NRAO"
+    },
+    {
+      "name": "Anjali Tripathi",
+      "placement": "Scientist, Raytheon",
+      "yearOfDeparture": "2018",
+      "currentTitle": "Scientist",
+      "currentInstitution": "Raytheon"
+    },
+    {
+      "name": "Stephen Portillo",
+      "placement": "DIRAC Fellow & UW Data Science Fellow, Univ of Washington",
+      "yearOfDeparture": "2018",
+      "currentTitle": "DIRAC Fellow & UW Data Science Fellow",
+      "currentInstitution": "Univ of Washington"
+    },
+    {
+      "name": "Xinyi Guo",
+      "placement": "Research Scientist, D.E. Shaw Research",
+      "yearOfDeparture": "2017",
+      "currentTitle": "Research Scientist",
+      "currentInstitution": "D.E. Shaw Research"
+    },
+    {
+      "name": "Philip Mocz",
+      "placement": "Einstein Fellow, Princeton",
+      "yearOfDeparture": "2017",
+      "currentTitle": "Einstein Fellow",
+      "currentInstitution": "Princeton"
+    },
+    {
+      "name": "Dawn Graninger",
+      "placement": "Senior Professinal Staff, Applied Physics Lab, The Johns Hopkins University",
+      "yearOfDeparture": "2017",
+      "currentTitle": "Senior Professinal Staff, Applied Physics Lab",
+      "currentInstitution": "The Johns Hopkins University"
+    },
+    {
+      "name": "Kirit Karkare",
+      "placement": "Postdoc Researcher, Physics, Univ of Chicago",
+      "yearOfDeparture": "2017",
+      "currentTitle": "Postdoc Researcher, Physics",
+      "currentInstitution": "Univ of Chicago"
+    },
+    {
+      "name": "Meredith A. MacGregor",
+      "placement": "Assistant Professor, Boulder",
+      "yearOfDeparture": "2017",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "Boulder"
+    },
+    {
+      "name": "Natalie Mashian Fisher",
+      "placement": "Visiting Professor of Phsyics & Astronomy, Pomona College",
+      "yearOfDeparture": "2017",
+      "currentTitle": "Visiting Professor of Phsyics & Astronomy",
+      "currentInstitution": "Pomona College"
+    },
+    {
+      "name": "Sukrit Ranjan",
+      "placement": "SCOL Fellow, MIT",
+      "yearOfDeparture": "2017",
+      "currentTitle": "SCOL Fellow",
+      "currentInstitution": "MIT"
+    },
+    {
+      "name": "Joshua Suresh",
+      "placement": "Research Scientist, Institute for Disease Modeling",
+      "yearOfDeparture": "2017",
+      "currentTitle": "Research Scientist",
+      "currentInstitution": "Institute for Disease Modeling"
+    },
+    {
+      "name": "Yuan-Sen Ting",
+      "placement": "Hubble Fellow, IAS",
+      "yearOfDeparture": "2017",
+      "currentTitle": "Hubble Fellow",
+      "currentInstitution": "IAS"
+    },
+    {
+      "name": "Andrew Vanderburg",
+      "placement": "Assistant Professor, U Wisconsin-Madison",
+      "yearOfDeparture": "2017",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "U Wisconsin-Madison"
+    },
+    {
+      "name": "Sarah Wellons",
+      "placement": "CIERA Fellow, Northwestern",
+      "yearOfDeparture": "2017",
+      "currentTitle": "CIERA Fellow",
+      "currentInstitution": "Northwestern"
+    },
+    {
+      "name": "Maria Drout",
+      "placement": "Hubble Postdoctoral Fellow, Carnegie Observatories",
+      "yearOfDeparture": "2016",
+      "currentTitle": "Hubble Postdoctoral Fellow",
+      "currentInstitution": "Carnegie Observatories"
+    },
+    {
+      "name": "Douglas Ferrer",
+      "placement": "Robotics Software Engineer, iRobot",
+      "yearOfDeparture": "2016",
+      "currentTitle": "Robotics Software Engineer",
+      "currentInstitution": "iRobot"
+    },
+    {
+      "name": "Gregory Green",
+      "placement": "Postdoctoral Fellow, Stanford University / KIPAC",
+      "yearOfDeparture": "2016",
+      "currentTitle": "Postdoctoral Fellow",
+      "currentInstitution": "Stanford University / KIPAC"
+    },
+    {
+      "name": "Luke Zoltan Kelley",
+      "placement": "Astrophysics Research Fellow, Harvard University",
+      "yearOfDeparture": "2016",
+      "currentTitle": "Astrophysics Research Fellow",
+      "currentInstitution": "Harvard University"
+    },
+    {
+      "name": "Gongjie Li",
+      "placement": "Assistant Professor, Georgia Tech",
+      "yearOfDeparture": "2016",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "Georgia Tech"
+    },
+    {
+      "name": "Dylan Nelson",
+      "placement": "Postdoctoral Fellow, Max Planck Institute for Astronomy, Garching",
+      "yearOfDeparture": "2016",
+      "currentTitle": "Postdoctoral Fellow",
+      "currentInstitution": "Max Planck Institute for Astronomy, Garching"
+    },
+    {
+      "name": "Vicente Rodrigues-Gomez",
+      "placement": "Postdoctoral Fellows, Space Telescope Science Institute",
+      "yearOfDeparture": "2016",
+      "currentTitle": "Postdoctoral Fellows",
+      "currentInstitution": "Space Telescope Science Institute"
+    },
+    {
+      "name": "Laura Schaefer",
+      "placement": "Assistant Professor, Stanford",
+      "yearOfDeparture": "2016",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "Stanford"
+    },
+    {
+      "name": "Yucong Zhu",
+      "placement": "Quantitative Analyst, D.E.Shaw Group",
+      "yearOfDeparture": "2016",
+      "currentTitle": "Quantitative Analyst",
+      "currentInstitution": "D.E.Shaw Group"
+    },
+    {
+      "name": "Nathan Sanders",
+      "placement": "Senior Director of Quantitative Analysis, Legendary Entertainment",
+      "yearOfDeparture": "2014",
+      "currentTitle": "Senior Director of Quantitative Analysis",
+      "currentInstitution": "Legendary Entertainment"
+    },
+    {
+      "name": "Paul Torrey",
+      "placement": "Postdoctoral Fellow, MIT",
+      "yearOfDeparture": "2014",
+      "currentTitle": "Postdoctoral Fellow",
+      "currentInstitution": "MIT"
+    },
+    {
+      "name": "Rebekah Dawson",
+      "placement": "Assistant Professor, Penn State University",
+      "yearOfDeparture": "2013",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "Penn State University"
+    },
+    {
+      "name": "Diego Munoz",
+      "placement": "Research Associate, Cornell University",
+      "yearOfDeparture": "2013",
+      "currentTitle": "Research Associate",
+      "currentInstitution": "Cornell University"
+    },
+    {
+      "name": "Tony Pan",
+      "placement": "Princial Scientists, Invention Science Fund",
+      "yearOfDeparture": "2013",
+      "currentTitle": "Princial Scientists",
+      "currentInstitution": "Invention Science Fund"
+    },
+    {
+      "name": "Robert Penna",
+      "placement": "Postdoctoral Fellow, M.I.T.",
+      "yearOfDeparture": "2013",
+      "currentTitle": "Postdoctoral Fellow",
+      "currentInstitution": "M.I.T."
+    },
+    {
+      "name": "Gregory Snyder",
+      "placement": "Postdoctoral Fellow, Space Telescope Science Institute",
+      "yearOfDeparture": "2013",
+      "currentTitle": "Postdoctoral Fellow",
+      "currentInstitution": "Space Telescope Science Institute"
+    },
+    {
+      "name": "Nick Stone",
+      "placement": "Postdoctoral Fellow, Columbia University",
+      "yearOfDeparture": "2013",
+      "currentTitle": "Postdoctoral Fellow",
+      "currentInstitution": "Columbia University"
+    },
+    {
+      "name": "Eli Visbal",
+      "placement": "Postdoctoral Fellow, Columbia University",
+      "yearOfDeparture": "2013",
+      "currentTitle": "Postdoctoral Fellow",
+      "currentInstitution": "Columbia University"
+    },
+    {
+      "name": "Gurtina Besla",
+      "placement": "Assistant Professor, University of Arizona",
+      "yearOfDeparture": "2012",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "University of Arizona"
+    },
+    {
+      "name": "Laura Blecha",
+      "placement": "Postdoctoral Fellow, University of Maryland",
+      "yearOfDeparture": "2012",
+      "currentTitle": "Postdoctoral Fellow",
+      "currentInstitution": "University of Maryland"
+    },
+    {
+      "name": "Chris Hayward",
+      "placement": "Associate Research Scientist, Flatiron Institute Center for Computational Astrophysics",
+      "yearOfDeparture": "2012",
+      "currentTitle": "Associate Research Scientist",
+      "currentInstitution": "Flatiron Institute Center for Computational Astrophysics"
+    },
+    {
+      "name": "Tongyan Lin",
+      "placement": "Postdoctoral Fellow, Berkeley Center for Theoretical Physics",
+      "yearOfDeparture": "2012",
+      "currentTitle": "Postdoctoral Fellow",
+      "currentInstitution": "Berkeley Center for Theoretical Physics"
+    },
+    {
+      "name": "Eddie Schlafly",
+      "placement": "Postdoctoral Fellow, Lawrence Berkeley National Laboratory",
+      "yearOfDeparture": "2012",
+      "currentTitle": "Postdoctoral Fellow",
+      "currentInstitution": "Lawrence Berkeley National Laboratory"
+    },
+    {
+      "name": "Meng Su",
+      "placement": "Postdoctoral Fellow, MIT",
+      "yearOfDeparture": "2012",
+      "currentTitle": "Postdoctoral Fellow",
+      "currentInstitution": "MIT"
+    },
+    {
+      "name": "Sui Ann Mao",
+      "placement": "Postdoctoral Fellow, University of Wisconsin - Madison",
+      "yearOfDeparture": "2011",
+      "currentTitle": "Postdoctoral Fellow",
+      "currentInstitution": "University of Wisconsin - Madison"
+    },
+    {
+      "name": "Robert Marcus",
+      "placement": "Systems Engineer, Northrup Grumman Corp.",
+      "yearOfDeparture": "2011",
+      "currentTitle": "Systems Engineer",
+      "currentInstitution": "Northrup Grumman Corp."
+    },
+    {
+      "name": "Roman Shcherbakov",
+      "placement": "Software Engineer, Teradata",
+      "yearOfDeparture": "2011",
+      "currentTitle": "Software Engineer",
+      "currentInstitution": "Teradata"
+    },
+    {
+      "name": "Svetlin Tassev",
+      "placement": "Physics Teacher, Braintree High School, MA",
+      "yearOfDeparture": "2011",
+      "currentTitle": "Physics Teacher",
+      "currentInstitution": "Braintree High School, MA"
+    },
+    {
+      "name": "Stephanie Bush",
+      "placement": "Research Scientist, Industry",
+      "yearOfDeparture": "2010",
+      "currentTitle": "Research Scientist",
+      "currentInstitution": "Industry"
+    },
+    {
+      "name": "Claude-Andre Faucher-Giguere",
+      "placement": "Assistant Professor, Northwestern University",
+      "yearOfDeparture": "2010",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "Northwestern University"
+    },
+    {
+      "name": "Cesar Fuentes",
+      "placement": "Assistant Professor, CATA, Universidad de Chile",
+      "yearOfDeparture": "2010",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "CATA, Universidad de Chile"
+    },
+    {
+      "name": "Joey Munoz",
+      "placement": "Postdoctoral Fellow, UCSB",
+      "yearOfDeparture": "2010",
+      "currentTitle": "Postdoctoral Fellow",
+      "currentInstitution": "UCSB"
+    },
+    {
+      "name": "Ryan O'Leary",
+      "placement": "Postdoctoral Fellow, UC Berkeley",
+      "yearOfDeparture": "2010",
+      "currentTitle": "Postdoctoral Fellow",
+      "currentInstitution": "UC Berkeley"
+    },
+    {
+      "name": "Tracey Slatyer",
+      "placement": "Assistant Professor, M.I.T",
+      "yearOfDeparture": "2010",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "M.I.T"
+    },
+    {
+      "name": "Alekandre (Sasha) Tchekhovskoi",
+      "placement": "Postdoctoral Fellow, UC Berkeley",
+      "yearOfDeparture": "2010",
+      "currentTitle": "Postdoctoral Fellow",
+      "currentInstitution": "UC Berkeley"
+    },
+    {
+      "name": "Miguel de Val Borro",
+      "placement": "Postdoctoral Fellow, Princeton, HATSouth Survey",
+      "yearOfDeparture": "2009",
+      "currentTitle": "Postdoctoral Fellow",
+      "currentInstitution": "Princeton, HATSouth Survey"
+    },
+    {
+      "name": "Matthew McQuinn",
+      "placement": "Assistant Professor, University of Washington",
+      "yearOfDeparture": "2009",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "University of Washington"
+    },
+    {
+      "name": "Eliza (Miller-Ricci) Kempton",
+      "placement": "Assistant Professor, Grinnell College",
+      "yearOfDeparture": "2009",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "Grinnell College"
+    },
+    {
+      "name": "Kaloyan Penev",
+      "placement": "Associate Research Scholar, Princeton University",
+      "yearOfDeparture": "2009",
+      "currentTitle": "Associate Research Scholar",
+      "currentInstitution": "Princeton University"
+    },
+    {
+      "name": "Randall Cooper",
+      "placement": "Data Scientist, Goldman Sachs",
+      "yearOfDeparture": "2008",
+      "currentTitle": "Data Scientist",
+      "currentInstitution": "Goldman Sachs"
+    },
+    {
+      "name": "Joel Hartman",
+      "placement": "Associate Research Scholar, Princeton University",
+      "yearOfDeparture": "2008",
+      "currentTitle": "Associate Research Scholar",
+      "currentInstitution": "Princeton University"
+    },
+    {
+      "name": "Philip Hopkins",
+      "placement": "Assistant Professor, Caltech",
+      "yearOfDeparture": "2008",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "Caltech"
+    },
+    {
+      "name": "Rebecca Shafee",
+      "placement": "Postdoctoral Fellow in Genetics, Harvard Medical School",
+      "yearOfDeparture": "2008",
+      "currentTitle": "Postdoctoral Fellow in Genetics",
+      "currentInstitution": "Harvard Medical School"
+    },
+    {
+      "name": "Ryan Hickox",
+      "placement": "Assistant Professor, Dartmouth College",
+      "yearOfDeparture": "2007",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "Dartmouth College"
+    },
+    {
+      "name": "Oliver Zahn",
+      "placement": "Executive Director, Berkeley Center for Cosmological Physics",
+      "yearOfDeparture": "2007",
+      "currentTitle": "Executive Director",
+      "currentInstitution": "Berkeley Center for Cosmological Physics"
+    },
+    {
+      "name": "Brant Robertson",
+      "placement": "Associate Professor, University of Arizona",
+      "yearOfDeparture": "2006",
+      "currentTitle": "Associate Professor",
+      "currentInstitution": "University of Arizona"
+    },
+    {
+      "name": "Hannah Jang-Condell",
+      "placement": "Assistant Professor, University of Wyoming",
+      "yearOfDeparture": "2004",
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "University of Wyoming"
+    },
+    {
+      "name": "Feryal Ozel",
+      "placement": "Professor, University of Arizona",
+      "yearOfDeparture": "2002",
+      "currentTitle": "Professor",
+      "currentInstitution": "University of Arizona"
+    },
+    {
+      "name": "Kristen Menou",
+      "placement": "Associate Professor, Columbia University",
+      "yearOfDeparture": "1999",
+      "currentTitle": "Associate Professor",
+      "currentInstitution": "Columbia University"
+    },
+    {
+      "name": "Rosalba Perna",
+      "placement": "Associate Professor, University of Colorado",
+      "yearOfDeparture": "1999",
+      "currentTitle": "Associate Professor",
+      "currentInstitution": "University of Colorado"
+    },
+    {
+      "name": "Eliot Quataert",
+      "placement": "Professor, Director, Theoretical Astrophysics Center, UC Berkeley",
+      "yearOfDeparture": "1999",
+      "currentTitle": "Professor, Director",
+      "currentInstitution": "Theoretical Astrophysics Center, UC Berkeley"
+    },
+    {
+      "name": "Ann Esin",
+      "placement": "Professor, Director, Harvey Mudd College",
+      "yearOfDeparture": "1998",
+      "currentTitle": "Professor, Director",
+      "currentInstitution": "Harvey Mudd College"
+    },
+    {
+      "name": "Rohan Mahadevan",
+      "placement": "Vice-President, PayPal",
+      "yearOfDeparture": "1997",
+      "currentTitle": "Vice-President",
+      "currentInstitution": "PayPal"
+    }
+  ]
+}

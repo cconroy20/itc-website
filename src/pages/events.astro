@@ -1,0 +1,57 @@
+---
+import Base from "../layouts/Base.astro";
+import PageHero from "../components/PageHero.astro";
+
+// Recurring ITC event series. (A live calendar feed would populate "upcoming" here.)
+const series = [
+  { name: "ITC Luncheon", cadence: "Weekly", desc: "The flagship gathering of the ITC: an informal lunch where members and visitors present and debate new results in theoretical astrophysics." },
+  { name: "ITC Seminar", cadence: "Weekly", desc: "Invited talks from leading researchers around the world spanning the breadth of theoretical and computational astrophysics." },
+  { name: "ITC Colloquia", cadence: "Termly", desc: "Broad-audience colloquia featuring distinguished speakers on major developments in the field." },
+  { name: "Pizza Lunches", cadence: "Weekly", desc: "Casual, student- and postdoc-driven discussions over lunch — a forum for works in progress and open questions." },
+  { name: "Special Seminars", cadence: "As scheduled", desc: "Additional talks arranged around visiting scientists and timely results." },
+  { name: "Sackler Conference", cadence: "Annual", desc: "A major annual conference bringing the international community together around a focused theme in astrophysics." },
+];
+---
+<Base title="Events" description="Seminars, colloquia, luncheons, and conferences at the ITC.">
+  <PageHero
+    eyebrow="Events"
+    title="Talks, seminars &amp; gatherings"
+    lead="Through its seminars, colloquia, luncheons, and conferences, the ITC brings leading scholars from around the world to present ideas and pursue research."
+  />
+
+  <section class="section">
+    <div class="container">
+      <div class="grid grid--2 series">
+        {series.map((s) => (
+          <article class="ev card">
+            <span class="ev__cadence">{s.cadence}</span>
+            <h3>{s.name}</h3>
+            <p>{s.desc}</p>
+          </article>
+        ))}
+      </div>
+
+      <div class="cal-note card">
+        <h3>Upcoming schedule</h3>
+        <p>A live calendar of upcoming talks and seminars would appear here, fed from the
+          department's events system. For now, see the CfA events calendar for current listings.</p>
+        <a href="https://www.cfa.harvard.edu/events" class="arrow-link">CfA events calendar</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .series { margin-bottom: 2.5rem; }
+  .ev { padding: 1.6rem; }
+  .ev__cadence {
+    display: inline-block; font-size: .72rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .08em; color: var(--accent); background: var(--accent-soft);
+    padding: .2rem .6rem; border-radius: 100px; margin-bottom: .75rem;
+  }
+  .ev h3 { margin: 0 0 .4rem; }
+  .ev p { color: var(--ink-soft); font-size: .92rem; margin: 0; }
+  .cal-note { padding: 1.75rem; background: var(--bg-soft); }
+  .cal-note h3 { margin: 0 0 .5rem; }
+  .cal-note p { color: var(--ink-soft); max-width: 60ch; }
+</style>

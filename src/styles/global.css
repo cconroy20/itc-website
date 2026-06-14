@@ -1,0 +1,144 @@
+/* ============================================================
+   ITC — global design system
+   Clean, light, academic. Content-first.
+   ============================================================ */
+
+:root {
+  /* Palette */
+  --bg:            #ffffff;
+  --bg-soft:       #f7f8fa;
+  --bg-sky:        #eef2f7;
+  --ink:           #16181d;   /* near-black body text */
+  --ink-soft:      #4a4f59;   /* secondary text */
+  --ink-faint:     #80868f;   /* captions, meta */
+  --line:          #e3e6eb;   /* hairlines */
+  --accent:        #8c1515;   /* deep crimson — Harvard-adjacent, restrained */
+  --accent-ink:    #6f1010;
+  --accent-soft:   #f6ecec;
+  --link:          #1f4e8c;   /* calm academic blue for inline links */
+
+  /* Type */
+  --font-serif: "Source Serif 4", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --font-sans:  "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  /* Rhythm */
+  --maxw: 1120px;
+  --maxw-prose: 720px;
+  --gap: 1.5rem;
+  --radius: 10px;
+  --shadow: 0 1px 2px rgba(20,24,29,.05), 0 6px 24px rgba(20,24,29,.06);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  line-height: 1.18;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 .5em;
+  letter-spacing: -0.01em;
+}
+h1 { font-size: clamp(2rem, 4vw, 3rem); }
+h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); }
+h3 { font-size: 1.25rem; }
+
+p { margin: 0 0 1rem; }
+
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+img { max-width: 100%; display: block; }
+
+.container {
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 4vw, 2.5rem);
+}
+
+.prose { max-width: var(--maxw-prose); }
+.prose p { color: var(--ink-soft); }
+.prose h2 { margin-top: 2.2rem; }
+
+.eyebrow {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: .75rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0 0 .75rem;
+}
+
+.section { padding-block: clamp(3rem, 7vw, 5.5rem); }
+.section--soft { background: var(--bg-soft); }
+.section__head { margin-bottom: 2.5rem; max-width: 640px; }
+.section__head p { color: var(--ink-soft); font-size: 1.05rem; }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: .5rem;
+  font-family: var(--font-sans); font-weight: 600; font-size: .95rem;
+  padding: .7rem 1.2rem; border-radius: 8px;
+  border: 1px solid transparent; cursor: pointer;
+  transition: background .15s ease, border-color .15s ease, transform .05s ease;
+}
+.btn:hover { text-decoration: none; }
+.btn:active { transform: translateY(1px); }
+.btn--primary { background: var(--accent); color: #fff; }
+.btn--primary:hover { background: var(--accent-ink); }
+.btn--ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+.btn--ghost:hover { border-color: var(--ink-faint); background: var(--bg-soft); }
+
+.arrow-link {
+  display: inline-flex; align-items: center; gap: .35rem;
+  font-weight: 600; color: var(--accent);
+}
+.arrow-link::after { content: "→"; transition: transform .15s ease; }
+.arrow-link:hover { text-decoration: none; }
+.arrow-link:hover::after { transform: translateX(3px); }
+
+/* Cards */
+.card {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: box-shadow .18s ease, transform .18s ease, border-color .18s ease;
+}
+.card:hover { box-shadow: var(--shadow); transform: translateY(-2px); border-color: #d7dbe2; }
+
+/* Grids */
+.grid { display: grid; gap: var(--gap); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 900px) {
+  .grid--3, .grid--4 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .grid--2, .grid--3, .grid--4 { grid-template-columns: 1fr; }
+}
+
+.meta { color: var(--ink-faint); font-size: .85rem; }
+
+hr { border: none; border-top: 1px solid var(--line); margin: 2.5rem 0; }
+
+.skip-link {
+  position: absolute; left: -999px; top: 0;
+  background: var(--accent); color: #fff; padding: .6rem 1rem; z-index: 200;
+}
+.skip-link:focus { left: .5rem; top: .5rem; }

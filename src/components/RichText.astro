@@ -1,0 +1,30 @@
+---
+// Renders our lightly-structured text: paragraphs split on blank lines,
+// "## " headings, and "- " bullet lists. Keeps it dependency-free.
+const { text = "" } = Astro.props;
+const blocks = text.split(/\n\n+/).map((b) => b.trim()).filter(Boolean);
+
+function classify(block) {
+  const lines = block.split("\n").map((l) => l.trim());
+  if (lines.every((l) => l.startsWith("- "))) {
+    return { type: "ul", items: lines.map((l) => l.replace(/^- /, "")) };
+  }
+  if (block.startsWith("## ")) return { type: "h", text: block.replace(/^##\s*/, "") };
+  return { type: "p", text: block };
+}
+const rendered = blocks.map(classify);
+---
+<div class="richtext">
+  {rendered.map((b) =>
+    b.type === "h" ? <h3>{b.text}</h3>
+    : b.type === "ul" ? <ul>{b.items.map((i) => <li>{i}</li>)}</ul>
+    : <p>{b.text}</p>
+  )}
+</div>
+
+<style>
+  .richtext h3 { margin-top: 1.75rem; }
+  .richtext p { color: var(--ink-soft); }
+  .richtext ul { color: var(--ink-soft); padding-left: 1.2rem; margin: 0 0 1rem; }
+  .richtext li { margin-bottom: .35rem; }
+</style>

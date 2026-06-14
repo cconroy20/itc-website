@@ -1,0 +1,87 @@
+---
+import Base from "../../layouts/Base.astro";
+import PageHero from "../../components/PageHero.astro";
+import alumniData from "../../data/alumni.json";
+
+// Sort by year of departure, most recent first; undated entries last.
+const alumni = [...alumniData.alumni].sort((a, b) => {
+  const ya = parseInt(a.yearOfDeparture) || 0;
+  const yb = parseInt(b.yearOfDeparture) || 0;
+  return yb - ya;
+});
+---
+<Base title="Alumni" description="ITC alumni and where they are now — a record of our training and placement.">
+  <PageHero
+    eyebrow="People · Alumni"
+    title="Where our alumni are now"
+    lead={`Over ${alumni.length} former ITC members hold research and faculty positions around the world. The breadth of this record reflects the ITC's role in training the next generation of astrophysicists.`}
+  />
+
+  <section class="section">
+    <div class="container">
+      <div class="alumni-tools">
+        <input id="filter" type="search" placeholder="Filter by name or institution…" class="alumni-filter" />
+        <p class="meta" id="count">{alumni.length} alumni</p>
+      </div>
+
+      <table class="alumni-table">
+        <thead>
+          <tr><th>Name</th><th>Left</th><th>Current position</th><th>Institution</th></tr>
+        </thead>
+        <tbody id="alumni-rows">
+          {alumni.map((a) => (
+            <tr data-search={`${a.name} ${a.currentInstitution || ""} ${a.currentTitle || ""}`.toLowerCase()}>
+              <td class="al-name">{a.name}</td>
+              <td class="al-year meta">{a.yearOfDeparture || "—"}</td>
+              <td>{a.currentTitle || "—"}</td>
+              <td>{a.currentInstitution || "—"}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+</Base>
+
+<script is:inline>
+  const input = document.getElementById("filter");
+  const rows = Array.from(document.querySelectorAll("#alumni-rows tr"));
+  const count = document.getElementById("count");
+  input?.addEventListener("input", () => {
+    const q = input.value.trim().toLowerCase();
+    let shown = 0;
+    rows.forEach((r) => {
+      const match = !q || r.dataset.search.includes(q);
+      r.style.display = match ? "" : "none";
+      if (match) shown++;
+    });
+    count.textContent = `${shown} alumni`;
+  });
+</script>
+
+<style>
+  .alumni-tools { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1.25rem; flex-wrap: wrap; }
+  .alumni-filter {
+    font: inherit; font-size: .95rem; padding: .6rem .9rem; min-width: 280px;
+    border: 1px solid var(--line); border-radius: 8px; background: var(--bg);
+  }
+  .alumni-filter:focus { outline: 2px solid var(--accent); border-color: var(--accent); }
+
+  .alumni-table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+  .alumni-table thead th {
+    text-align: left; font-family: var(--font-sans); font-weight: 700; font-size: .78rem;
+    text-transform: uppercase; letter-spacing: .06em; color: var(--ink-faint);
+    padding: .6rem .75rem; border-bottom: 2px solid var(--line);
+  }
+  .alumni-table td { padding: .7rem .75rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .alumni-table tbody tr:hover { background: var(--bg-soft); }
+  .al-name { font-weight: 600; }
+  .al-year { white-space: nowrap; }
+  @media (max-width: 640px) {
+    .alumni-table thead { display: none; }
+    .alumni-table, .alumni-table tbody, .alumni-table tr, .alumni-table td { display: block; width: 100%; }
+    .alumni-table tr { padding: .75rem 0; border-bottom: 1px solid var(--line); }
+    .alumni-table td { border: none; padding: .1rem 0; }
+    .al-name { font-size: 1.05rem; }
+  }
+</style>

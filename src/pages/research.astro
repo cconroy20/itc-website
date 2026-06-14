@@ -1,0 +1,61 @@
+---
+import Base from "../layouts/Base.astro";
+import PageHero from "../components/PageHero.astro";
+import RichText from "../components/RichText.astro";
+import research from "../data/research.json";
+
+const areas = research.areas;
+---
+<Base title="Research" description="Research at the ITC spans galaxies & cosmology, gravity, high-energy astrophysics, planetary astronomy, and stars.">
+  <PageHero eyebrow="Research" title="Research at the ITC" lead={research.intro} />
+
+  <nav class="jump container" aria-label="Jump to area">
+    {areas.map((a) => <a href={`#${a.slug}`} class="jump__link">{a.name}</a>)}
+  </nav>
+
+  <div class="section">
+    <div class="container areas-list">
+      {areas.map((a, i) => (
+        <section class="area-block" id={a.slug}>
+          <div class="area-block__head">
+            <span class="area-block__num">{String(i + 1).padStart(2, "0")}</span>
+            <h2>{a.name}</h2>
+          </div>
+          <div class="area-block__body prose">
+            <RichText text={a.body} />
+            {a.people && a.people.length > 0 && (
+              <p class="area-block__people">
+                <strong>Faculty &amp; researchers:</strong> {a.people.join(", ")}
+              </p>
+            )}
+          </div>
+        </section>
+      ))}
+    </div>
+  </div>
+</Base>
+
+<style>
+  .jump {
+    display: flex; gap: .5rem; flex-wrap: wrap;
+    padding-block: 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 72px; background: rgba(255,255,255,.92);
+    backdrop-filter: blur(8px); z-index: 50;
+  }
+  .jump__link {
+    font-size: .85rem; font-weight: 600; color: var(--ink-soft);
+    padding: .35rem .75rem; border: 1px solid var(--line); border-radius: 100px;
+  }
+  .jump__link:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
+
+  .areas-list { display: flex; flex-direction: column; gap: 3.5rem; }
+  .area-block { display: grid; grid-template-columns: 280px 1fr; gap: 2.5rem; scroll-margin-top: 140px; }
+  .area-block__head { position: sticky; top: 140px; align-self: start; }
+  .area-block__num { font-family: var(--font-serif); color: var(--accent); font-size: 1rem; font-weight: 700; }
+  .area-block__head h2 { margin: .25rem 0 0; }
+  .area-block__people { margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--line); font-size: .92rem; color: var(--ink-soft); }
+  @media (max-width: 800px) {
+    .area-block { grid-template-columns: 1fr; gap: 1rem; }
+    .area-block__head { position: static; }
+  }
+</style>

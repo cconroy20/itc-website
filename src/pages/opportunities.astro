@@ -1,0 +1,75 @@
+---
+import Base from "../layouts/Base.astro";
+import PageHero from "../components/PageHero.astro";
+import RichText from "../components/RichText.astro";
+import pages from "../data/pages.json";
+
+const { postdoctoralFellowships, predoctoralFellowships, sabbaticalVisitors } = pages;
+
+const tracks = [
+  { key: "postdoc", title: "Postdoctoral Fellowships", data: postdoctoralFellowships,
+    blurb: "Prize fellowships for outstanding early-career theorists, with the freedom to pursue an independent research program." },
+  { key: "predoc", title: "Predoctoral Fellowships", data: predoctoralFellowships,
+    blurb: "Opportunities for exceptional students to pursue doctoral research in theoretical astrophysics at the CfA." },
+  { key: "sabbatical", title: "Sabbatical Visitors", data: sabbaticalVisitors,
+    blurb: "Visiting appointments for established researchers spending sabbatical time within the ITC community." },
+];
+---
+<Base title="Opportunities" description="Postdoctoral and predoctoral fellowships and visiting opportunities at the ITC.">
+  <PageHero
+    eyebrow="Opportunities"
+    title="Join the ITC"
+    lead="The ITC recruits outstanding scientists at every career stage. Our fellows go on to lead research groups around the world — see where our alumni are now."
+  />
+
+  <section class="section">
+    <div class="container">
+      <div class="tracks">
+        {tracks.map((t) => (
+          <a href={`#${t.key}`} class="track card">
+            <h3>{t.title}</h3>
+            <p>{t.blurb}</p>
+            <span class="arrow-link">Details</span>
+          </a>
+        ))}
+      </div>
+
+      <div class="placement card">
+        <div>
+          <h3>An exceptional placement record</h3>
+          <p>ITC alumni hold faculty positions and research leadership roles at institutions worldwide.</p>
+        </div>
+        <a href="/people/alumni" class="btn btn--primary">See our alumni</a>
+      </div>
+
+      <div class="details">
+        {tracks.map((t) => (
+          <section id={t.key} class="detail prose">
+            <h2>{t.title}</h2>
+            <RichText text={t.data.body} />
+          </section>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .tracks { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap); margin-bottom: 2rem; }
+  .track { padding: 1.6rem; display: flex; flex-direction: column; gap: .5rem; color: inherit; }
+  .track:hover { text-decoration: none; }
+  .track h3 { margin: 0; }
+  .track p { color: var(--ink-soft); font-size: .92rem; flex: 1; margin: 0; }
+  @media (max-width: 800px) { .tracks { grid-template-columns: 1fr; } }
+
+  .placement {
+    display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap;
+    padding: 1.75rem; background: var(--accent-soft); border-color: #e7cfcf; margin-bottom: 3.5rem;
+  }
+  .placement h3 { margin: 0 0 .25rem; }
+  .placement p { margin: 0; color: var(--ink-soft); }
+
+  .details { display: flex; flex-direction: column; gap: 3rem; max-width: var(--maxw-prose); }
+  .detail { scroll-margin-top: 96px; }
+  .detail + .detail { padding-top: 2.5rem; border-top: 1px solid var(--line); }
+</style>
