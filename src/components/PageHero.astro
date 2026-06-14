@@ -4,19 +4,24 @@ const { eyebrow, title, lead } = Astro.props;
 <section class="page-hero">
   <div class="container">
     {eyebrow && <p class="eyebrow">{eyebrow}</p>}
-    <h1>{title}</h1>
+    <h1 set:html={title} />
     {lead && <p class="page-hero__lead">{lead}</p>}
   </div>
 </section>
 
 <style>
   .page-hero {
+    position: relative;
     border-bottom: 1px solid var(--line);
     background:
-      radial-gradient(50% 80% at 90% 0%, rgba(140,21,21,.05), transparent 70%),
+      radial-gradient(46% 90% at 92% -10%, rgba(124,58,237,.07), transparent 66%),
       var(--bg-soft);
-    padding-block: clamp(2.5rem, 6vw, 4rem) clamp(2rem, 4vw, 2.75rem);
+    padding-block: clamp(2.75rem, 6vw, 4rem) clamp(2rem, 4vw, 2.75rem);
   }
-  .page-hero h1 { margin: 0; }
-  .page-hero__lead { color: var(--ink-soft); font-size: 1.1rem; max-width: 60ch; margin: .75rem 0 0; }
+  .page-hero::before {
+    content: ""; position: absolute; left: 0; top: 0; height: 3px; width: clamp(64px, 12vw, 140px);
+    background: var(--grad);
+  }
+  .page-hero h1 { margin: 0; letter-spacing: -0.025em; }
+  .page-hero__lead { color: var(--ink-soft); font-size: 1.1rem; max-width: 60ch; margin: .85rem 0 0; }
 </style>

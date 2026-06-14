@@ -13,7 +13,7 @@ const isActive = (href) => path === href || (href !== "/" && path.startsWith(hre
 <header class="site-header">
   <div class="container site-header__inner">
     <a class="brand" href="/">
-      <span class="brand__mark" aria-hidden="true">ITC</span>
+      <span class="brand__mark" aria-hidden="true"><span>ITC</span></span>
       <span class="brand__text">
         <strong>Institute for Theory &amp; Computation</strong>
         <small>Center for Astrophysics · Harvard &amp; Smithsonian</small>
@@ -50,23 +50,40 @@ const isActive = (href) => path === href || (href !== "/" && path.startsWith(hre
   .brand { display: flex; align-items: center; gap: .75rem; color: var(--ink); }
   .brand:hover { text-decoration: none; }
   .brand__mark {
-    font-family: var(--font-serif); font-weight: 700; font-size: 1.1rem;
-    color: #fff; background: var(--accent);
-    width: 42px; height: 42px; border-radius: 8px;
-    display: grid; place-items: center; letter-spacing: .02em;
-    flex-shrink: 0;
+    font-family: var(--font-mono); font-weight: 500; font-size: .98rem;
+    color: #fff; background: var(--ink);
+    width: 40px; height: 40px; border-radius: var(--radius);
+    display: grid; place-items: center; letter-spacing: .01em;
+    flex-shrink: 0; position: relative; overflow: hidden;
   }
+  .brand__mark::after {
+    content: ""; position: absolute; inset: 0;
+    background: var(--grad); opacity: 0; transition: opacity .2s ease;
+  }
+  .brand:hover .brand__mark::after { opacity: 1; }
+  .brand__mark > * { position: relative; z-index: 1; }
   .brand__text { display: flex; flex-direction: column; line-height: 1.15; }
   .brand__text strong { font-family: var(--font-serif); font-size: .98rem; font-weight: 600; }
-  .brand__text small { color: var(--ink-faint); font-size: .72rem; }
+  .brand__text small {
+    color: var(--ink-faint); font-size: .68rem;
+    font-family: var(--font-mono); letter-spacing: .02em;
+  }
 
   .site-nav { display: flex; align-items: center; gap: .35rem; }
   .site-nav__link {
-    color: var(--ink-soft); font-weight: 500; font-size: .95rem;
-    padding: .5rem .75rem; border-radius: 6px;
+    position: relative;
+    color: var(--ink-soft); font-weight: 500; font-size: .94rem;
+    padding: .5rem .35rem; margin-inline: .4rem; border-radius: 0;
   }
-  .site-nav__link:hover { color: var(--ink); background: var(--bg-soft); text-decoration: none; }
-  .site-nav__link.is-active { color: var(--accent); font-weight: 600; }
+  .site-nav__link::after {
+    content: ""; position: absolute; left: .35rem; right: .35rem; bottom: -2px;
+    height: 2px; background: var(--grad); transform: scaleX(0); transform-origin: left;
+    transition: transform .18s ease;
+  }
+  .site-nav__link:hover { color: var(--ink); text-decoration: none; }
+  .site-nav__link:hover::after { transform: scaleX(1); }
+  .site-nav__link.is-active { color: var(--ink); font-weight: 600; }
+  .site-nav__link.is-active::after { transform: scaleX(1); }
   .site-nav__cta { margin-left: .5rem; padding: .5rem 1rem; }
 
   .nav-toggle__btn { display: none; }
@@ -86,7 +103,9 @@ const isActive = (href) => path === href || (href !== "/" && path.startsWith(hre
       display: none; box-shadow: var(--shadow);
     }
     .nav-toggle:checked ~ .site-nav { display: flex; }
-    .site-nav__link { padding: .75rem; font-size: 1rem; }
+    .site-nav__link { padding: .75rem; margin-inline: 0; font-size: 1rem; }
+    .site-nav__link::after { display: none; }
+    .site-nav__link:hover { background: var(--bg-soft); }
     .site-nav__cta { margin: .5rem 0 0; justify-content: center; }
   }
 </style>

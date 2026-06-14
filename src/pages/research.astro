@@ -18,7 +18,7 @@ const areas = research.areas;
       {areas.map((a, i) => (
         <section class="area-block" id={a.slug}>
           <div class="area-block__head">
-            <span class="area-block__num">{String(i + 1).padStart(2, "0")}</span>
+            <span class="area-block__num mono">{String(i + 1).padStart(2, "0")} / 05</span>
             <h2>{a.name}</h2>
           </div>
           <div class="area-block__body prose">
@@ -43,15 +43,16 @@ const areas = research.areas;
     backdrop-filter: blur(8px); z-index: 50;
   }
   .jump__link {
-    font-size: .85rem; font-weight: 600; color: var(--ink-soft);
-    padding: .35rem .75rem; border: 1px solid var(--line); border-radius: 100px;
+    font-family: var(--font-mono); font-size: .76rem; font-weight: 400;
+    text-transform: uppercase; letter-spacing: .04em; color: var(--ink-soft);
+    padding: .38rem .7rem; border: 1px solid var(--line); border-radius: var(--radius);
   }
-  .jump__link:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
+  .jump__link:hover { color: var(--accent-ink); border-color: var(--accent-line); background: var(--accent-soft); text-decoration: none; }
 
   .areas-list { display: flex; flex-direction: column; gap: 3.5rem; }
   .area-block { display: grid; grid-template-columns: 280px 1fr; gap: 2.5rem; scroll-margin-top: 140px; }
   .area-block__head { position: sticky; top: 140px; align-self: start; }
-  .area-block__num { font-family: var(--font-serif); color: var(--accent); font-size: 1rem; font-weight: 700; }
+  .area-block__num { color: var(--ink-faint); font-size: .76rem; letter-spacing: .06em; }
   .area-block__head h2 { margin: .25rem 0 0; }
   .area-block__people { margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--line); font-size: .92rem; color: var(--ink-soft); }
   @media (max-width: 800px) {

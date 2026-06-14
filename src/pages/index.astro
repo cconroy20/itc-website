@@ -16,7 +16,7 @@ const memberCount = people.groups
   <section class="hero">
     <div class="container hero__inner">
       <p class="eyebrow">Center for Astrophysics · Harvard &amp; Smithsonian</p>
-      <h1 class="hero__title">Theoretical&nbsp;astrophysics, computed&nbsp;at scale.</h1>
+      <h1 class="hero__title">Theoretical astrophysics,<br /><span class="hero__accent">computed at scale.</span></h1>
       <p class="hero__lead">
         The Institute for Theory and Computation advances our understanding of the universe
         through computation and analysis, creates a forum for discovery in theoretical
@@ -48,8 +48,9 @@ const memberCount = people.groups
           theoretical and computational frontier of modern astrophysics.</p>
       </div>
       <div class="grid grid--3 areas">
-        {areas.map((a) => (
+        {areas.map((a, i) => (
           <a href={`/research#${a.slug}`} class="area card">
+            <span class="area__num mono">{String(i + 1).padStart(2, "0")}</span>
             <h3>{a.name}</h3>
             <p>{a.body.split("\n\n")[0].slice(0, 130)}{a.body.length > 130 ? "…" : ""}</p>
             <span class="arrow-link">Learn more</span>
@@ -97,38 +98,69 @@ const memberCount = people.groups
   /* Hero */
   .hero { position: relative; overflow: hidden; background: var(--bg); }
   .hero__inner { position: relative; z-index: 1; padding-block: clamp(3.5rem, 9vw, 7rem) clamp(2.5rem, 5vw, 3.5rem); max-width: 820px; }
-  .hero__title { font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1.05; margin-bottom: 1.25rem; }
+  .hero__title { font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1.04; margin-bottom: 1.25rem; letter-spacing: -0.03em; }
+  .hero__accent {
+    background: var(--grad); -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: transparent;
+  }
   .hero__lead { font-size: clamp(1.05rem, 1.6vw, 1.3rem); color: var(--ink-soft); max-width: 640px; }
   .hero__actions { display: flex; gap: .75rem; margin-top: 2rem; flex-wrap: wrap; }
   .hero__glow {
     position: absolute; inset: 0; z-index: 0; pointer-events: none;
     background:
-      radial-gradient(60% 70% at 85% 10%, rgba(140,21,21,.06), transparent 70%),
-      radial-gradient(50% 60% at 10% 90%, rgba(31,78,140,.06), transparent 70%);
+      radial-gradient(55% 70% at 88% 0%, rgba(124,58,237,.10), transparent 68%),
+      radial-gradient(55% 65% at 5% 100%, rgba(79,70,229,.08), transparent 70%);
   }
 
   /* Stats */
   .stats {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
-    padding-block: 1.5rem 2.5rem; border-bottom: 1px solid var(--line);
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+    padding-block: 0; border-bottom: 1px solid var(--line);
+    background: var(--line);
   }
-  .stat { display: flex; flex-direction: column; gap: .15rem; }
-  .stat__num { font-family: var(--font-serif); font-size: clamp(1.6rem, 3vw, 2.3rem); font-weight: 700; color: var(--ink); }
-  .stat__label { color: var(--ink-faint); font-size: .85rem; }
+  .stat {
+    display: flex; flex-direction: column; gap: .2rem;
+    background: var(--bg); padding: 1.75rem 0 2rem;
+  }
+  .stat__num {
+    font-family: var(--font-mono); font-variant-numeric: tabular-nums;
+    font-size: clamp(1.5rem, 3vw, 2.1rem); font-weight: 500; color: var(--ink);
+    letter-spacing: -0.02em;
+  }
+  .stat__label {
+    color: var(--ink-faint); font-size: .72rem; font-family: var(--font-mono);
+    text-transform: uppercase; letter-spacing: .08em;
+  }
   @media (max-width: 560px) { .stats { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; } }
 
   /* Research areas */
-  .areas .area { padding: 1.5rem; display: flex; flex-direction: column; gap: .5rem; color: inherit; }
+  .areas .area { padding: 1.6rem; display: flex; flex-direction: column; gap: .5rem; color: inherit; position: relative; }
   .areas .area:hover { text-decoration: none; }
+  .areas .area::before {
+    content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 2px;
+    background: var(--grad); transform: scaleX(0); transform-origin: left;
+    transition: transform .2s ease;
+  }
+  .areas .area:hover::before { transform: scaleX(1); }
+  .areas .area__num { color: var(--ink-faint); font-size: .78rem; }
   .areas .area h3 { margin: 0; }
   .areas .area p { color: var(--ink-soft); font-size: .92rem; margin: 0; flex: 1; }
-  .areas .area .arrow-link { font-size: .9rem; margin-top: .25rem; }
+  .areas .area .arrow-link { margin-top: .35rem; }
 
   .section__head--row { display: flex; align-items: flex-end; justify-content: space-between; max-width: none; }
 
   /* CTA */
-  .cta { background: var(--ink); color: #e7e9ee; }
+  .cta { background: var(--ink); color: #e7e9ee; position: relative; overflow: hidden; }
+  .cta::before {
+    content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px;
+    background: var(--grad);
+  }
+  .cta::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(50% 120% at 100% 0%, rgba(124,58,237,.22), transparent 60%);
+  }
   .cta__inner {
+    position: relative; z-index: 1;
     display: flex; align-items: center; justify-content: space-between; gap: 2.5rem;
     padding-block: clamp(2.5rem, 5vw, 4rem); flex-wrap: wrap;
   }

@@ -7,7 +7,7 @@ const fmt = date
 ---
 <article class="news card">
   <a href={url} class="news__link">
-    {fmt && <time class="news__date meta" datetime={date}>{fmt}</time>}
+    {fmt && <time class="news__date mono" datetime={date}>{fmt}</time>}
     <h3 class="news__title">{title}</h3>
     {excerpt && <p class="news__excerpt">{excerpt}</p>}
     <span class="arrow-link news__more">Read more</span>
@@ -18,7 +18,7 @@ const fmt = date
   .news { height: 100%; }
   .news__link { display: flex; flex-direction: column; height: 100%; padding: 1.4rem 1.4rem 1.5rem; color: inherit; }
   .news__link:hover { text-decoration: none; }
-  .news__date { display: block; margin-bottom: .5rem; }
+  .news__date { display: block; margin-bottom: .6rem; font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-faint); }
   .news__title { font-size: 1.15rem; margin: 0 0 .5rem; }
   .news__excerpt { color: var(--ink-soft); font-size: .92rem; margin: 0 0 1rem; flex: 1; }
   .news__more { font-size: .9rem; }
