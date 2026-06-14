@@ -1,9 +1,8 @@
 ---
-const { eyebrow, title, lead } = Astro.props;
+const { title, lead } = Astro.props;
 ---
 <section class="page-hero">
   <div class="container">
-    {eyebrow && <p class="eyebrow">{eyebrow}</p>}
     <h1 set:html={title} />
     {lead && <p class="page-hero__lead">{lead}</p>}
   </div>

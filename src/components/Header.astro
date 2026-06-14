@@ -31,7 +31,6 @@ const isActive = (href) => path === href || (href !== "/" && path.startsWith(hre
           {item.label}
         </a>
       ))}
-      <a href="/opportunities" class="btn btn--primary site-nav__cta">Join the ITC</a>
     </nav>
   </div>
 </header>
@@ -84,7 +83,6 @@ const isActive = (href) => path === href || (href !== "/" && path.startsWith(hre
   .site-nav__link:hover::after { transform: scaleX(1); }
   .site-nav__link.is-active { color: var(--ink); font-weight: 600; }
   .site-nav__link.is-active::after { transform: scaleX(1); }
-  .site-nav__cta { margin-left: .5rem; padding: .5rem 1rem; }
 
   .nav-toggle__btn { display: none; }
 
@@ -106,6 +104,5 @@ const isActive = (href) => path === href || (href !== "/" && path.startsWith(hre
     .site-nav__link { padding: .75rem; margin-inline: 0; font-size: 1rem; }
     .site-nav__link::after { display: none; }
     .site-nav__link:hover { background: var(--bg-soft); }
-    .site-nav__cta { margin: .5rem 0 0; justify-content: center; }
   }
 </style>

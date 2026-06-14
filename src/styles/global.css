@@ -80,25 +80,6 @@ img { max-width: 100%; display: block; }
 .prose p { color: var(--ink-soft); }
 .prose h2 { margin-top: 2.2rem; }
 
-/* Eyebrow — monospace, the "computation" signal */
-.eyebrow {
-  font-family: var(--font-mono);
-  text-transform: uppercase;
-  letter-spacing: .14em;
-  font-size: .72rem;
-  font-weight: 500;
-  color: var(--accent);
-  margin: 0 0 1rem;
-  display: inline-flex;
-  align-items: center;
-  gap: .55rem;
-}
-.eyebrow::before {
-  content: "";
-  width: 1.4rem; height: 1px; background: var(--accent);
-  display: inline-block;
-}
-
 /* Monospace metadata utility */
 .mono {
   font-family: var(--font-mono);
