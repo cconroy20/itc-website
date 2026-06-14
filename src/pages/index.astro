@@ -73,22 +73,6 @@ const memberCount = people.groups
     </div>
   </section>
 
-  <!-- Recruiting CTA -->
-  <section class="cta">
-    <div class="container cta__inner">
-      <div>
-        <h2 class="cta__title">Build your research career at the ITC.</h2>
-        <p class="cta__lead">
-          Our prize postdoctoral and predoctoral fellowships bring outstanding early-career
-          scientists into one of the world's leading centers for theoretical astrophysics.
-        </p>
-      </div>
-      <div class="cta__actions">
-        <a href="/opportunities" class="btn btn--primary">View opportunities</a>
-        <a href="/people" class="btn btn--ghost btn--ghost-dark">Meet the people</a>
-      </div>
-    </div>
-  </section>
 </Base>
 
 <style>
@@ -145,25 +129,4 @@ const memberCount = people.groups
   .areas .area .arrow-link { margin-top: .35rem; }
 
   .section__head--row { display: flex; align-items: flex-end; justify-content: space-between; max-width: none; }
-
-  /* CTA */
-  .cta { background: var(--ink); color: #e7e9ee; position: relative; overflow: hidden; }
-  .cta::before {
-    content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px;
-    background: var(--grad);
-  }
-  .cta::after {
-    content: ""; position: absolute; inset: 0; pointer-events: none;
-    background: radial-gradient(50% 120% at 100% 0%, rgba(124,58,237,.22), transparent 60%);
-  }
-  .cta__inner {
-    position: relative; z-index: 1;
-    display: flex; align-items: center; justify-content: space-between; gap: 2.5rem;
-    padding-block: clamp(2.5rem, 5vw, 4rem); flex-wrap: wrap;
-  }
-  .cta__title { color: #fff; max-width: 18ch; }
-  .cta__lead { color: #b8bcc6; max-width: 46ch; margin: 0; }
-  .cta__actions { display: flex; gap: .75rem; flex-wrap: wrap; }
-  .btn--ghost-dark { color: #fff; border-color: rgba(255,255,255,.25); }
-  .btn--ghost-dark:hover { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.4); }
 </style>
