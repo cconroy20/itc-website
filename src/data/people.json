@@ -9,7 +9,8 @@
           "title": "Senior Lecturer in Astronomy",
           "researchInterests": "Dr. Chen received his PhD from Columbia University in 2003 and held postdoc positions at the University of Florida, Cornell University, and MIT. From 2009 to 2013, he was a Stephen Hawking Advanced Fellow at the University of Cambridge. Dr. Chen was an...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/xingang-chen-utd.jpg?itok=vG4cjGdd",
-          "photo": "/people/xingang-chen.jpg"
+          "photo": "/people/xingang-chen.jpg",
+          "website": "https://astronomy.fas.harvard.edu/people/xingang-chen"
         },
         {
           "name": "Liam Connor",
@@ -97,7 +98,8 @@
           "title": "Professor of Astronomy",
           "researchInterests": "The detection and characterization of exoplanets. Received his Ph.D. and M.S. in Astronomy from UC Berkeley, and his B.S. in physics from the University of Missouri-Rolla (now known as the Missouri University of Science and Technology)...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2026-06/ITC%20JOHNSON%20John%20Asher.jpg?itok=x0blmMAu",
-          "photo": "/people/john-asher-johnson.jpg"
+          "photo": "/people/john-asher-johnson.jpg",
+          "website": "https://astronomy.fas.harvard.edu/people/john-asher-johnson"
         },
         {
           "name": "Lisa Kewley",
@@ -105,7 +107,8 @@
           "title": "Professor of Astronomy · Director, Center for Astrophysics",
           "researchInterests": "Lisa Kewley is Director of the Center for Astrophysics | Harvard & Smithsonian. She is Director of the Smithsonian Astrophysical Observatory, Director of the Harvard College Observatory, and Professor of Astrophysics at the Harvard Department of Astronomy...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/lisa-kewley-lores.jpg?itok=JyjIbYNy",
-          "photo": "/people/lisa-kewley.jpg"
+          "photo": "/people/lisa-kewley.jpg",
+          "website": "https://www.cfa.harvard.edu/people/lisa-kewley"
         },
         {
           "name": "Avi Loeb",
