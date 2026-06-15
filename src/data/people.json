@@ -1,22 +1,6 @@
 {
   "groups": [
     {
-      "name": "ITC Director",
-      "people": [
-        {
-          "name": "Charlie Conroy",
-          "email": "cconroy@cfa.harvard.edu",
-          "title": "Professor of Astronomy · Director, ITC",
-          "roles": [
-            "Director, Institute for Theory and Computation (ITC)"
-          ],
-          "researchInterests": "Galaxy formation and evolution, connection between galaxies and dark matter halos, stellar population modeling, stellar evolution.",
-          "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2025-08/conroy.jpg?itok=WTgIQZLw",
-          "photo": "/people/charlie-conroy.jpg"
-        }
-      ]
-    },
-    {
       "name": "Senior ITC Members",
       "people": [
         {
@@ -33,7 +17,8 @@
           "title": "Assistant Professor of Astronomy",
           "researchInterests": "The origin of Fast Radio Bursts and their application to cosmology; the intersection of AI and astrophysics, in particular computer vision methods for astronomical imaging and ill-posed 3D reconstruction. To advance these subjects, I...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2026-06/ITC%20CONNOR%20Liam.jpg?itok=yhkbNHi0",
-          "photo": "/people/liam-connor.jpg"
+          "photo": "/people/liam-connor.jpg",
+          "website": "https://liamconnorastro.com/"
         },
         {
           "name": "Charlie Conroy",
@@ -44,7 +29,8 @@
           ],
           "researchInterests": "Galaxy formation and evolution, connection between galaxies and dark matter halos, stellar population modeling, stellar evolution.",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2025-08/conroy.jpg?itok=WTgIQZLw",
-          "photo": "/people/charlie-conroy.jpg"
+          "photo": "/people/charlie-conroy.jpg",
+          "website": "https://cconroy20.github.io/"
         },
         {
           "name": "Rosanne Di Stefano",
@@ -54,7 +40,8 @@
             "SAO Senior Astrophysicist"
           ],
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2026-06/ITC%20DISEFANO%20Rosanne.jpg?itok=bZ-56qXP",
-          "photo": "/people/rosanne-di-stefano.jpg"
+          "photo": "/people/rosanne-di-stefano.jpg",
+          "website": "http://rosanne-distefano.org/"
         },
         {
           "name": "Daniel Eisenstein",
@@ -62,7 +49,8 @@
           "title": "Paul C. Mangelsdorf Professor of Astronomy",
           "researchInterests": "Cosmology and extragalactic astronomy with a mix of theoretical and observational methods; the development of the baryon acoustic oscillation method to measure the cosmic distance scale and study dark energy. Professor Eisenstein...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2026-06/ITC%20EISENSTEIN%20Daniel.jpg?itok=_KwUb_3i",
-          "photo": "/people/daniel-eisenstein.jpg"
+          "photo": "/people/daniel-eisenstein.jpg",
+          "website": "https://deisenstein.scholars.harvard.edu/"
         },
         {
           "name": "Douglas Finkbeiner",
@@ -70,7 +58,8 @@
           "title": "Professor of Astronomy and of Physics",
           "researchInterests": "Professor Finkbeiner was born in Ann Arbor, Michigan in 1971. He graduated from Pioneer High School in 1989, and enrolled in the College of Engineering at the University of Michigan. His Freshman year he helped build the legendary Sunrunner and was active...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2026-06/ITC%20FINKBEINER%20Douglas.jpg?itok=SSjuzlbN",
-          "photo": "/people/douglas-finkbeiner.jpg"
+          "photo": "/people/douglas-finkbeiner.jpg",
+          "website": "https://lweb.cfa.harvard.edu/~dfinkbei"
         },
         {
           "name": "Alyssa  Goodman",
@@ -78,7 +67,8 @@
           "title": "Robert Wheeler Willson Professor of Applied Astronomy",
           "researchInterests": "Alyssa Goodman is the Robert Wheeler Willson Professor of Applied Astronomy at Harvard University , and a Research Associate of the Smithsonian Institution. Goodman's research and teaching interests span astronomy, data visualization, prediction, and...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2026-06/ITC%20GOODMAN%20Alyssa.jpg?itok=WkuCIHLD",
-          "photo": "/people/alyssa-goodman.jpg"
+          "photo": "/people/alyssa-goodman.jpg",
+          "website": "https://www.cfa.harvard.edu/~agoodman/"
         },
         {
           "name": "Lars Hernquist",
@@ -86,7 +76,8 @@
           "title": "Mallinckrodt Professor of Astrophysics",
           "researchInterests": "Theoretical studies of dynamical processes in cosmology and galaxy formation/galaxy evolution. Numerical simulations of stellar dynamical and hydrodynamical systems. Investigations of the physics of compact objects, particularly...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2026-06/ITC%20HERNQUIST%20Lars.jpg?itok=IIC6_Uvg",
-          "photo": "/people/lars-hernquist.jpg"
+          "photo": "/people/lars-hernquist.jpg",
+          "website": "https://www.hernquist.group/"
         },
         {
           "name": "Matthew Holman",
@@ -97,7 +88,8 @@
           ],
           "researchInterests": "Research Studies of the long-term dynamics of our solar system and extrasolar planetary systems. Observational surveys for Kuiper belt objects, Centaurs, and outer planet satellites using Kitt Peak National Observatory (KPNO), Cerro Tololo Inter-American...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2026-06/ITC%20HOLMAN%20Matthew.jpg?itok=4UI0WbMr",
-          "photo": "/people/matthew-holman.jpg"
+          "photo": "/people/matthew-holman.jpg",
+          "website": "https://lweb.cfa.harvard.edu/~mholman"
         },
         {
           "name": "John Asher Johnson",
@@ -125,7 +117,8 @@
           ],
           "researchInterests": "Avi Loeb is the Frank B. Baird Jr. Professor of Science at Harvard University. He is the Former Chair (2011-2020) of the Department of Astronomy; Founding Director of Harvard's Black Hole Initiative; and a Former Director of the Institute for Theory and...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2025-07/Avi%20Loeb%202025%20ITC%20Portrait.jpeg?itok=fT2lrmqU",
-          "photo": "/people/avi-loeb.jpg"
+          "photo": "/people/avi-loeb.jpg",
+          "website": "https://lweb.cfa.harvard.edu/~loeb/"
         },
         {
           "name": "Morgan MacLeod",
@@ -133,7 +126,8 @@
           "title": "Lecturer in Astronomy",
           "researchInterests": "Morgan MacLeod is a Lecturer in Astronomy whose research focuses on stellar encounters in binary systems and their imprints on the transient night sky. Morgan uses computational and simulation methods to trace close encounters of stars and compact objects...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2026-06/ITC%20MACLEOD%20Morgan.jpg?itok=h0Tpa5pb",
-          "photo": "/people/morgan-macleod.jpg"
+          "photo": "/people/morgan-macleod.jpg",
+          "website": "https://morganmacleod.net"
         },
         {
           "name": "Ramesh Narayan",
@@ -141,7 +135,8 @@
           "title": "Thomas Dudley Cabot Professor of the Natural Sciences",
           "researchInterests": "Gravitational lensing; accretion disks; black holes; gamma-ray bursts. Publications: astro-ph , ADS Additional Contact: Fax: (617) 495-7093",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2026-06/ITC%20NARAYAN%20Ramesh.jpg?itok=_1f-iu4F",
-          "photo": "/people/ramesh-narayan.jpg"
+          "photo": "/people/ramesh-narayan.jpg",
+          "website": "https://lweb.cfa.harvard.edu/~narayan/"
         },
         {
           "name": "Karin Öberg",
@@ -153,7 +148,8 @@
           ],
           "researchInterests": "The Öberg Astrochemistry Lab pursues laboratory ice experiments and astronomical observations that address how astrochemically important molecules form, and how they may evolve into larger molecules associated with the origins of life. An important aspect...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2026-06/ITC%20O%CC%88BERG%20Karin.jpg?itok=f_OPhjN5",
-          "photo": "/people/karin-berg.jpg"
+          "photo": "/people/karin-berg.jpg",
+          "website": "https://karinoberg.cfa.harvard.edu/"
         },
         {
           "name": "Fabio Pacucci",
@@ -164,7 +160,8 @@
           ],
           "researchInterests": "Theoretical and observational studies of black holes, including supermassive black holes, quasars, black hole seeds, intermediate-mass black holes, and wandering black holes. I am also involved in the development of next-generation...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2026-06/ITC%20PACUCCI%20Fabio.jpg?itok=iOfBtIB7",
-          "photo": "/people/fabio-pacucci.jpg"
+          "photo": "/people/fabio-pacucci.jpg",
+          "website": "https://www.fabiopacucci.com/"
         },
         {
           "name": "Christopher Stubbs",
@@ -175,7 +172,8 @@
           ],
           "researchInterests": "Foundations of gravitational physics, searches for dark matter, and observational cosmology. Christopher Stubbs is an experimental physicist working at the interface between particle physics, cosmology and gravitation. His interests...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/stubbs.jpg?itok=E2LZ-e3f",
-          "photo": "/people/christopher-stubbs.jpg"
+          "photo": "/people/christopher-stubbs.jpg",
+          "website": "https://stubbs.hsites.harvard.edu/"
         },
         {
           "name": "Ashley Villar",
@@ -183,7 +181,8 @@
           "title": "Assistant Professor of Astronomy",
           "researchInterests": "Theoretical and observational studies of extragalactic transients, including core-collapse supernovae and kilonovae. Development of statistical and deep learning methodologies for wide-field surveys, such as the Vera C. Rubin...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/ashley_villar_headshot_3.jpg?itok=Y_PaYBeJ",
-          "photo": "/people/ashley-villar.jpg"
+          "photo": "/people/ashley-villar.jpg",
+          "website": "https://ashleyvillar.com/"
         },
         {
           "name": "Catherine Zucker",
@@ -191,7 +190,8 @@
           "title": "Lecturer / SAO Astrophysicist",
           "researchInterests": "I am currently an astrophysicist at the Center for Astrophysics | Harvard & Smithsonian. Formerly, I was a NASA Hubble Fellowship Program Hubble Fellow working in the ISM* group at the Space Telescope Science Institute. I received my PhD from Harvard...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2026-06/ITC%20Zucker%20Catherine.jpg?itok=_noAHOfG",
-          "photo": "/people/catherine-zucker.jpg"
+          "photo": "/people/catherine-zucker.jpg",
+          "website": "https://catherinezucker.github.io/"
         }
       ]
     },
