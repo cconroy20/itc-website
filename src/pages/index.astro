@@ -101,9 +101,8 @@ const memberCount = people.groups
   }
   .stat {
     display: flex; flex-direction: column; align-items: center; gap: .35rem;
-    text-align: center; padding-inline: 1rem;
+    text-align: center;
   }
-  .stat + .stat { border-left: 1px solid var(--line); }
   .stat__num {
     font-family: var(--font-serif); font-variant-numeric: tabular-nums;
     font-size: clamp(1.9rem, 3.4vw, 2.6rem); font-weight: 600; color: var(--ink);
@@ -115,8 +114,6 @@ const memberCount = people.groups
   }
   @media (max-width: 560px) {
     .stats { grid-template-columns: repeat(2, 1fr); gap: 1.75rem 0; }
-    .stat + .stat { border-left: none; }
-    .stat:nth-child(even) { border-left: 1px solid var(--line); }
   }
 
   /* Research areas */
