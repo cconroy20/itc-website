@@ -7,12 +7,9 @@ import pages from "../data/pages.json";
 const { postdoctoralFellowships, predoctoralFellowships, sabbaticalVisitors } = pages;
 
 const tracks = [
-  { key: "postdoc", title: "Postdoctoral Fellowships", data: postdoctoralFellowships,
-    blurb: "Prize fellowships for outstanding early-career theorists, with the freedom to pursue an independent research program." },
-  { key: "predoc", title: "Predoctoral Fellowships", data: predoctoralFellowships,
-    blurb: "Opportunities for exceptional students to pursue doctoral research in theoretical astrophysics at the CfA." },
-  { key: "sabbatical", title: "Sabbatical Visitors", data: sabbaticalVisitors,
-    blurb: "Visiting appointments for established researchers spending sabbatical time within the ITC community." },
+  { key: "postdoc", title: "Postdoctoral Fellowships", data: postdoctoralFellowships },
+  { key: "predoc", title: "Predoctoral Fellowships", data: predoctoralFellowships },
+  { key: "sabbatical", title: "Sabbatical Visitors", data: sabbaticalVisitors },
 ];
 ---
 <Base title="Opportunities" description="Postdoctoral and predoctoral fellowships and visiting opportunities at the ITC.">
@@ -28,7 +25,6 @@ const tracks = [
         {tracks.map((t) => (
           <a href={`#${t.key}`} class="track card">
             <h3>{t.title}</h3>
-            <p>{t.blurb}</p>
             <span class="arrow-link">Details</span>
           </a>
         ))}
@@ -48,10 +44,9 @@ const tracks = [
 
 <style>
   .tracks { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap); margin-bottom: 2rem; }
-  .track { padding: 1.6rem; display: flex; flex-direction: column; gap: .5rem; color: inherit; }
+  .track { padding: 1.6rem; display: flex; flex-direction: column; gap: .75rem; color: inherit; }
   .track:hover { text-decoration: none; }
   .track h3 { margin: 0; }
-  .track p { color: var(--ink-soft); font-size: .92rem; flex: 1; margin: 0; }
   @media (max-width: 800px) { .tracks { grid-template-columns: 1fr; } }
 
   .details { display: flex; flex-direction: column; gap: 3rem; max-width: var(--maxw-prose); margin-top: 1rem; }
