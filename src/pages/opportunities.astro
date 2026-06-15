@@ -32,7 +32,7 @@ const tracks = [
 
       <div class="details">
         {tracks.map((t) => (
-          <section id={t.key} class="detail prose">
+          <section id={t.key} class="detail">
             <h2>{t.title}</h2>
             <RichText text={t.data.body} />
           </section>
@@ -49,7 +49,7 @@ const tracks = [
   .track h3 { margin: 0; }
   @media (max-width: 800px) { .tracks { grid-template-columns: 1fr; } }
 
-  .details { display: flex; flex-direction: column; gap: 3rem; max-width: var(--maxw-prose); margin-top: 1rem; }
+  .details { display: flex; flex-direction: column; gap: 3rem; max-width: 860px; margin-top: 1rem; }
   .detail { scroll-margin-top: 96px; }
   .detail + .detail { padding-top: 2.5rem; border-top: 1px solid var(--line); }
 </style>
