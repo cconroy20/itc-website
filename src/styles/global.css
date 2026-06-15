@@ -28,7 +28,7 @@
   --font-sans:  "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
   /* Rhythm */
-  --maxw: 1140px;
+  --maxw: 1280px;
   --maxw-prose: 700px;
   --gap: 1.5rem;
   --radius: 6px;        /* sharper corners */

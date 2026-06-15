@@ -87,9 +87,11 @@ const memberCount = people.groups
       linear-gradient(0deg, rgba(8,7,18,.55) 0%, transparent 45%);
   }
   .hero__inner {
-    position: relative; z-index: 1; max-width: 760px;
+    position: relative; z-index: 1;
     padding-block: clamp(5rem, 12vw, 9rem) clamp(5rem, 12vw, 9rem);
   }
+  .hero__inner .hero__title,
+  .hero__inner .hero__lead { max-width: 680px; }
   .hero__title {
     font-size: clamp(2.8rem, 6.5vw, 5rem); line-height: 1.02; margin-bottom: 1.4rem;
     letter-spacing: -0.035em; color: #fff;
