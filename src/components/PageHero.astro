@@ -1,11 +1,10 @@
 ---
-const { title, lead } = Astro.props;
+const { title } = Astro.props;
 ---
 <section class="page-hero">
   <div class="page-hero__stars" aria-hidden="true"></div>
   <div class="container">
     <h1 set:html={title} />
-    {lead && <p class="page-hero__lead">{lead}</p>}
   </div>
 </section>
 
@@ -16,7 +15,7 @@ const { title, lead } = Astro.props;
       radial-gradient(60% 120% at 85% -20%, rgba(124,58,237,.32), transparent 60%),
       radial-gradient(50% 120% at 5% 120%, rgba(79,70,229,.22), transparent 60%),
       linear-gradient(180deg, #14122b, #0b0a18);
-    padding-block: clamp(3rem, 7vw, 4.75rem) clamp(2.5rem, 5vw, 3.25rem);
+    padding-block: clamp(2.5rem, 5vw, 3.5rem);
   }
   /* tiling starfield */
   .page-hero__stars {
@@ -35,8 +34,4 @@ const { title, lead } = Astro.props;
   }
   .page-hero .container { position: relative; z-index: 1; }
   .page-hero h1 { margin: 0; color: #fff; letter-spacing: -0.025em; text-shadow: 0 2px 24px rgba(0,0,0,.4); }
-  .page-hero__lead {
-    color: rgba(255,255,255,.78); font-size: 1.1rem; max-width: 60ch; margin: .9rem 0 0;
-    text-shadow: 0 1px 14px rgba(0,0,0,.3);
-  }
 </style>
