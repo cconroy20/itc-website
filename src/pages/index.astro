@@ -34,7 +34,6 @@ const memberCount = people.groups
     <div class="container stats">
       <div class="stat"><span class="stat__num">2004</span><span class="stat__label">Founded</span></div>
       <div class="stat"><span class="stat__num">{memberCount}+</span><span class="stat__label">Members &amp; fellows</span></div>
-      <div class="stat"><span class="stat__num">5</span><span class="stat__label">Research areas</span></div>
       <div class="stat"><span class="stat__num">200+</span><span class="stat__label">Alumni worldwide</span></div>
     </div>
   </section>
@@ -117,7 +116,7 @@ const memberCount = people.groups
     border-bottom: 1px solid var(--line);
   }
   .stats {
-    display: grid; grid-template-columns: repeat(4, 1fr);
+    display: grid; grid-template-columns: repeat(3, 1fr);
     padding-block: clamp(1.75rem, 3vw, 2.5rem);
   }
   .stat {
@@ -133,8 +132,8 @@ const memberCount = people.groups
     color: var(--ink-faint); font-size: .74rem; font-family: var(--font-sans);
     font-weight: 500; text-transform: uppercase; letter-spacing: .08em;
   }
-  @media (max-width: 560px) {
-    .stats { grid-template-columns: repeat(2, 1fr); gap: 1.75rem 0; }
+  @media (max-width: 440px) {
+    .stats { grid-template-columns: 1fr; gap: 1.5rem; }
   }
 
   /* Research image tiles */
