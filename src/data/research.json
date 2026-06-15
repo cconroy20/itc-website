@@ -2,7 +2,7 @@
   "intro": "The ITC is a locus for much of the most rigorous and exciting research being done in theoretical astrophysics. Through its seminars, colloquiua, luncheons, and conferences, leading scholars in the fields of astrophysics come from the world around to present their ideas and pursue their research.",
   "areas": [
     {
-      "name": "Galaxies & Cosmology",
+      "name": "Cosmology",
       "slug": "galaxies-cosmology",
       "body": "Cosmic Microwave Background Radiation, Inflation, Formation and Evolution of Galaxies and their Nuclear Black Holes, Reionization in the Early Universe, First Stars and Galaxies, Gravitational Lensing, 21 cm Radiation in the Early Universe, Cosmological Parameters, Dark Matter and Dark Energy.\n\nCosmological Simulations produced at the ITC:\n\n- Moving Mesh Cosmology - M. Vogelsberger and D. Sijacki\n- Evolving Universe - P. Torrey and M. Vogelsberger\n- A physical model for cosmological simulations of galaxy formation - M. Vogelsberger et al.",
       "people": [
