@@ -4,6 +4,7 @@ import NewsCard from "../components/NewsCard.astro";
 import news from "../data/news.json";
 import research from "../data/research.json";
 import people from "../data/people.json";
+import { url } from "../lib/url.js";
 
 const recentNews = news.items.slice(0, 3);
 const areas = research.areas;
@@ -15,7 +16,7 @@ const memberCount = people.groups
   <!-- Hero -->
   <section class="hero">
     <div class="hero__media" aria-hidden="true">
-      <img src="/hero-bg.jpg" alt="" fetchpriority="high" />
+      <img src={url("/hero-bg.jpg")} alt="" fetchpriority="high" />
       <div class="hero__scrim"></div>
     </div>
     <div class="container hero__inner">
@@ -48,8 +49,8 @@ const memberCount = people.groups
       </div>
       <div class="grid grid--3 areas">
         {areas.map((a) => (
-          <a href={`/research#${a.slug}`} class="area-tile" data-reveal>
-            <img src={`/research/${a.slug}.jpg`} alt="" loading="lazy" />
+          <a href={`${url("/research")}#${a.slug}`} class="area-tile" data-reveal>
+            <img src={url(`/research/${a.slug}.jpg`)} alt="" loading="lazy" />
             <div class="area-tile__scrim"></div>
             <div class="area-tile__label">
               <h3>{a.name}</h3>
@@ -68,7 +69,7 @@ const memberCount = people.groups
         <div>
           <h2>Recent highlights</h2>
         </div>
-        <a href="/news" class="arrow-link">All news</a>
+        <a href={url("/news")} class="arrow-link">All news</a>
       </div>
       <div class="grid grid--3" data-reveal>
         {recentNews.map((item) => <NewsCard item={item} />)}

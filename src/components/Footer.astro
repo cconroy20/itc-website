@@ -1,4 +1,5 @@
 ---
+import { url } from "../lib/url.js";
 ---
 <footer class="site-footer">
   <div class="container site-footer__inner">
@@ -14,12 +15,12 @@
 
     <div class="site-footer__col">
       <h4>Explore</h4>
-      <a href="/about">About</a>
-      <a href="/people">People</a>
-      <a href="/research">Research</a>
-      <a href="/events">Events</a>
-      <a href="/opportunities">Opportunities</a>
-      <a href="/news">News</a>
+      <a href={url("/about")}>About</a>
+      <a href={url("/people")}>People</a>
+      <a href={url("/research")}>Research</a>
+      <a href={url("/events")}>Events</a>
+      <a href={url("/opportunities")}>Opportunities</a>
+      <a href={url("/news")}>News</a>
     </div>
 
     <div class="site-footer__col">

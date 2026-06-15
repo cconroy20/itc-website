@@ -3,6 +3,7 @@ import Base from "../layouts/Base.astro";
 import PageHero from "../components/PageHero.astro";
 import RichText from "../components/RichText.astro";
 import research from "../data/research.json";
+import { url } from "../lib/url.js";
 
 const areas = research.areas;
 ---
@@ -17,7 +18,7 @@ const areas = research.areas;
     {areas.map((a) => (
       <section class="area" id={a.slug} data-reveal>
         <div class="area__media">
-          <img src={`/research/${a.slug}.jpg`} alt={`${a.name} — illustrative astrophysics imagery`} loading="lazy" />
+          <img src={url(`/research/${a.slug}.jpg`)} alt={`${a.name} — illustrative astrophysics imagery`} loading="lazy" />
         </div>
         <div class="area__body">
           <h2>{a.name}</h2>

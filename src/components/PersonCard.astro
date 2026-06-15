@@ -1,4 +1,5 @@
 ---
+import { url } from "../lib/url.js";
 const { person } = Astro.props;
 const { name, email, title, photo, website } = person;
 const initials = name.split(/\s+/).map((n) => n[0]).slice(0, 2).join("").toUpperCase();
@@ -6,7 +7,7 @@ const initials = name.split(/\s+/).map((n) => n[0]).slice(0, 2).join("").toUpper
 <article class="person card">
   <div class="person__photo">
     {photo
-      ? <img src={photo} alt={name} loading="lazy" width="320" height="400" />
+      ? <img src={url(photo)} alt={name} loading="lazy" width="320" height="400" />
       : <div class="person__placeholder" aria-hidden="true">{initials}</div>}
   </div>
   <div class="person__body">
