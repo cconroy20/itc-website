@@ -18,10 +18,7 @@ const alumni = [...alumniData.alumni].sort((a, b) => {
 
   <section class="section">
     <div class="container">
-      <div class="alumni-tools">
-        <input id="filter" type="search" placeholder="Filter by name or institution…" class="alumni-filter" />
-        <p class="meta" id="count">{alumni.length} alumni</p>
-      </div>
+      <p class="meta alumni-count">{alumni.length} alumni</p>
 
       <table class="alumni-table">
         <thead>
@@ -29,7 +26,7 @@ const alumni = [...alumniData.alumni].sort((a, b) => {
         </thead>
         <tbody id="alumni-rows">
           {alumni.map((a) => (
-            <tr data-search={`${a.name} ${a.currentInstitution || ""} ${a.currentTitle || ""}`.toLowerCase()}>
+            <tr>
               <td class="al-name">{a.name}</td>
               <td class="al-year meta">{a.yearOfDeparture || "—"}</td>
               <td>{a.currentTitle || "—"}</td>
@@ -42,29 +39,8 @@ const alumni = [...alumniData.alumni].sort((a, b) => {
   </section>
 </Base>
 
-<script is:inline>
-  const input = document.getElementById("filter");
-  const rows = Array.from(document.querySelectorAll("#alumni-rows tr"));
-  const count = document.getElementById("count");
-  input?.addEventListener("input", () => {
-    const q = input.value.trim().toLowerCase();
-    let shown = 0;
-    rows.forEach((r) => {
-      const match = !q || r.dataset.search.includes(q);
-      r.style.display = match ? "" : "none";
-      if (match) shown++;
-    });
-    count.textContent = `${shown} alumni`;
-  });
-</script>
-
 <style>
-  .alumni-tools { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1.25rem; flex-wrap: wrap; }
-  .alumni-filter {
-    font: inherit; font-size: .95rem; padding: .6rem .9rem; min-width: 280px;
-    border: 1px solid var(--line); border-radius: 8px; background: var(--bg);
-  }
-  .alumni-filter:focus { outline: 2px solid var(--accent); border-color: var(--accent); }
+  .alumni-count { margin: 0 0 1.25rem; }
 
   .alumni-table { width: 100%; border-collapse: collapse; font-size: .92rem; }
   .alumni-table thead th {
