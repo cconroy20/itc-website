@@ -6,6 +6,7 @@ const nav = [
   { label: "Alumni", href: "/alumni" },
   { label: "Research", href: "/research" },
   { label: "Events", href: "/events" },
+  { label: "Frontiers", href: "/frontiers" },
   { label: "Opportunities", href: "/opportunities" },
   { label: "News", href: "/news" },
 ];
@@ -47,7 +48,7 @@ const isActive = (href) => path === href || (href !== "/" && path.startsWith(hre
   }
   .site-header__inner {
     display: flex; align-items: center; justify-content: space-between;
-    gap: clamp(1rem, 3vw, 2rem); min-height: 72px;
+    gap: clamp(.75rem, 2.5vw, 1.75rem); min-height: 72px;
   }
   .brand {
     display: flex; align-items: center; gap: .7rem; color: var(--ink);
@@ -71,14 +72,14 @@ const isActive = (href) => path === href || (href !== "/" && path.startsWith(hre
     font-family: var(--font-sans); font-weight: 500; letter-spacing: .01em;
   }
 
-  .site-nav { display: flex; align-items: center; gap: .2rem; }
+  .site-nav { display: flex; align-items: center; gap: .1rem; }
   .site-nav__link {
     position: relative;
-    color: var(--ink-soft); font-weight: 500; font-size: .92rem;
-    padding: .5rem .25rem; margin-inline: .22rem; border-radius: 0;
+    color: var(--ink-soft); font-weight: 500; font-size: .86rem;
+    padding: .5rem .2rem; margin-inline: .18rem; border-radius: 0;
   }
   .site-nav__link::after {
-    content: ""; position: absolute; left: .25rem; right: .25rem; bottom: -2px;
+    content: ""; position: absolute; left: .2rem; right: .2rem; bottom: -2px;
     height: 2px; background: var(--grad); transform: scaleX(0); transform-origin: left;
     transition: transform .18s ease;
   }
@@ -89,7 +90,7 @@ const isActive = (href) => path === href || (href !== "/" && path.startsWith(hre
 
   .nav-toggle__btn { display: none; }
 
-  @media (max-width: 880px) {
+  @media (max-width: 1100px) {
     .brand__text small { display: none; }
     .brand__text strong { font-size: 1.05rem; white-space: normal; }
     .nav-toggle__btn {
