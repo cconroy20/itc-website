@@ -2,6 +2,7 @@
 const { title, lead } = Astro.props;
 ---
 <section class="page-hero">
+  <div class="page-hero__stars" aria-hidden="true"></div>
   <div class="container">
     <h1 set:html={title} />
     {lead && <p class="page-hero__lead">{lead}</p>}
@@ -10,12 +11,32 @@ const { title, lead } = Astro.props;
 
 <style>
   .page-hero {
-    border-bottom: 1px solid var(--line);
+    position: relative; overflow: hidden;
     background:
-      radial-gradient(46% 90% at 92% -10%, rgba(124,58,237,.07), transparent 66%),
-      var(--bg-soft);
-    padding-block: clamp(2.75rem, 6vw, 4rem) clamp(2rem, 4vw, 2.75rem);
+      radial-gradient(60% 120% at 85% -20%, rgba(124,58,237,.32), transparent 60%),
+      radial-gradient(50% 120% at 5% 120%, rgba(79,70,229,.22), transparent 60%),
+      linear-gradient(180deg, #14122b, #0b0a18);
+    padding-block: clamp(3rem, 7vw, 4.75rem) clamp(2.5rem, 5vw, 3.25rem);
   }
-  .page-hero h1 { margin: 0; letter-spacing: -0.025em; }
-  .page-hero__lead { color: var(--ink-soft); font-size: 1.1rem; max-width: 60ch; margin: .85rem 0 0; }
+  /* tiling starfield */
+  .page-hero__stars {
+    position: absolute; inset: 0; pointer-events: none; opacity: .7;
+    background-image:
+      radial-gradient(1.5px 1.5px at 12% 30%, rgba(255,255,255,.9), transparent),
+      radial-gradient(1px 1px at 28% 70%, rgba(255,255,255,.7), transparent),
+      radial-gradient(1.5px 1.5px at 47% 22%, rgba(255,255,255,.8), transparent),
+      radial-gradient(1px 1px at 63% 58%, rgba(255,255,255,.6), transparent),
+      radial-gradient(1.5px 1.5px at 78% 38%, rgba(255,255,255,.85), transparent),
+      radial-gradient(1px 1px at 88% 76%, rgba(255,255,255,.6), transparent),
+      radial-gradient(1px 1px at 38% 86%, rgba(255,255,255,.5), transparent),
+      radial-gradient(1px 1px at 70% 14%, rgba(255,255,255,.7), transparent),
+      radial-gradient(1px 1px at 18% 54%, rgba(255,255,255,.5), transparent),
+      radial-gradient(1.5px 1.5px at 95% 22%, rgba(255,255,255,.7), transparent);
+  }
+  .page-hero .container { position: relative; z-index: 1; }
+  .page-hero h1 { margin: 0; color: #fff; letter-spacing: -0.025em; text-shadow: 0 2px 24px rgba(0,0,0,.4); }
+  .page-hero__lead {
+    color: rgba(255,255,255,.78); font-size: 1.1rem; max-width: 60ch; margin: .9rem 0 0;
+    text-shadow: 0 1px 14px rgba(0,0,0,.3);
+  }
 </style>
