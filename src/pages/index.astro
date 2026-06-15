@@ -48,7 +48,7 @@ const memberCount = people.groups
       </div>
       <div class="grid grid--3 areas">
         {areas.map((a) => (
-          <a href={`/research#${a.slug}`} class="area-tile">
+          <a href={`/research#${a.slug}`} class="area-tile" data-reveal>
             <img src={`/research/${a.slug}.jpg`} alt="" loading="lazy" />
             <div class="area-tile__scrim"></div>
             <div class="area-tile__label">
@@ -70,7 +70,7 @@ const memberCount = people.groups
         </div>
         <a href="/news" class="arrow-link">All news</a>
       </div>
-      <div class="grid grid--3">
+      <div class="grid grid--3" data-reveal>
         {recentNews.map((item) => <NewsCard item={item} />)}
       </div>
     </div>

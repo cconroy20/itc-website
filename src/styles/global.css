@@ -147,3 +147,15 @@ hr { border: none; border-top: 1px solid var(--line); margin: 2.5rem 0; }
 .skip-link:focus { left: .5rem; top: .5rem; }
 
 ::selection { background: var(--accent-soft); color: var(--accent-ink); }
+
+/* Scroll-reveal */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .6s cubic-bezier(.16,1,.3,1), transform .6s cubic-bezier(.16,1,.3,1);
+  will-change: opacity, transform;
+}
+[data-reveal].is-revealed { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1; transform: none; transition: none; }
+}
