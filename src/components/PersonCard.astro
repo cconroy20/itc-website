@@ -12,7 +12,15 @@ const initials = name.split(/\s+/).map((n) => n[0]).slice(0, 2).join("").toUpper
   <div class="person__body">
     <h3 class="person__name">{name}</h3>
     {title && <p class="person__title">{title}</p>}
-    {email && <a class="person__email" href={`mailto:${email}`}>{email}</a>}
+    {email && (
+      <a class="person__email" href={`mailto:${email}`} aria-label={`Email ${name}`}>
+        <svg class="person__email-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+          <path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Email
+      </a>
+    )}
   </div>
 </article>
 
@@ -28,5 +36,11 @@ const initials = name.split(/\s+/).map((n) => n[0]).slice(0, 2).join("").toUpper
   .person__body { padding: 1.1rem 1.1rem 1.25rem; display: flex; flex-direction: column; gap: .15rem; }
   .person__name { font-size: 1.1rem; margin: 0; }
   .person__title { color: var(--ink-soft); font-size: .9rem; margin: .1rem 0 0; }
-  .person__email { margin-top: .65rem; font-family: var(--font-sans); font-size: .82rem; word-break: break-word; }
+  .person__email {
+    margin-top: .7rem; display: inline-flex; align-items: center; gap: .35rem;
+    font-size: .85rem; font-weight: 500; color: var(--accent-ink);
+  }
+  .person__email-icon { flex-shrink: 0; opacity: .8; }
+  .person__email:hover { text-decoration: none; color: var(--accent); }
+  .person__email:hover .person__email-icon { opacity: 1; }
 </style>
