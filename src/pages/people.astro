@@ -5,7 +5,8 @@ import PersonCard from "../components/PersonCard.astro";
 import people from "../data/people.json";
 
 // Show current members on this page; alumni get their own page.
-const groups = people.groups.filter((g) => !/alumni/i.test(g.name));
+// The Director is shown within Senior ITC Members (no standalone section).
+const groups = people.groups.filter((g) => !/alumni/i.test(g.name) && !/director/i.test(g.name));
 const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 ---
 <Base title="People" description="Faculty, fellows, postdocs, and staff of the Institute for Theory and Computation.">
