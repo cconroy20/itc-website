@@ -14,13 +14,12 @@ const areas = research.areas;
   </nav>
 
   <div class="areas">
-    {areas.map((a, i) => (
+    {areas.map((a) => (
       <section class="area" id={a.slug} data-reveal>
         <div class="area__media">
           <img src={`/research/${a.slug}.jpg`} alt={`${a.name} — illustrative astrophysics imagery`} loading="lazy" />
         </div>
         <div class="area__body">
-          <span class="area__num">{String(i + 1).padStart(2, "0")} / {String(areas.length).padStart(2, "0")}</span>
           <h2>{a.name}</h2>
           <div class="prose"><RichText text={a.body} /></div>
           {a.people && a.people.length > 0 && (
@@ -73,11 +72,7 @@ const areas = research.areas;
     background: linear-gradient(180deg, transparent 60%, rgba(8,7,18,.25));
   }
 
-  .area__num {
-    font-family: var(--font-sans); font-size: .78rem; font-weight: 600;
-    letter-spacing: .04em; color: var(--accent); font-variant-numeric: tabular-nums;
-  }
-  .area__body h2 { margin: .35rem 0 1rem; font-size: clamp(1.7rem, 3vw, 2.4rem); }
+  .area__body h2 { margin: 0 0 1rem; font-size: clamp(1.7rem, 3vw, 2.4rem); }
   .area__people {
     margin-top: 1.5rem; padding-top: 1.1rem; border-top: 1px solid var(--line);
     font-size: .92rem; color: var(--ink-soft);
