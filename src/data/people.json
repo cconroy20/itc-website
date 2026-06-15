@@ -285,6 +285,12 @@
           "photo": "/people/carolina-cuesta-lazaro.jpg"
         },
         {
+          "name": "Yize Dong",
+          "email": "yize.dong@cfa.harvard.edu",
+          "title": "ITC Fellow",
+          "photo": "/people/yize-dong.png"
+        },
+        {
           "name": "Paola Domínguez Fernández",
           "title": "FFL Fellow",
           "researchInterests": "Dr. Paola Domínguez Fernández studies large-scale magnetic fields and non-thermal phenomena in the Universe, with special interest in the magnetized cosmic web and galaxy clusters. Specifically, the areas related to her work are: primordial magnetic...",
@@ -293,7 +299,7 @@
         },
         {
           "name": "Monica  Gallegos-Garcia",
-          "title": "ITC Fellow",
+          "title": "Harvard Junior Fellow & ITC Fellow",
           "researchInterests": "Monica Gallegos-Garcia’s research aims to improve our understanding of binary evolution and the formation of gravitational wave sources. In her work, she incorporates a physics-focused and multi-messenger approach to the study of key stages in binary...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/monica.png?itok=oW6ip3kl",
           "photo": "/people/monica-gallegos-garcia.jpg"
@@ -352,6 +358,12 @@
           "researchInterests": "My study focused on modelling physics of galaxy formation and evolution. I am especially interested in the interaction between stars and the dust and metals in the interstellar medium. I got my PhD from Swinburne University in Melbourne, with a thesis...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2025-12/Dian%20Pipit%20Triani.jpeg?itok=lNSeTnFm",
           "photo": "/people/dian-triani.jpg"
+        },
+        {
+          "name": "Daichi Tsuna",
+          "email": "daichi.tsuna@cfa.harvard.edu",
+          "title": "ITC Fellow",
+          "photo": "/people/daichi-tsuna.jpg"
         },
         {
           "name": "Oliver  Zier",
