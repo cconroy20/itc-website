@@ -26,11 +26,13 @@ const memberCount = people.groups
   </section>
 
   <!-- Stats -->
-  <section class="stats container">
-    <div class="stat"><span class="stat__num">2004</span><span class="stat__label">Founded</span></div>
-    <div class="stat"><span class="stat__num">{memberCount}+</span><span class="stat__label">Members &amp; fellows</span></div>
-    <div class="stat"><span class="stat__num">5</span><span class="stat__label">Research areas</span></div>
-    <div class="stat"><span class="stat__num">200+</span><span class="stat__label">Alumni worldwide</span></div>
+  <section class="stats-band">
+    <div class="container stats">
+      <div class="stat"><span class="stat__num">2004</span><span class="stat__label">Founded</span></div>
+      <div class="stat"><span class="stat__num">{memberCount}+</span><span class="stat__label">Members &amp; fellows</span></div>
+      <div class="stat"><span class="stat__num">5</span><span class="stat__label">Research areas</span></div>
+      <div class="stat"><span class="stat__num">200+</span><span class="stat__label">Alumni worldwide</span></div>
+    </div>
   </section>
 
   <!-- Research areas -->
@@ -89,25 +91,37 @@ const memberCount = people.groups
   }
 
   /* Stats */
+  .stats-band {
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
   .stats {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
-    padding-block: 0; border-bottom: 1px solid var(--line);
-    background: var(--line);
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    padding-block: clamp(1.75rem, 3vw, 2.5rem);
   }
   .stat {
-    display: flex; flex-direction: column; gap: .2rem;
-    background: var(--bg); padding: 1.75rem 0 2rem;
+    display: flex; flex-direction: column; gap: .35rem;
+    padding-inline: clamp(1rem, 2.5vw, 2rem);
   }
+  .stat + .stat { border-left: 1px solid var(--line); }
+  .stat:first-child { padding-left: 0; }
   .stat__num {
     font-family: var(--font-serif); font-variant-numeric: tabular-nums;
-    font-size: clamp(1.7rem, 3.2vw, 2.4rem); font-weight: 600; color: var(--ink);
-    letter-spacing: -0.02em;
+    font-size: clamp(1.9rem, 3.4vw, 2.6rem); font-weight: 600; color: var(--ink);
+    letter-spacing: -0.02em; line-height: 1;
   }
   .stat__label {
-    color: var(--ink-faint); font-size: .76rem; font-family: var(--font-sans);
-    font-weight: 500; text-transform: uppercase; letter-spacing: .07em;
+    color: var(--ink-faint); font-size: .74rem; font-family: var(--font-sans);
+    font-weight: 500; text-transform: uppercase; letter-spacing: .08em;
   }
-  @media (max-width: 560px) { .stats { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; } }
+  @media (max-width: 560px) {
+    .stats { grid-template-columns: repeat(2, 1fr); gap: 1.75rem 0; }
+    .stat { padding-inline: clamp(1rem, 4vw, 1.5rem); }
+    .stat:first-child { padding-left: clamp(1rem, 4vw, 1.5rem); }
+    .stat + .stat { border-left: none; }
+    .stat:nth-child(odd) { padding-left: 0; }
+    .stat:nth-child(even) { border-left: 1px solid var(--line); }
+  }
 
   /* Research areas */
   .areas .area { padding: 1.6rem; display: flex; flex-direction: column; gap: .5rem; color: inherit; position: relative; }
