@@ -275,7 +275,8 @@
           "title": "ITC Post-Doc",
           "researchInterests": "Vishnu Balakrishnan is a postdoctoral researcher in Liam Connor’s group, working in time-domain radio astronomy with a focus on pulsars, fast radio bursts (FRBs), and large-scale survey software. He joined the group in September 2025. He received his Ph.D...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2026-02/ITC%20Vishnu%20Balakrishnan_0.jpg?itok=ipR-pTxE",
-          "photo": "/people/vishnu-balakrishnan.jpg"
+          "photo": "/people/vishnu-balakrishnan.jpg",
+          "website": "https://github.com/vishnubk"
         },
         {
           "name": "Kaley Brauer",
@@ -283,7 +284,8 @@
           "title": "NSF Fellow",
           "researchInterests": "Kaley develops and analyzes dwarf galaxy simulations in the early Universe to understand the first stars & galaxies and how they contributed to the Milky Way.",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/kaley.jpg?itok=h9PzzRbS",
-          "photo": "/people/kaley-brauer.jpg"
+          "photo": "/people/kaley-brauer.jpg",
+          "website": "https://www.kaleybrauer.com"
         },
         {
           "name": "Carolina Cuesta-Lazaro",
@@ -291,27 +293,33 @@
           "title": "IAIFI Fellow",
           "researchInterests": "Carolina Cuesta is an IAIFI Fellow at the Institute for Artificial Intelligence and Fundamental Interactions, holding a shared position between MIT and the Theory and Computation at the Center for Astrophysics | Harvard & Smithsonian. Carolina is...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/img_0174.jpeg?itok=sVn39VTk",
-          "photo": "/people/carolina-cuesta-lazaro.jpg"
+          "photo": "/people/carolina-cuesta-lazaro.jpg",
+          "website": "https://florpi.github.io"
         },
         {
           "name": "Yize Dong",
           "email": "yize.dong@cfa.harvard.edu",
           "title": "ITC Fellow",
-          "photo": "/people/yize-dong.png"
+          "photo": "/people/yize-dong.png",
+          "website": "https://www.cfa.harvard.edu/people/yize-dong"
         },
         {
           "name": "Paola Domínguez Fernández",
           "title": "FFL Fellow",
           "researchInterests": "Dr. Paola Domínguez Fernández studies large-scale magnetic fields and non-thermal phenomena in the Universe, with special interest in the magnetized cosmic web and galaxy clusters. Specifically, the areas related to her work are: primordial magnetic...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/paola_dominguez_fernandez_itc_headshots_102623_01.jpg?itok=OxPvmQJ1",
-          "photo": "/people/paola-dom-nguez-fern-ndez.jpg"
+          "photo": "/people/paola-dom-nguez-fern-ndez.jpg",
+          "website": "https://paoladominguez-fernandez.me",
+          "email": "pdominguezfernandez@cfa.harvard.edu"
         },
         {
           "name": "Monica  Gallegos-Garcia",
           "title": "Harvard Junior Fellow & ITC Fellow",
           "researchInterests": "Monica Gallegos-Garcia’s research aims to improve our understanding of binary evolution and the formation of gravitational wave sources. In her work, she incorporates a physics-focused and multi-messenger approach to the study of key stages in binary...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/monica.png?itok=oW6ip3kl",
-          "photo": "/people/monica-gallegos-garcia.jpg"
+          "photo": "/people/monica-gallegos-garcia.jpg",
+          "website": "https://mpgalleg.github.io",
+          "email": "monica.gallegos_garcia@cfa.harvard.edu"
         },
         {
           "name": "Cristhian Garcia Quintero",
@@ -327,14 +335,18 @@
           "title": "Hubble & ITC Fellow",
           "researchInterests": "galaxy evolution, the circumgalactic medium, gas physics, galactic outflows",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/cassi_lochhaas_headshot.jpg?itok=pXjSvqev",
-          "photo": "/people/cassi-lochhaas.jpg"
+          "photo": "/people/cassi-lochhaas.jpg",
+          "website": "https://clochhaas.github.io",
+          "email": "clochhaas@cfa.harvard.edu"
         },
         {
           "name": "Scott Lucchini",
           "title": "ITC Fellow",
           "researchInterests": "I study the evolution of gas around galaxies using computer simulations. By combining large-scale cosmological simulations with high-resolution isolated galaxy simulations, we can explore the formation and survival of small-scale, multiphase structures in...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/lucchini_headshot_square_small.png?itok=Yh10b3Ox",
-          "photo": "/people/scott-lucchini.jpg"
+          "photo": "/people/scott-lucchini.jpg",
+          "website": "https://www.scottlucchini.com",
+          "email": "scott.lucchini@cfa.harvard.edu"
         },
         {
           "name": "Devesh Nandal",
@@ -342,7 +354,8 @@
           "title": "Swiss National Science Foundation Postdoctoral Fellow",
           "researchInterests": "Devesh Nandal is a Swiss National Science Foundation Postdoctoral Fellow at the Center for Astrophysics | Harvard & Smithsonian. He builds next-generation stellar evolution models for massive and supermassive stars. His work develops the physics of...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2025-11/Devesh%20Nandal.jpeg?itok=w9lXabIo",
-          "photo": "/people/devesh-nandal.jpg"
+          "photo": "/people/devesh-nandal.jpg",
+          "website": "https://itc.cfa.harvard.edu/people/devesh-nandal"
         },
         {
           "name": "Elia Pizzati",
@@ -353,34 +366,42 @@
           ],
           "researchInterests": "I am broadly interested in a range of topics in astrophysics and cosmology, with a particular focus on the formation and evolution of galaxies and quasars. My current research combines numerical simulations and phenomenological...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2025-12/Elia%20Pizzati%20ITC.jpg?itok=0Q0-DeLX",
-          "photo": "/people/elia-pizzati.jpg"
+          "photo": "/people/elia-pizzati.jpg",
+          "website": "https://eliapizzati.github.io"
         },
         {
           "name": "Vadim Semenov",
           "title": "ITC Fellow",
           "researchInterests": "Vadim’s research is centered on understanding how galaxies form and evolve. He explores this problem by running and analyzing supercomputer simulations of galaxies. His previous and current work focuses on the origin of inefficient star formation in...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/vadim_semenov_harvard_itc_100324_03.jpg?itok=S10FbJxw",
-          "photo": "/people/vadim-semenov.jpg"
+          "photo": "/people/vadim-semenov.jpg",
+          "website": "https://vadimsemenov.com",
+          "email": "vadim.semenov@cfa.harvard.edu"
         },
         {
           "name": "Dian Triani",
           "title": "CfA Postdoc",
           "researchInterests": "My study focused on modelling physics of galaxy formation and evolution. I am especially interested in the interaction between stars and the dust and metals in the interstellar medium. I got my PhD from Swinburne University in Melbourne, with a thesis...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2025-12/Dian%20Pipit%20Triani.jpeg?itok=lNSeTnFm",
-          "photo": "/people/dian-triani.jpg"
+          "photo": "/people/dian-triani.jpg",
+          "website": "https://dptriani.github.io",
+          "email": "dian.triani@cfa.harvard.edu"
         },
         {
           "name": "Daichi Tsuna",
           "email": "daichi.tsuna@cfa.harvard.edu",
           "title": "ITC Fellow",
-          "photo": "/people/daichi-tsuna.jpg"
+          "photo": "/people/daichi-tsuna.jpg",
+          "website": "https://sites.google.com/view/daichi-tsuna"
         },
         {
           "name": "Oliver  Zier",
           "title": "ITC Fellow",
           "researchInterests": "Oliver Zier earned Bachelor`s degrees in physics and computer science from the University of Bayreuth in Germany and a Master’s degree in Theoretical and Mathematical Physics from the University of Munich. In 2023, under the advisory of Prof. Volker...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/oliver_zier_2.jpeg?itok=qYrjFzYX",
-          "photo": "/people/oliver-zier.jpg"
+          "photo": "/people/oliver-zier.jpg",
+          "website": "https://sites.google.com/view/oliverzier/",
+          "email": "oliver.zier@cfa.harvard.edu"
         }
       ]
     },
