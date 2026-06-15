@@ -210,7 +210,8 @@
           ],
           "researchInterests": "Charles Alcock is the former director of the Center for Astrophysics | Harvard & Smithsonian, a position he held for 17 years until January 2022. Charles remains a Professor of Astronomy at Harvard University and a Senior Scientist at the Smithsonian...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/2026-06/charles-alcock-20180322-2B.jpg?itok=Y5mPsRfp",
-          "photo": "/people/charles-alcock.jpg"
+          "photo": "/people/charles-alcock.jpg",
+          "website": "https://astronomy.fas.harvard.edu/people/charles-r-alcock"
         },
         {
           "name": "Eric Keto",
@@ -221,7 +222,8 @@
           ],
           "researchInterests": "star formation, numerical simulations, extragalactic, instrumentation, The Eric R. Keto Prize Endowed with a generous donation by ITC Senior Member Eric Keto, the Keto Prize is awarded each year for the best thesis in theoretical...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/keto.2.crop_.jpg?itok=8gTj5E7a",
-          "photo": "/people/eric-keto.jpg"
+          "photo": "/people/eric-keto.jpg",
+          "website": "https://lweb.cfa.harvard.edu/~eketo/"
         },
         {
           "name": "John M. Kovac",
@@ -229,7 +231,8 @@
           "title": "Professor of Astronomy and Physics",
           "researchInterests": "His cosmology research focuses on observations of the cosmic microwave background (CMB) to reveal signatures of the physics that drove the birth of the universe, the creation of its structure, and its present-day expansion. His...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/kovac.jpg?itok=bKzoNYbX",
-          "photo": "/people/john-m-kovac.jpg"
+          "photo": "/people/john-m-kovac.jpg",
+          "website": "https://sites.harvard.edu/cmb-lab/"
         },
         {
           "name": "Mark Reid",
@@ -237,7 +240,8 @@
           "title": "SAO Astrophysicist",
           "researchInterests": "Mark Reid is Senior Radio Astronomer at the Smithsonian Astrophysical Observatory, part of the Harvard-Smithsonian Center for Astrophysics. Research interests include black holes, active galactic nuclei, galactic structure, star formation, evolved stars...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/mark_reid.jpg?itok=P0kxtFlg",
-          "photo": "/people/mark-reid.jpg"
+          "photo": "/people/mark-reid.jpg",
+          "website": "https://lweb.cfa.harvard.edu/~reid/"
         },
         {
           "name": "Dimitar Sasselov",
@@ -248,7 +252,8 @@
           ],
           "researchInterests": "Professor Sasselov studies the interaction between light and matter (radiative transfer) from stars and exoplanets to biomolecules at the origins of life, and astrobiology in general. He runs a photochemistry lab exploring the origins...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/2-dimitar_sasselov_1.jpg?itok=KzD0Sfiv",
-          "photo": "/people/dimitar-sasselov.jpg"
+          "photo": "/people/dimitar-sasselov.jpg",
+          "website": "https://sasselov.cfa.harvard.edu"
         },
         {
           "name": "Alexey Vikhlinin",
@@ -256,7 +261,8 @@
           "title": "Lecturer / SAO Astrophysicist",
           "researchInterests": "X-ray studies of galaxy clusters and their applications for cosmology and physics of the intergalactic medium. The main past projects in this area include: development of the efficient detection pipeline for extended X-ray sources --...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/vikhlinin_a.jpg?itok=ji6txagD",
-          "photo": "/people/alexey-vikhlinin.jpg"
+          "photo": "/people/alexey-vikhlinin.jpg",
+          "website": "https://hea-www.harvard.edu/~alexey/about.html"
         }
       ]
     },
