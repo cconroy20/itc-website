@@ -4,7 +4,9 @@ const year = 2026;
 <footer class="site-footer">
   <div class="container site-footer__inner">
     <div class="site-footer__brand">
-      <span class="brand__mark" aria-hidden="true">ITC</span>
+      <svg class="brand__mark" viewBox="0 13 116 31" role="img" aria-hidden="true" preserveAspectRatio="xMinYMid meet">
+        <text x="0" y="44" class="brand__mark-text">ITC</text>
+      </svg>
       <p>
         <strong>Institute for Theory &amp; Computation</strong><br />
         Center for Astrophysics | Harvard &amp; Smithsonian
@@ -49,8 +51,11 @@ const year = 2026;
   }
   .site-footer__brand { display: flex; gap: 1rem; align-items: flex-start; max-width: 360px; }
   .site-footer__brand .brand__mark {
-    font-family: var(--font-serif); font-weight: 700; font-size: 1.5rem; color: #fff;
-    display: grid; place-items: center; flex-shrink: 0;
+    height: calc((1rem + 0.92rem) * 1.45); width: auto; flex-shrink: 0; display: block; color: #fff;
+  }
+  .site-footer__brand .brand__mark-text {
+    font-family: var(--font-serif); font-weight: 700; font-size: 46px;
+    letter-spacing: .01em; fill: currentColor;
   }
   .site-footer__brand strong { color: #fff; font-family: var(--font-serif); }
   .site-footer__col { display: flex; flex-direction: column; gap: .4rem; }
