@@ -6,7 +6,7 @@
         {
           "name": "Charlie Conroy",
           "email": "cconroy@cfa.harvard.edu",
-          "title": "Professor of Astronomy",
+          "title": "Professor of Astronomy · Director, ITC",
           "roles": [
             "Director, Institute for Theory and Computation (ITC)"
           ],
@@ -38,7 +38,7 @@
         {
           "name": "Charlie Conroy",
           "email": "cconroy@cfa.harvard.edu",
-          "title": "Professor of Astronomy",
+          "title": "Professor of Astronomy · Director, ITC",
           "roles": [
             "Director, Institute for Theory and Computation (ITC)"
           ],
@@ -110,7 +110,7 @@
         {
           "name": "Lisa Kewley",
           "email": "lisa.kewley@cfa.harvard.edu",
-          "title": "Director, Center for Astrophysics",
+          "title": "Professor of Astronomy · Director, Center for Astrophysics",
           "researchInterests": "Lisa Kewley is Director of the Center for Astrophysics | Harvard & Smithsonian. She is Director of the Smithsonian Astrophysical Observatory, Director of the Harvard College Observatory, and Professor of Astrophysics at the Harvard Department of Astronomy...",
           "photoUrl": "https://itc.cfa.harvard.edu/sites/g/files/omnuum8321/files/styles/hwp_4_5__690x865/public/itc/files/lisa-kewley-lores.jpg?itok=JyjIbYNy",
           "photo": "/people/lisa-kewley.jpg"
@@ -169,7 +169,7 @@
         {
           "name": "Christopher Stubbs",
           "email": "stubbs@physics.harvard.edu",
-          "title": "Dean of Science",
+          "title": "Samuel C. Moncher Professor of Physics and of Astronomy",
           "roles": [
             "Samuel C. Moncher Professor of Physics and of Astronomy"
           ],
