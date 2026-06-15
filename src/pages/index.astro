@@ -48,10 +48,13 @@ const memberCount = people.groups
       </div>
       <div class="grid grid--3 areas">
         {areas.map((a) => (
-          <a href={`/research#${a.slug}`} class="area card">
-            <h3>{a.name}</h3>
-            <p>{a.body.split("\n\n")[0].slice(0, 130)}{a.body.length > 130 ? "…" : ""}</p>
-            <span class="arrow-link">Learn more</span>
+          <a href={`/research#${a.slug}`} class="area-tile">
+            <img src={`/research/${a.slug}.jpg`} alt="" loading="lazy" />
+            <div class="area-tile__scrim"></div>
+            <div class="area-tile__label">
+              <h3>{a.name}</h3>
+              <span class="area-tile__cta">Explore →</span>
+            </div>
           </a>
         ))}
       </div>
@@ -133,18 +136,34 @@ const memberCount = people.groups
     .stats { grid-template-columns: repeat(2, 1fr); gap: 1.75rem 0; }
   }
 
-  /* Research areas */
-  .areas .area { padding: 1.6rem; display: flex; flex-direction: column; gap: .5rem; color: inherit; position: relative; }
-  .areas .area:hover { text-decoration: none; }
-  .areas .area::before {
-    content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 2px;
-    background: var(--grad); transform: scaleX(0); transform-origin: left;
-    transition: transform .2s ease;
+  /* Research image tiles */
+  .area-tile {
+    position: relative; display: block; overflow: hidden;
+    border-radius: var(--radius); aspect-ratio: 5 / 4; background: #0a0918;
+    color: #fff; isolation: isolate;
   }
-  .areas .area:hover::before { transform: scaleX(1); }
-  .areas .area h3 { margin: 0; }
-  .areas .area p { color: var(--ink-soft); font-size: .92rem; margin: 0; flex: 1; }
-  .areas .area .arrow-link { margin-top: .35rem; }
+  .area-tile:hover { text-decoration: none; }
+  .area-tile img {
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+    transition: transform .6s ease;
+  }
+  .area-tile:hover img { transform: scale(1.06); }
+  .area-tile__scrim {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(8,7,18,.05) 30%, rgba(8,7,18,.55) 70%, rgba(8,7,18,.85));
+    transition: background .3s ease;
+  }
+  .area-tile:hover .area-tile__scrim {
+    background: linear-gradient(180deg, rgba(8,7,18,.15) 20%, rgba(8,7,18,.6) 60%, rgba(8,7,18,.9));
+  }
+  .area-tile__label { position: absolute; left: 0; right: 0; bottom: 0; padding: 1.25rem 1.4rem; z-index: 1; }
+  .area-tile__label h3 { margin: 0; color: #fff; font-size: 1.3rem; text-shadow: 0 1px 14px rgba(0,0,0,.5); }
+  .area-tile__cta {
+    display: inline-block; margin-top: .3rem; font-size: .82rem; font-weight: 600;
+    color: rgba(255,255,255,.85); opacity: 0; transform: translateY(4px);
+    transition: opacity .25s ease, transform .25s ease;
+  }
+  .area-tile:hover .area-tile__cta { opacity: 1; transform: translateY(0); }
 
   .section__head--row { display: flex; align-items: flex-end; justify-content: space-between; max-width: none; }
 </style>
