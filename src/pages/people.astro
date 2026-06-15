@@ -18,7 +18,6 @@ const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g
 
   <nav class="jump container" aria-label="Jump to group">
     {groups.map((g) => <a href={`#${slug(g.name)}`} class="jump__link">{g.name}</a>)}
-    <a href="/people/alumni" class="jump__link">Alumni</a>
   </nav>
 
   {groups.map((g) => (

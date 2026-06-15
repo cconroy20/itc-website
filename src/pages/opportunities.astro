@@ -19,7 +19,7 @@ const tracks = [
   <PageHero
     eyebrow="Opportunities"
     title="Join the ITC"
-    lead="The ITC recruits outstanding scientists at every career stage. Our fellows go on to lead research groups around the world — see where our alumni are now."
+    lead="The ITC recruits outstanding scientists at every career stage. Our fellows go on to lead research groups around the world."
   />
 
   <section class="section">
@@ -32,14 +32,6 @@ const tracks = [
             <span class="arrow-link">Details</span>
           </a>
         ))}
-      </div>
-
-      <div class="placement card">
-        <div>
-          <h3>An exceptional placement record</h3>
-          <p>ITC alumni hold faculty positions and research leadership roles at institutions worldwide.</p>
-        </div>
-        <a href="/people/alumni" class="btn btn--primary">See our alumni</a>
       </div>
 
       <div class="details">
@@ -62,14 +54,7 @@ const tracks = [
   .track p { color: var(--ink-soft); font-size: .92rem; flex: 1; margin: 0; }
   @media (max-width: 800px) { .tracks { grid-template-columns: 1fr; } }
 
-  .placement {
-    display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap;
-    padding: 1.75rem; background: var(--accent-soft); border-color: #e7cfcf; margin-bottom: 3.5rem;
-  }
-  .placement h3 { margin: 0 0 .25rem; }
-  .placement p { margin: 0; color: var(--ink-soft); }
-
-  .details { display: flex; flex-direction: column; gap: 3rem; max-width: var(--maxw-prose); }
+  .details { display: flex; flex-direction: column; gap: 3rem; max-width: var(--maxw-prose); margin-top: 1rem; }
   .detail { scroll-margin-top: 96px; }
   .detail + .detail { padding-top: 2.5rem; border-top: 1px solid var(--line); }
 </style>
