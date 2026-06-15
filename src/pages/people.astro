@@ -51,7 +51,8 @@ const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g
   .people-group:last-of-type { padding-bottom: 2rem; }
   .people-group__title { display: flex; align-items: baseline; gap: .6rem; margin-bottom: 1.75rem; }
   .people-group__count {
-    font-family: var(--font-mono); font-size: .8rem; font-weight: 400;
+    font-family: var(--font-sans); font-size: .8rem; font-weight: 500;
+    font-variant-numeric: tabular-nums;
     color: var(--ink-faint); background: var(--bg-soft);
     padding: .1rem .5rem; border-radius: var(--radius); border: 1px solid var(--line);
   }

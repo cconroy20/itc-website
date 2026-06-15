@@ -1,6 +1,6 @@
 ---
 const { person } = Astro.props;
-const { name, email, title, roles = [], researchInterests, photo } = person;
+const { name, email, title, photo } = person;
 const initials = name.split(/\s+/).map((n) => n[0]).slice(0, 2).join("").toUpperCase();
 ---
 <article class="person card">
@@ -12,8 +12,6 @@ const initials = name.split(/\s+/).map((n) => n[0]).slice(0, 2).join("").toUpper
   <div class="person__body">
     <h3 class="person__name">{name}</h3>
     {title && <p class="person__title">{title}</p>}
-    {roles.map((r) => <p class="person__role">{r}</p>)}
-    {researchInterests && <p class="person__interests">{researchInterests}</p>}
     {email && <a class="person__email" href={`mailto:${email}`}>{email}</a>}
   </div>
 </article>
@@ -24,13 +22,11 @@ const initials = name.split(/\s+/).map((n) => n[0]).slice(0, 2).join("").toUpper
   .person__photo img { width: 100%; height: 100%; object-fit: cover; }
   .person__placeholder {
     width: 100%; height: 100%; display: grid; place-items: center;
-    font-family: var(--font-mono); font-size: 1.8rem; color: var(--accent);
+    font-family: var(--font-serif); font-size: 2rem; color: var(--accent);
     background: linear-gradient(135deg, var(--accent-soft), var(--bg-sky));
   }
   .person__body { padding: 1.1rem 1.1rem 1.25rem; display: flex; flex-direction: column; gap: .15rem; }
   .person__name { font-size: 1.1rem; margin: 0; }
   .person__title { color: var(--ink-soft); font-size: .9rem; margin: .1rem 0 0; }
-  .person__role { color: var(--accent-ink); font-size: .8rem; font-weight: 600; margin: .15rem 0 0; }
-  .person__interests { color: var(--ink-faint); font-size: .82rem; margin: .55rem 0 0; line-height: 1.45; }
-  .person__email { margin-top: .65rem; font-family: var(--font-mono); font-size: .74rem; word-break: break-word; }
+  .person__email { margin-top: .65rem; font-family: var(--font-sans); font-size: .82rem; word-break: break-word; }
 </style>

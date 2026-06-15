@@ -7,7 +7,7 @@ const fmt = date
 ---
 <article class="news card">
   <a href={url} class="news__link">
-    {fmt && <time class="news__date mono" datetime={date}>{fmt}</time>}
+    {fmt && <time class="news__date" datetime={date}>{fmt}</time>}
     <h3 class="news__title">{title}</h3>
     {excerpt && <p class="news__excerpt">{excerpt}</p>}
     <span class="arrow-link news__more">Read more</span>
