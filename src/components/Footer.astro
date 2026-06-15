@@ -1,5 +1,4 @@
 ---
-const year = 2026;
 ---
 <footer class="site-footer">
   <div class="container site-footer__inner">
@@ -32,13 +31,6 @@ const year = 2026;
       </p>
     </div>
   </div>
-  <div class="container site-footer__base">
-    <p class="meta">© {year} The President and Fellows of Harvard College</p>
-    <p class="meta">
-      <a href="https://www.cfa.harvard.edu/">Center for Astrophysics</a> ·
-      <a href="https://accessibility.huit.harvard.edu/digital-accessibility-policy">Accessibility</a>
-    </p>
-  </div>
 </footer>
 
 <style>
@@ -47,7 +39,7 @@ const year = 2026;
   .site-footer a:hover { color: #fff; }
   .site-footer__inner {
     display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2.5rem;
-    padding-block: 3rem 2rem;
+    padding-block: 3rem 3.25rem;
   }
   .site-footer__brand { display: flex; gap: 1rem; align-items: flex-start; max-width: 360px; }
   .site-footer__brand .brand__mark {
@@ -61,11 +53,6 @@ const year = 2026;
   .site-footer__col { display: flex; flex-direction: column; gap: .4rem; }
   .site-footer__col h4 { color: #fff; font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; margin-bottom: .5rem; font-family: var(--font-sans); }
   .site-footer__col a { font-size: .92rem; }
-  .site-footer__base {
-    display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
-    border-top: 1px solid rgba(255,255,255,.12); padding-block: 1.25rem 2rem;
-  }
-  .site-footer__base .meta { color: #8c919b; }
   @media (max-width: 700px) {
     .site-footer__inner { grid-template-columns: 1fr 1fr; }
     .site-footer__brand { grid-column: 1 / -1; }
