@@ -3,7 +3,7 @@
   "areas": [
     {
       "name": "Cosmology",
-      "slug": "galaxies-cosmology",
+      "slug": "cosmology",
       "body": "Cosmic Microwave Background Radiation, Inflation, Formation and Evolution of Galaxies and their Nuclear Black Holes, Reionization in the Early Universe, First Stars and Galaxies, Gravitational Lensing, 21 cm Radiation in the Early Universe, Cosmological Parameters, Dark Matter and Dark Energy.\n\nCosmological Simulations produced at the ITC:\n\n- Moving Mesh Cosmology - M. Vogelsberger and D. Sijacki\n- Evolving Universe - P. Torrey and M. Vogelsberger\n- A physical model for cosmological simulations of galaxy formation - M. Vogelsberger et al.",
       "people": [
         "D. Sijacki",
@@ -12,24 +12,29 @@
       ]
     },
     {
-      "name": "Gravity",
-      "slug": "gravity",
-      "body": "Black Holes, Neutron Stars, White Dwarfs, Gravitational Wave Astronomy, Tests of Gravity, Equivalence Principle"
+      "name": "Galaxy Formation",
+      "slug": "galaxy-formation",
+      "body": "Description coming soon."
     },
     {
-      "name": "High Energy Astrophysics",
-      "slug": "high-energy-astrophysics",
-      "body": "Accretion Disks around Compact Objects, Stellar Mass Black Holes, Supermassive Black Holes, Gamma Ray Bursts, Fast Radio Bursts, Radiative Transfer around Compact Objects"
+      "name": "Black Holes & Accretion Physics",
+      "slug": "black-holes-accretion",
+      "body": "Description coming soon."
     },
     {
-      "name": "Planetary Astronomy",
-      "slug": "planetary-astronomy",
-      "body": "ExtraSolar Planets, ProtoPlanetary Disks, Kuiper Belt Objects, Outer Solar System, Planet Formation, Gravitational Dynamics, Search for Extra-terrestrial Life."
+      "name": "Star Formation",
+      "slug": "star-formation",
+      "body": "Description coming soon."
     },
     {
-      "name": "Stars",
-      "slug": "stars",
-      "body": "Stellar Atmospheres, Stellar Oscillations, Interactions between Stars and ProtoPlanetary Disks, Stellar Evolution and Stellar Populations"
+      "name": "Stellar Evolution & Death",
+      "slug": "stellar-evolution-death",
+      "body": "Description coming soon."
+    },
+    {
+      "name": "Big Data",
+      "slug": "big-data",
+      "body": "Description coming soon."
     }
   ]
 }
