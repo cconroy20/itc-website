@@ -5,12 +5,10 @@ import PageHero from "../components/PageHero.astro";
 const events = [
   {
     name: "ITC Luncheon",
-    cadence: "Weekly",
     desc: "The flagship gathering of the ITC. Each week, members and visitors come together over lunch to present and debate new results across theoretical and computational astrophysics — an informal forum where ideas are shared and discussed in real time.",
   },
   {
     name: "Special Seminars",
-    cadence: "As scheduled",
     desc: "Additional talks arranged throughout the year around visiting scientists and timely results, bringing leading researchers from around the world to present their work to the ITC community.",
   },
 ];
@@ -26,39 +24,18 @@ const events = [
       <div class="grid grid--2 events">
         {events.map((e) => (
           <article class="ev card">
-            <span class="ev__cadence">{e.cadence}</span>
             <h2>{e.name}</h2>
             <p>{e.desc}</p>
           </article>
         ))}
-      </div>
-
-      <div class="cal-note card">
-        <h3>Schedule</h3>
-        <p>For dates, speakers, and locations of upcoming talks, see the CfA events calendar
-          or contact the ITC.</p>
-        <div class="cal-note__links">
-          <a href="https://www.cfa.harvard.edu/events" class="arrow-link">CfA events calendar</a>
-          <a href="mailto:itcinfo@cfa.harvard.edu" class="arrow-link">Contact the ITC</a>
-        </div>
       </div>
     </div>
   </section>
 </Base>
 
 <style>
-  .events { margin-bottom: 2.5rem; align-items: start; }
+  .events { align-items: start; }
   .ev { padding: clamp(1.75rem, 3vw, 2.5rem); }
-  .ev__cadence {
-    display: inline-block; font-size: .72rem; font-weight: 700; text-transform: uppercase;
-    letter-spacing: .08em; color: var(--accent-ink); background: var(--accent-soft);
-    padding: .25rem .7rem; border-radius: 100px; margin-bottom: 1rem;
-  }
   .ev h2 { margin: 0 0 .6rem; font-size: clamp(1.4rem, 2.4vw, 1.8rem); }
   .ev p { color: var(--ink-soft); margin: 0; }
-
-  .cal-note { padding: 1.75rem; background: var(--bg-soft); }
-  .cal-note h3 { margin: 0 0 .5rem; }
-  .cal-note p { color: var(--ink-soft); max-width: 60ch; margin: 0 0 1rem; }
-  .cal-note__links { display: flex; gap: 1.75rem; flex-wrap: wrap; }
 </style>
