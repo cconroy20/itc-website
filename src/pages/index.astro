@@ -44,9 +44,8 @@ const memberCount = people.groups
           theoretical and computational frontier of modern astrophysics.</p>
       </div>
       <div class="grid grid--3 areas">
-        {areas.map((a, i) => (
+        {areas.map((a) => (
           <a href={`/research#${a.slug}`} class="area card">
-            <span class="area__num mono">{String(i + 1).padStart(2, "0")}</span>
             <h3>{a.name}</h3>
             <p>{a.body.split("\n\n")[0].slice(0, 130)}{a.body.length > 130 ? "…" : ""}</p>
             <span class="arrow-link">Learn more</span>
@@ -125,7 +124,6 @@ const memberCount = people.groups
     transition: transform .2s ease;
   }
   .areas .area:hover::before { transform: scaleX(1); }
-  .areas .area__num { color: var(--ink-faint); font-size: .78rem; }
   .areas .area h3 { margin: 0; }
   .areas .area p { color: var(--ink-soft); font-size: .92rem; margin: 0; flex: 1; }
   .areas .area .arrow-link { margin-top: .35rem; }
