@@ -91,13 +91,14 @@ const isActive = (href) => path === href || (href !== "/" && path.startsWith(hre
 
   @media (max-width: 880px) {
     .brand__text small { display: none; }
+    .brand__text strong { font-size: 1.05rem; white-space: normal; }
     .nav-toggle__btn {
       display: flex; flex-direction: column; gap: 5px; cursor: pointer;
       padding: .5rem; margin: -.5rem;
     }
     .nav-toggle__btn span { width: 24px; height: 2px; background: var(--ink); border-radius: 2px; }
     .site-nav {
-      position: absolute; top: 72px; left: 0; right: 0;
+      position: absolute; top: 100%; left: 0; right: 0;
       flex-direction: column; align-items: stretch;
       background: #fff; border-bottom: 1px solid var(--line);
       padding: .75rem 1rem 1.25rem; gap: .25rem;
@@ -107,5 +108,11 @@ const isActive = (href) => path === href || (href !== "/" && path.startsWith(hre
     .site-nav__link { padding: .75rem; margin-inline: 0; font-size: 1rem; }
     .site-nav__link::after { display: none; }
     .site-nav__link:hover { background: var(--bg-soft); }
+  }
+
+  /* Very narrow phones: drop the long name, keep just the ITC mark */
+  @media (max-width: 460px) {
+    .brand__text strong { font-size: .95rem; }
+    .site-header__inner { gap: .75rem; }
   }
 </style>
