@@ -13,23 +13,14 @@ const tracks = [
 ];
 ---
 <Base title="Opportunities" description="Postdoctoral and predoctoral fellowships and visiting opportunities at the ITC.">
-  <PageHero
-    eyebrow="Opportunities"
-    title="Join the ITC"
-    lead="The ITC recruits outstanding scientists at every career stage. Our fellows go on to lead research groups around the world."
-  />
+  <PageHero title="Join the ITC" />
+
+  <nav class="jump container" aria-label="Jump to opportunity">
+    {tracks.map((t) => <a href={`#${t.key}`} class="jump__link">{t.title}</a>)}
+  </nav>
 
   <section class="section">
     <div class="container">
-      <div class="tracks">
-        {tracks.map((t) => (
-          <a href={`#${t.key}`} class="track card">
-            <h3>{t.title}</h3>
-            <span class="arrow-link">Details</span>
-          </a>
-        ))}
-      </div>
-
       <div class="details">
         {tracks.map((t) => (
           <section id={t.key} class="detail">
@@ -43,13 +34,20 @@ const tracks = [
 </Base>
 
 <style>
-  .tracks { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap); margin-bottom: 2rem; }
-  .track { padding: 1.6rem; display: flex; flex-direction: column; gap: .75rem; color: inherit; }
-  .track:hover { text-decoration: none; }
-  .track h3 { margin: 0; }
-  @media (max-width: 800px) { .tracks { grid-template-columns: 1fr; } }
+  .jump {
+    display: flex; gap: .5rem; flex-wrap: wrap;
+    padding-block: 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 72px; background: rgba(255,255,255,.92);
+    backdrop-filter: blur(8px); z-index: 50;
+  }
+  .jump__link {
+    font-family: var(--font-sans); font-size: .85rem; font-weight: 500;
+    color: var(--ink-soft);
+    padding: .4rem .8rem; border: 1px solid var(--line); border-radius: var(--radius);
+  }
+  .jump__link:hover { color: var(--accent-ink); border-color: var(--accent-line); background: var(--accent-soft); text-decoration: none; }
 
-  .details { display: flex; flex-direction: column; gap: 3rem; max-width: 860px; margin-top: 1rem; }
-  .detail { scroll-margin-top: 96px; }
+  .details { display: flex; flex-direction: column; gap: 3rem; max-width: 860px; }
+  .detail { scroll-margin-top: 130px; }
   .detail + .detail { padding-top: 2.5rem; border-top: 1px solid var(--line); }
 </style>

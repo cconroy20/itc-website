@@ -8,24 +8,21 @@ import { url } from "../lib/url.js";
 const { about, directorsWelcome, computingResources, supportItc } = pages;
 ---
 <Base title="About" description="About the Institute for Theory and Computation: our mission, leadership, and computing resources.">
-  <PageHero
-    eyebrow="About"
-    title="About the ITC"
-    lead="Since 2004, the Institute for Theory and Computation has integrated conceptual theory with computation to study the universe."
-  />
+  <PageHero title="About the ITC" />
+
+  <nav class="jump container" aria-label="Jump to section">
+    <a href="#mission" class="jump__link">Mission</a>
+    <a href="#welcome" class="jump__link">Director's welcome</a>
+    <a href="#computing" class="jump__link">Computing resources</a>
+    <a href="#support" class="jump__link">Support the ITC</a>
+    <a href={url("/contact")} class="jump__link">Contact &amp; location</a>
+  </nav>
 
   <div class="section">
-    <div class="container layout">
-      <aside class="layout__nav">
-        <a href="#mission">Mission</a>
-        <a href="#welcome">Director's welcome</a>
-        <a href="#computing">Computing resources</a>
-        <a href="#support">Support the ITC</a>
-        <a href={url("/contact")}>Contact &amp; location</a>
-      </aside>
-
+    <div class="container">
       <div class="layout__main prose">
         <section id="mission" class="block">
+          <h2>Mission Statement</h2>
           <RichText text={about.body} />
         </section>
 
@@ -50,15 +47,20 @@ const { about, directorsWelcome, computingResources, supportItc } = pages;
 </Base>
 
 <style>
-  .layout { display: grid; grid-template-columns: 220px 1fr; gap: 3rem; }
-  .layout__nav { position: sticky; top: 96px; align-self: start; display: flex; flex-direction: column; gap: .15rem; }
-  .layout__nav a { font-size: .92rem; color: var(--ink-soft); padding: .4rem .6rem; border-left: 2px solid var(--line); }
-  .layout__nav a:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
-  .block { scroll-margin-top: 96px; }
-  .block + .block { margin-top: 3rem; padding-top: 2.5rem; border-top: 1px solid var(--line); }
-  @media (max-width: 800px) {
-    .layout { grid-template-columns: 1fr; gap: 1.5rem; }
-    .layout__nav { position: static; flex-direction: row; flex-wrap: wrap; }
-    .layout__nav a { border-left: none; border: 1px solid var(--line); border-radius: 100px; }
+  .jump {
+    display: flex; gap: .5rem; flex-wrap: wrap;
+    padding-block: 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 72px; background: rgba(255,255,255,.92);
+    backdrop-filter: blur(8px); z-index: 50;
   }
+  .jump__link {
+    font-family: var(--font-sans); font-size: .85rem; font-weight: 500;
+    color: var(--ink-soft);
+    padding: .4rem .8rem; border: 1px solid var(--line); border-radius: var(--radius);
+  }
+  .jump__link:hover { color: var(--accent-ink); border-color: var(--accent-line); background: var(--accent-soft); text-decoration: none; }
+
+  .layout__main { max-width: var(--maxw-prose); }
+  .block { scroll-margin-top: 130px; }
+  .block + .block { margin-top: 3rem; padding-top: 2.5rem; border-top: 1px solid var(--line); }
 </style>
