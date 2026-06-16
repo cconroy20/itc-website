@@ -1,0 +1,46 @@
+---
+import Base from "../../layouts/Base.astro";
+import RichText from "../../components/RichText.astro";
+import frontiers from "../../data/frontiers.json";
+import { url } from "../../lib/url.js";
+
+export function getStaticPaths() {
+  return frontiers.programs.map((program) => ({
+    params: { slug: program.slug },
+    props: { program },
+  }));
+}
+
+const { program } = Astro.props;
+const { title, dates, body } = program;
+---
+<Base title={`${title} · Frontiers`} description={`${title} — an ITC Frontiers program, ${dates}.`}>
+  <article class="article">
+    <div class="container article__head">
+      <a href={url("/frontiers")} class="article__back">← Frontiers</a>
+      <span class="article__dates">{dates}</span>
+      <h1>{title}</h1>
+    </div>
+
+    <div class="container article__body prose">
+      <RichText text={body} />
+    </div>
+  </article>
+</Base>
+
+<style>
+  .article__head { padding-block: clamp(2rem, 4vw, 2.75rem) 1.5rem; max-width: var(--maxw-prose); }
+  .article__back {
+    display: inline-block; font-size: .85rem; font-weight: 500; color: var(--ink-soft);
+    margin-bottom: 1.25rem;
+  }
+  .article__back:hover { color: var(--accent-ink); text-decoration: none; }
+  .article__dates {
+    display: block; font-size: .8rem; text-transform: uppercase; letter-spacing: .06em;
+    color: var(--ink-faint); margin-bottom: .6rem;
+  }
+  .article__head h1 { margin: 0; font-size: clamp(1.9rem, 4vw, 2.8rem); letter-spacing: -0.025em; }
+
+  .article__body { max-width: var(--maxw-prose); padding-bottom: 4rem; }
+  .article__body :global(p) { font-size: 1.05rem; }
+</style>

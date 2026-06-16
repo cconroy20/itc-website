@@ -1,6 +1,10 @@
 ---
 import Base from "../layouts/Base.astro";
 import PageHero from "../components/PageHero.astro";
+import frontiers from "../data/frontiers.json";
+import { url } from "../lib/url.js";
+
+const programs = [...frontiers.programs].sort((a, b) => a.start.localeCompare(b.start));
 ---
 <Base title="Frontiers" description="The ITC Frontiers programs bring together experts for month-long residencies on unsolved problems in astrophysics.">
   <PageHero title="Frontiers" />
@@ -15,11 +19,41 @@ import PageHero from "../components/PageHero.astro";
           collaboration, both between experts and between experts and non-specialists.
         </p>
       </div>
+
+      <h2 class="programs__heading">Programs</h2>
+      <ul class="programs">
+        {programs.map((p) => (
+          <li>
+            <a href={url(`/frontiers/${p.slug}`)} class="program card">
+              <div class="program__text">
+                <h3>{p.title}</h3>
+                <span class="program__dates">{p.dates}</span>
+              </div>
+              <span class="program__arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+        ))}
+      </ul>
     </div>
   </section>
 </Base>
 
 <style>
-  .intro { max-width: var(--maxw-prose); }
+  .intro { max-width: var(--maxw-prose); margin-bottom: clamp(2.5rem, 5vw, 3.5rem); }
   .intro p { font-size: 1.15rem; color: var(--ink-soft); line-height: 1.7; text-align: left; }
+
+  .programs__heading { font-size: 1.4rem; margin: 0 0 1.25rem; }
+  .programs { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1rem; max-width: 760px; }
+  .program {
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    padding: 1.4rem 1.6rem; color: inherit;
+  }
+  .program:hover { text-decoration: none; }
+  .program__text { display: flex; flex-direction: column; gap: .3rem; }
+  .program h3 { margin: 0; font-size: 1.2rem; }
+  .program__dates {
+    font-size: .8rem; text-transform: uppercase; letter-spacing: .05em; color: var(--ink-faint);
+  }
+  .program__arrow { color: var(--accent); font-size: 1.2rem; transition: transform .15s ease; flex-shrink: 0; }
+  .program:hover .program__arrow { transform: translateX(4px); }
 </style>
