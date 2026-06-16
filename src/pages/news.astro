@@ -15,7 +15,7 @@ const fmt = (d) => d ? new Date(d + "T00:00:00").toLocaleDateString("en-US", { y
   <section class="section">
     <div class="container">
       {feature && (
-        <a href={feature.url} class:list={["feature card", { "feature--media": feature.image }]}>
+        <a href={url(`/news/${feature.slug}`)} class:list={["feature card", { "feature--media": feature.image }]}>
           {feature.image && (
             <div class="feature__media"><img src={url(feature.image)} alt="" /></div>
           )}

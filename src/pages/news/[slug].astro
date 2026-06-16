@@ -1,0 +1,62 @@
+---
+import Base from "../../layouts/Base.astro";
+import RichText from "../../components/RichText.astro";
+import news from "../../data/news.json";
+import { url } from "../../lib/url.js";
+
+export function getStaticPaths() {
+  return news.items
+    .filter((item) => item.slug)
+    .map((item) => ({ params: { slug: item.slug }, props: { item } }));
+}
+
+const { item } = Astro.props;
+const { title, date, image, body } = item;
+const fmt = date
+  ? new Date(date + "T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })
+  : null;
+---
+<Base title={title.replace(/<[^>]*>/g, "")} description={item.excerpt || title}>
+  <article class="article">
+    <div class="container article__head">
+      <a href={url("/news")} class="article__back">← All news</a>
+      {fmt && <time class="article__date" datetime={date}>{fmt}</time>}
+      <h1>{title}</h1>
+    </div>
+
+    {image && (
+      <div class="article__hero">
+        <div class="container">
+          <img src={url(image)} alt="" />
+        </div>
+      </div>
+    )}
+
+    <div class="container article__body prose">
+      <RichText text={body} />
+    </div>
+  </article>
+</Base>
+
+<style>
+  .article__head { padding-block: clamp(2rem, 4vw, 2.75rem) 1.5rem; max-width: var(--maxw-prose); }
+  .article__back {
+    display: inline-block; font-size: .85rem; font-weight: 500; color: var(--ink-soft);
+    margin-bottom: 1.25rem;
+  }
+  .article__back:hover { color: var(--accent-ink); text-decoration: none; }
+  .article__date {
+    display: block; font-size: .8rem; text-transform: uppercase; letter-spacing: .06em;
+    color: var(--ink-faint); margin-bottom: .6rem;
+  }
+  .article__head h1 { margin: 0; font-size: clamp(1.9rem, 4vw, 2.8rem); letter-spacing: -0.025em; }
+
+  .article__hero { margin-bottom: 2.25rem; }
+  .article__hero img {
+    width: 100%; max-height: 480px; object-fit: cover;
+    border-radius: var(--radius);
+  }
+
+  .article__body { max-width: var(--maxw-prose); padding-bottom: 4rem; }
+  .article__body :global(p) { font-size: 1.05rem; }
+</style>

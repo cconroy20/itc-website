@@ -1,7 +1,8 @@
 ---
 import { url } from "../lib/url.js";
 const { item } = Astro.props;
-const { title, date, url: href, excerpt, image } = item;
+const { title, date, slug, excerpt, image } = item;
+const href = url(`/news/${slug}`);
 const fmt = date
   ? new Date(date + "T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })
   : null;
