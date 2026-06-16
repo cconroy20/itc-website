@@ -1,25 +1,23 @@
 ---
 const { title } = Astro.props;
 ---
-<section class="page-hero">
-  <div class="container">
-    <h1 set:html={title} />
-    <span class="page-hero__rule" aria-hidden="true"></span>
-  </div>
-</section>
+<div class="page-title container">
+  <h1 set:html={title} />
+  <span class="page-title__rule" aria-hidden="true"></span>
+</div>
 
 <style>
-  .page-hero {
-    border-bottom: 1px solid var(--line);
-    padding-block: clamp(2.25rem, 5vw, 3.25rem) clamp(1.5rem, 3vw, 2rem);
+  /* No banner — the page title opens the content inline. */
+  .page-title {
+    padding-block: clamp(2rem, 4vw, 2.75rem) 0;
   }
-  .page-hero h1 {
+  .page-title h1 {
     margin: 0;
-    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    font-size: clamp(2.1rem, 4.5vw, 3rem);
     letter-spacing: -0.03em;
   }
-  .page-hero__rule {
-    display: block; width: 3.25rem; height: 3px; margin-top: 1.1rem;
+  .page-title__rule {
+    display: block; width: 3rem; height: 3px; margin-top: .9rem;
     background: var(--grad); border-radius: 2px;
   }
 </style>
