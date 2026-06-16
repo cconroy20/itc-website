@@ -3,20 +3,24 @@ import Base from "../layouts/Base.astro";
 import PageHero from "../components/PageHero.astro";
 import NewsCard from "../components/NewsCard.astro";
 import news from "../data/news.json";
+import { url } from "../lib/url.js";
 
 const items = news.items;
 const [feature, ...rest] = items;
 const fmt = (d) => d ? new Date(d + "T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }) : null;
 ---
 <Base title="News" description="News and highlights from the Institute for Theory and Computation.">
-  <PageHero eyebrow="News" title="News &amp; highlights" lead="Awards, discoveries, and milestones from across the ITC community." />
+  <PageHero title="News &amp; highlights" />
 
   <section class="section">
     <div class="container">
       {feature && (
-        <a href={feature.url} class="feature card">
+        <a href={feature.url} class:list={["feature card", { "feature--media": feature.image }]}>
+          {feature.image && (
+            <div class="feature__media"><img src={url(feature.image)} alt="" /></div>
+          )}
           <div class="feature__body">
-            {feature.date && <time class="meta" datetime={feature.date}>{fmt(feature.date)}</time>}
+            {feature.date && <time class="news__date" datetime={feature.date}>{fmt(feature.date)}</time>}
             <h2>{feature.title}</h2>
             {feature.excerpt && <p>{feature.excerpt}</p>}
             <span class="arrow-link">Read more</span>
@@ -32,9 +36,18 @@ const fmt = (d) => d ? new Date(d + "T00:00:00").toLocaleDateString("en-US", { y
 </Base>
 
 <style>
-  .feature { display: block; padding: 2rem; margin-bottom: 2.5rem; color: inherit; border-left: 4px solid var(--accent); }
+  .feature { display: block; margin-bottom: 2.5rem; color: inherit; overflow: hidden; }
   .feature:hover { text-decoration: none; }
-  .feature__body { max-width: 70ch; }
-  .feature h2 { margin: .5rem 0 .75rem; }
-  .feature p { color: var(--ink-soft); margin: 0 0 1rem; }
+  .feature--media { display: grid; grid-template-columns: 1.1fr 1fr; align-items: stretch; }
+  .feature__media { overflow: hidden; min-height: 260px; background: var(--bg-sky); }
+  .feature__media img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+  .feature:hover .feature__media img { transform: scale(1.03); }
+  .feature__body { padding: clamp(1.75rem, 3vw, 2.5rem); display: flex; flex-direction: column; justify-content: center; }
+  .feature__body .news__date { display: block; margin-bottom: .6rem; font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-faint); }
+  .feature h2 { margin: 0 0 .75rem; }
+  .feature p { color: var(--ink-soft); margin: 0 0 1rem; max-width: 52ch; }
+  @media (max-width: 720px) {
+    .feature--media { grid-template-columns: 1fr; }
+    .feature__media { aspect-ratio: 16 / 9; min-height: 0; }
+  }
 </style>
