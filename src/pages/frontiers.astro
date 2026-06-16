@@ -2,16 +2,22 @@
 import Base from "../layouts/Base.astro";
 import PageHero from "../components/PageHero.astro";
 ---
-<Base title="Frontiers" description="Frontiers of theory and computation at the ITC.">
-  <PageHero title="Frontiers" lead="Coming soon." />
+<Base title="Frontiers" description="The ITC Frontiers programs bring together experts for month-long residencies on unsolved problems in astrophysics.">
+  <PageHero title="Frontiers" />
 
   <section class="section">
-    <div class="container">
-      <p class="placeholder">This section is under construction.</p>
+    <div class="container intro prose">
+      <p>
+        The ITC Frontiers programs bring together experts on an unsolved problem in
+        astrophysics for a month-long residency at the Institute for Theory and
+        Computation (ITC). The purpose of the Frontiers programs is to foster learning and
+        collaboration, both between experts and between experts and non-specialists.
+      </p>
     </div>
   </section>
 </Base>
 
 <style>
-  .placeholder { color: var(--ink-soft); }
+  .intro { max-width: var(--maxw-prose); }
+  .intro p { font-size: 1.15rem; color: var(--ink-soft); line-height: 1.7; }
 </style>
