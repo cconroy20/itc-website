@@ -3,14 +3,10 @@ import Base from "../layouts/Base.astro";
 import NewsCard from "../components/NewsCard.astro";
 import news from "../data/news.json";
 import research from "../data/research.json";
-import people from "../data/people.json";
 import { url } from "../lib/url.js";
 
 const recentNews = news.items.slice(0, 3);
 const areas = research.areas;
-const memberCount = people.groups
-  .filter((g) => !/alumni/i.test(g.name))
-  .reduce((n, g) => n + g.people.length, 0);
 ---
 <Base title={null}>
   <!-- Hero -->
@@ -26,15 +22,6 @@ const memberCount = people.groups
         understand how the universe works — from the Big Bang and cosmic structure to
         black holes and exoplanets.
       </p>
-    </div>
-  </section>
-
-  <!-- Stats -->
-  <section class="stats-band">
-    <div class="container stats">
-      <div class="stat"><span class="stat__num">2004</span><span class="stat__label">Founded</span></div>
-      <div class="stat"><span class="stat__num">{memberCount}+</span><span class="stat__label">Members &amp; fellows</span></div>
-      <div class="stat"><span class="stat__num">200+</span><span class="stat__label">Alumni worldwide</span></div>
     </div>
   </section>
 
@@ -110,31 +97,6 @@ const memberCount = people.groups
     max-width: 600px; text-shadow: 0 1px 16px rgba(0,0,0,.4);
   }
 
-  /* Stats */
-  .stats-band {
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-  }
-  .stats {
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    padding-block: clamp(1.75rem, 3vw, 2.5rem);
-  }
-  .stat {
-    display: flex; flex-direction: column; align-items: center; gap: .35rem;
-    text-align: center;
-  }
-  .stat__num {
-    font-family: var(--font-serif); font-variant-numeric: tabular-nums;
-    font-size: clamp(1.9rem, 3.4vw, 2.6rem); font-weight: 600; color: var(--ink);
-    letter-spacing: -0.02em; line-height: 1;
-  }
-  .stat__label {
-    color: var(--ink-faint); font-size: .74rem; font-family: var(--font-sans);
-    font-weight: 500; text-transform: uppercase; letter-spacing: .08em;
-  }
-  @media (max-width: 440px) {
-    .stats { grid-template-columns: 1fr; gap: 1.5rem; }
-  }
 
   /* Research image tiles */
   .area-tile {
