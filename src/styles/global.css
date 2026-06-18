@@ -5,22 +5,23 @@
    ============================================================ */
 
 :root {
-  /* Palette — light, near-neutral with a cool cast */
-  --bg:            #ffffff;
-  --bg-soft:       #f6f7f9;
-  --bg-sky:        #eef0f5;
-  --ink:           #14151a;   /* near-black */
-  --ink-soft:      #494d59;   /* secondary */
-  --ink-faint:     #888d9a;   /* meta / captions */
-  --line:          #e4e6ed;   /* hairlines */
-  --line-strong:   #d2d6e0;
+  /* Palette — DARK theme (preview) */
+  --bg:            #090a12;   /* near-black, faint cool/indigo cast */
+  --bg-soft:       #11121d;   /* slightly lighter panels */
+  --bg-sky:        #1a1c2a;   /* image/placeholder backdrop */
+  --ink:           #f3f4f7;   /* near-white text */
+  --ink-soft:      #b4b8c4;   /* secondary */
+  --ink-faint:     #7e8493;   /* meta / captions */
+  --line:          #24262f;   /* hairlines */
+  --line-strong:   #353844;
+  --surface:       rgba(11,12,16,.82);  /* sticky nav backdrop */
 
-  /* Accent — deep violet */
-  --accent:        #6d28d9;   /* violet-700 */
-  --accent-2:      #9333ea;   /* purple-600, lighter end of gradient */
-  --accent-ink:    #581c9c;   /* deeper, for hover/text */
-  --accent-soft:   #f1ecfb;   /* tint */
-  --accent-line:   #ddd2f4;
+  /* Accent — violet (brighter for dark bg) */
+  --accent:        #a78bfa;   /* violet-400 */
+  --accent-2:      #c084fc;   /* purple-400 */
+  --accent-ink:    #c4b5fd;   /* lighter, for text/hover on dark */
+  --accent-soft:   #1e1b2e;   /* dark tint */
+  --accent-line:   #3b3357;
   --grad: linear-gradient(100deg, var(--accent), var(--accent-2));
 
   /* Type */
@@ -37,17 +38,77 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; background: var(--bg); }
 
 body {
   margin: 0;
   font-family: var(--font-sans);
   color: var(--ink);
-  background: var(--bg);
+  background: transparent;
   line-height: 1.62;
   font-size: 17px;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+/* Atmospheric backdrop: a faint cosmic glow + dim starfield, fixed behind all
+   content. Kept subtle so body text panels read cleanly over it. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(1.5px 1.5px at 246.1px 114.6px, rgba(255,255,255,0.33), transparent),
+    radial-gradient(1.2px 1.2px at 71.5px 442.9px, rgba(199,210,254,0.42), transparent),
+    radial-gradient(1.2px 1.2px at 317.8px 182.9px, rgba(255,255,255,0.53), transparent),
+    radial-gradient(1.5px 1.5px at 94.1px 169.7px, rgba(199,210,254,0.62), transparent),
+    radial-gradient(1.0px 1.0px at 445.0px 37.7px, rgba(255,255,255,0.33), transparent),
+    radial-gradient(0.8px 0.8px at 220.1px 109.6px, rgba(255,255,255,0.61), transparent),
+    radial-gradient(1.2px 1.2px at 518.3px 78.3px, rgba(255,255,255,0.65), transparent),
+    radial-gradient(0.8px 0.8px at 416.3px 47.7px, rgba(255,255,255,0.64), transparent),
+    radial-gradient(1.2px 1.2px at 404.1px 590.7px, rgba(255,255,255,0.62), transparent),
+    radial-gradient(1.5px 1.5px at 227.8px 603.7px, rgba(199,210,254,0.73), transparent),
+    radial-gradient(1.0px 1.0px at 228.2px 376.3px, rgba(255,255,255,0.7), transparent),
+    radial-gradient(1.2px 1.2px at 744.9px 89.7px, rgba(255,255,255,0.39), transparent),
+    radial-gradient(1.5px 1.5px at 709.3px 320.5px, rgba(255,255,255,0.34), transparent),
+    radial-gradient(1.0px 1.0px at 599.7px 621.9px, rgba(255,255,255,0.68), transparent),
+    radial-gradient(0.8px 0.8px at 440.7px 346.7px, rgba(255,255,255,0.82), transparent),
+    radial-gradient(1.5px 1.5px at 504.8px 46.1px, rgba(255,255,255,0.47), transparent),
+    radial-gradient(1.5px 1.5px at 422.4px 276.3px, rgba(255,255,255,0.51), transparent),
+    radial-gradient(1.0px 1.0px at 14.0px 286.3px, rgba(255,255,255,0.64), transparent),
+    radial-gradient(1.5px 1.5px at 135.3px 178.2px, rgba(255,255,255,0.44), transparent),
+    radial-gradient(1.2px 1.2px at 540.3px 50.0px, rgba(255,255,255,0.52), transparent),
+    radial-gradient(1.2px 1.2px at 84.9px 266.9px, rgba(255,255,255,0.45), transparent),
+    radial-gradient(1.0px 1.0px at 222.4px 548.2px, rgba(255,255,255,0.38), transparent),
+    radial-gradient(1.2px 1.2px at 143.8px 144.7px, rgba(255,255,255,0.76), transparent),
+    radial-gradient(1.2px 1.2px at 174.8px 90.3px, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1.2px 1.2px at 590.9px 428.1px, rgba(255,255,255,0.82), transparent),
+    radial-gradient(1.5px 1.5px at 458.7px 283.1px, rgba(255,255,255,0.74), transparent),
+    radial-gradient(1.5px 1.5px at 247.4px 64.2px, rgba(255,255,255,0.52), transparent),
+    radial-gradient(0.8px 0.8px at 610.5px 273.2px, rgba(199,210,254,0.49), transparent),
+    radial-gradient(0.8px 0.8px at 0.1px 93.8px, rgba(255,255,255,0.82), transparent),
+    radial-gradient(1.2px 1.2px at 43.6px 128.9px, rgba(255,255,255,0.38), transparent),
+    radial-gradient(0.8px 0.8px at 305.7px 320.5px, rgba(255,255,255,0.36), transparent),
+    radial-gradient(1.0px 1.0px at 860.5px 422.7px, rgba(199,210,254,0.35), transparent),
+    radial-gradient(1.5px 1.5px at 301.5px 233.0px, rgba(199,210,254,0.39), transparent),
+    radial-gradient(1.0px 1.0px at 836.9px 464.9px, rgba(255,255,255,0.68), transparent),
+    radial-gradient(1.5px 1.5px at 667.2px 262.3px, rgba(255,255,255,0.77), transparent),
+    radial-gradient(1.0px 1.0px at 229.8px 322.7px, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1.5px 1.5px at 476.6px 442.4px, rgba(255,255,255,0.42), transparent),
+    radial-gradient(1.0px 1.0px at 866.7px 750.3px, rgba(255,255,255,0.75), transparent),
+    radial-gradient(1.0px 1.0px at 199.5px 455.5px, rgba(255,255,255,0.7), transparent),
+    radial-gradient(1.0px 1.0px at 695.3px 415.6px, rgba(255,255,255,0.68), transparent),
+    radial-gradient(1.0px 1.0px at 393.6px 824.6px, rgba(255,255,255,0.83), transparent),
+    radial-gradient(1.0px 1.0px at 194.0px 199.6px, rgba(255,255,255,0.49), transparent),
+    radial-gradient(1100px 700px at 84% -10%, rgba(124,58,237,.12), transparent 70%),
+    radial-gradient(900px 700px at 4% 110%, rgba(79,70,229,.09), transparent 70%);
+  background-repeat: repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, no-repeat, no-repeat;
+  background-size: 760px 760px, 760px 760px, 760px 760px, 760px 760px, 760px 760px, 760px 760px, 760px 760px, 760px 760px, 760px 760px, 760px 760px, 760px 760px, 760px 760px, 760px 760px, 760px 760px, 760px 760px, 760px 760px, 620px 620px, 620px 620px, 620px 620px, 620px 620px, 620px 620px, 620px 620px, 620px 620px, 620px 620px, 620px 620px, 620px 620px, 620px 620px, 620px 620px, 620px 620px, 620px 620px, 880px 880px, 880px 880px, 880px 880px, 880px 880px, 880px 880px, 880px 880px, 880px 880px, 880px 880px, 880px 880px, 880px 880px, 880px 880px, 880px 880px, auto, auto;
+}
+@media (prefers-reduced-motion: no-preference) {
+  /* no animation by default — kept static for a calm, classy feel */
 }
 
 h1, h2, h3, h4 {
@@ -85,7 +146,7 @@ img { max-width: 100%; display: block; }
 }
 
 .section { padding-block: clamp(3rem, 7vw, 5.5rem); }
-.section--soft { background: var(--bg-soft); }
+.section--soft { background: rgba(255,255,255,.02); }
 .section__head { margin-bottom: 2.5rem; max-width: 640px; }
 .section__head p { color: var(--ink-soft); font-size: 1.05rem; }
 

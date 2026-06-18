@@ -4,9 +4,7 @@ import { url } from "../lib/url.js";
 <footer class="site-footer">
   <div class="container site-footer__inner">
     <div class="site-footer__brand">
-      <svg class="brand__mark" viewBox="-1 12 74 35" role="img" aria-hidden="true" preserveAspectRatio="xMinYMid meet">
-        <text x="0" y="44" class="brand__mark-text">ITC</text>
-      </svg>
+      <span class="brand__mark" aria-hidden="true">ITC</span>
       <p>
         <strong>Institute for Theory &amp; Computation</strong><br />
         Center for Astrophysics | Harvard &amp; Smithsonian
@@ -35,24 +33,21 @@ import { url } from "../lib/url.js";
 </footer>
 
 <style>
-  .site-footer { background: var(--ink); color: #cfd3da; margin-top: 4rem; }
-  .site-footer a { color: #cfd3da; }
-  .site-footer a:hover { color: #fff; }
+  .site-footer { background: var(--bg-soft); color: var(--ink-soft); margin-top: 4rem; border-top: 1px solid var(--line); }
+  .site-footer a { color: var(--ink-soft); }
+  .site-footer a:hover { color: var(--ink); }
   .site-footer__inner {
     display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2.5rem;
     padding-block: 3rem 3.25rem;
   }
   .site-footer__brand { display: flex; gap: 1rem; align-items: flex-start; max-width: 360px; }
   .site-footer__brand .brand__mark {
-    height: calc((1rem + 0.92rem) * 1.45); width: auto; flex-shrink: 0; display: block; color: #fff;
+    flex-shrink: 0; font-family: var(--font-serif); font-weight: 600;
+    font-size: 2.4rem; line-height: 1; letter-spacing: .005em; color: var(--ink);
   }
-  .site-footer__brand .brand__mark-text {
-    font-family: var(--font-serif); font-weight: 700; font-size: 46px;
-    letter-spacing: .01em; fill: currentColor;
-  }
-  .site-footer__brand strong { color: #fff; font-family: var(--font-serif); }
+  .site-footer__brand strong { color: var(--ink); font-family: var(--font-serif); }
   .site-footer__col { display: flex; flex-direction: column; gap: .4rem; }
-  .site-footer__col h4 { color: #fff; font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; margin-bottom: .5rem; font-family: var(--font-sans); }
+  .site-footer__col h4 { color: var(--ink); font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; margin-bottom: .5rem; font-family: var(--font-sans); }
   .site-footer__col a { font-size: .92rem; }
   @media (max-width: 700px) {
     .site-footer__inner { grid-template-columns: 1fr 1fr; }

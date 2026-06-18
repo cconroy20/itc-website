@@ -36,13 +36,12 @@ const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g
   .jump {
     display: flex; gap: .5rem; flex-wrap: wrap;
     padding-block: 1.25rem; border-bottom: 1px solid var(--line);
-    position: sticky; top: 72px; background: rgba(255,255,255,.92);
-    backdrop-filter: blur(8px); z-index: 50;
+    position: sticky; top: 72px; background: transparent; backdrop-filter: blur(6px); z-index: 50;
   }
   .jump__link {
     font-family: var(--font-sans); font-size: .85rem; font-weight: 500;
     letter-spacing: 0; color: var(--ink-soft);
-    padding: .4rem .8rem; border: 1px solid var(--line); border-radius: var(--radius);
+    padding: .4rem .8rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg-soft);
   }
   .jump__link:hover { color: var(--accent-ink); border-color: var(--accent-line); background: var(--accent-soft); text-decoration: none; }
 

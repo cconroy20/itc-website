@@ -1579,6 +1579,20 @@
       "yearOfDeparture": "1997",
       "currentTitle": "Vice-President",
       "currentInstitution": "PayPal"
+    },
+    {
+      "name": "Sarah Jeffreson",
+      "yearOfDeparture": "2024"
+    },
+    {
+      "name": "Razieh Meibody",
+      "yearOfDeparture": "2025"
+    },
+    {
+      "name": "Yueying Ni",
+      "yearOfDeparture": "2025",
+      "currentTitle": "Schmidt AI in Science Fellow",
+      "currentInstitution": "University of Michigan"
     }
   ]
 }

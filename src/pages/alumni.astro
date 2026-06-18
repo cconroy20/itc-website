@@ -18,8 +18,6 @@ const alumni = [...alumniData.alumni].sort((a, b) => {
 
   <section class="section">
     <div class="container">
-      <p class="meta alumni-count">{alumni.length} alumni</p>
-
       <table class="alumni-table">
         <thead>
           <tr><th>Name</th><th>Departed</th><th>Current position</th><th>Institution</th></tr>
@@ -28,7 +26,7 @@ const alumni = [...alumniData.alumni].sort((a, b) => {
           {alumni.map((a) => (
             <tr>
               <td class="al-name">{a.name}</td>
-              <td class="al-year meta">{a.yearOfDeparture || "—"}</td>
+              <td class="al-year">{a.yearOfDeparture || "—"}</td>
               <td>{a.currentTitle || "—"}</td>
               <td>{a.currentInstitution || "—"}</td>
             </tr>
@@ -40,18 +38,17 @@ const alumni = [...alumniData.alumni].sort((a, b) => {
 </Base>
 
 <style>
-  .alumni-count { margin: 0 0 1.25rem; }
 
-  .alumni-table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+  .alumni-table { width: 100%; border-collapse: collapse; font-size: 1.02rem; }
   .alumni-table thead th {
-    text-align: left; font-family: var(--font-sans); font-weight: 700; font-size: .78rem;
+    text-align: left; font-family: var(--font-sans); font-weight: 700; font-size: .95rem;
     text-transform: uppercase; letter-spacing: .06em; color: var(--ink-faint);
     padding: .6rem .75rem; border-bottom: 2px solid var(--line);
   }
-  .alumni-table td { padding: .7rem .75rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .alumni-table td { padding: .8rem .85rem; border-bottom: 1px solid var(--line); vertical-align: top; }
   .alumni-table tbody tr:hover { background: var(--bg-soft); }
   .al-name { font-weight: 600; }
-  .al-year { white-space: nowrap; }
+  .al-year { white-space: nowrap; color: var(--ink-faint); }
   @media (max-width: 640px) {
     .alumni-table thead { display: none; }
     .alumni-table, .alumni-table tbody, .alumni-table tr, .alumni-table td { display: block; width: 100%; }
