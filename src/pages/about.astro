@@ -5,13 +5,12 @@ import RichText from "../components/RichText.astro";
 import pages from "../data/pages.json";
 import { url } from "../lib/url.js";
 
-const { about, directorsWelcome, computingResources, supportItc } = pages;
+const { directorsWelcome, computingResources, supportItc } = pages;
 ---
 <Base title="About" description="About the Institute for Theory and Computation: our mission, leadership, and computing resources.">
   <PageHero title="About the ITC" />
 
   <nav class="jump container" aria-label="Jump to section">
-    <a href="#mission" class="jump__link">Mission</a>
     <a href="#welcome" class="jump__link">Director's welcome</a>
     <a href="#computing" class="jump__link">Computing resources</a>
     <a href="#support" class="jump__link">Support the ITC</a>
@@ -21,11 +20,6 @@ const { about, directorsWelcome, computingResources, supportItc } = pages;
   <div class="section">
     <div class="container">
       <div class="layout__main prose">
-        <section id="mission" class="block">
-          <h2>Mission Statement</h2>
-          <RichText text={about.body} />
-        </section>
-
         <section id="welcome" class="block">
           <h2>Director's Welcome</h2>
           <RichText text={directorsWelcome.body} />
