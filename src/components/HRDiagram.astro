@@ -1,0 +1,198 @@
+---
+// Right-margin decoration: a coeval stellar population evolving across the
+// Hertzsprung–Russell diagram (log Teff vs log L, with Teff reversed).
+// Loads MIST evolutionary tracks (reduced to a shared log-age grid in
+// public/tracks/mist.json) and advances a single population-age index so all
+// stars age together, each drawing a fading trail of its recent path.
+// Canvas-based; pauses off-screen; honors reduced-motion.
+import { url } from "../lib/url.js";
+const dataUrl = url("/tracks/mist.json");
+---
+<canvas class="hrfield" aria-hidden="true" data-src={dataUrl}></canvas>
+
+<script>
+  function initHR(canvas) {
+    if (!canvas || !canvas.getContext || canvas.dataset.hrInit) return;
+    canvas.dataset.hrInit = "1";
+    const ctx = canvas.getContext("2d");
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const accent = getComputedStyle(document.documentElement)
+      .getPropertyValue("--accent").trim() || "#a78bfa";
+    const ar = parseInt(accent.replace("#", "").slice(0, 2), 16) || 167;
+    const ag = parseInt(accent.replace("#", "").slice(2, 4), 16) || 139;
+    const ab = parseInt(accent.replace("#", "").slice(4, 6), 16) || 250;
+    const rgba = (a) => `rgba(${ar},${ag},${ab},${a})`;
+
+    let w = 0, h = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
+    let tracks = [];           // [{m, logT:[], logL:[]}] (null where star has died)
+    let bounds = null;         // {tMin,tMax,lMin,lMax}
+    let logA = 0;              // current sim age, in log10(years)
+    let raf = 0, visible = false, ready = false;
+
+    const PADX = 0.07;         // horizontal plot inset fraction
+    const PADY = 0.03;         // vertical inset (smaller → more vertical stretch)
+    // uniform animation clock over log(age); the track keeps its NATIVE sampling.
+    const LOGA_MIN = 5.0;      // 1e5 yr
+    const LOGA_MAX = Math.log10(5.0e10);  // 50 Gyr
+    const SPEED = (LOGA_MAX - LOGA_MIN) / 1400; // base log-age advanced per frame
+    const FADE = 0.6;          // trail length in dex of log-age (older → vanishes)
+    // Gradual slowdown of the clock at late times (so old-age evolution lingers).
+    const SLOW_KNEE = 9.0;     // logA where slowdown sets in
+    const SLOW_WIDTH = 0.5;    // dex over which the easing happens
+    const SLOW_MIN = 0.25;     // clock speed factor at very late times
+
+    async function load() {
+      const src = canvas.dataset.src;
+      let data;
+      try { data = await fetch(src).then((r) => r.ok ? r.json() : null); }
+      catch { data = null; }
+      if (!data || !data.tracks || !data.tracks.length) return;
+      tracks = data.tracks;
+      // bounds over all native points
+      let tMin = Infinity, tMax = -Infinity, lMin = Infinity, lMax = -Infinity;
+      for (const t of tracks) {
+        for (let i = 0; i < t.logT.length; i++) {
+          const T = t.logT[i], L = t.logL[i];
+          if (T < tMin) tMin = T; if (T > tMax) tMax = T;
+          if (L < lMin) lMin = L; if (L > lMax) lMax = L;
+        }
+      }
+      bounds = { tMin, tMax, lMin, lMax };
+      logA = LOGA_MIN;
+      ready = true;
+    }
+
+    function resize() {
+      const rect = canvas.getBoundingClientRect();
+      w = rect.width; h = rect.height;
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.max(1, Math.round(w * dpr));
+      canvas.height = Math.max(1, Math.round(h * dpr));
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    // map (logTeff, logL) -> canvas px. Teff axis reversed (hot = left).
+    function toXY(logT, logL) {
+      const { tMin, tMax, lMin, lMax } = bounds;
+      const fx = (logT - tMin) / (tMax - tMin || 1);
+      const fy = (logL - lMin) / (lMax - lMin || 1);
+      const x = w * (PADX + (1 - PADX * 2) * (1 - fx));  // hot on left
+      const y = h * (PADY + (1 - PADY * 2) * (1 - fy));  // bright on top
+      return [x, y];
+    }
+
+    // index of the last NATIVE point with age <= simAge (binary search); -1 if
+    // the star hasn't been born yet at this age (always 0 here since age[0]≈1e5).
+    function lastPast(age, simAge) {
+      if (simAge < age[0]) return -1;
+      let lo = 0, hi = age.length - 1;
+      if (simAge >= age[hi]) return hi;
+      while (hi - lo > 1) { const m = (lo + hi) >> 1; if (age[m] <= simAge) lo = m; else hi = m; }
+      return lo;
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, w, h);
+      if (!ready) { raf = visible ? requestAnimationFrame(draw) : 0; return; }
+
+      if (!reduce) {
+        // Advance the log-age clock, but slow down gradually past logA~9 so the
+        // late-time evolution doesn't zoom by. Speed factor eases from 1 toward
+        // SLOW_MIN as logA crosses SLOW_KNEE over a SLOW_WIDTH-dex transition.
+        const ramp = (logA - SLOW_KNEE) / SLOW_WIDTH;
+        const ease = 1 / (1 + Math.exp(ramp));            // logistic 1→0
+        const factor = SLOW_MIN + (1 - SLOW_MIN) * ease;  // 1 below knee → SLOW_MIN above
+        logA += SPEED * factor;
+        if (logA >= LOGA_MAX) logA = LOGA_MIN;   // loop
+      }
+      const simAge = Math.pow(10, logA);
+
+      // Draw each star's PAST path at native resolution: the track points with
+      // age <= simAge, plus an interpolated head exactly at simAge. The native
+      // (adaptive) sampling is preserved, so the curve stays smooth.
+      for (let k = 0; k < tracks.length; k++) {
+        const t = tracks[k];
+        const last = lastPast(t.age, simAge);
+        if (last < 0) continue;                  // not yet born
+        const tEnd = t.age[t.age.length - 1];
+        const dead = simAge > tEnd;              // past the end of its track
+
+        // head position: interpolate between native points bracketing simAge
+        let hx, hy;
+        if (last >= t.age.length - 1 || dead) {
+          [hx, hy] = toXY(t.logT[last], t.logL[last]);  // hold at final point
+        } else {
+          const a0 = t.age[last], a1 = t.age[last + 1];
+          const f = (simAge - a0) / (a1 - a0 || 1);
+          const lt = t.logT[last] + f * (t.logT[last + 1] - t.logT[last]);
+          const ll = t.logL[last] + f * (t.logL[last + 1] - t.logL[last]);
+          [hx, hy] = toXY(lt, ll);
+        }
+
+        // Past polyline as a fading comet tail: each point's opacity depends on
+        // how far behind the head it is in log-age. Points older than FADE dex
+        // are fully transparent, so the trail recedes over time instead of
+        // persisting forever.
+        // Once dead, draw no fresh head segment — the trail is just the real
+        // past points, which fade by their own ages so the whole thing recedes.
+        const lastDraw = dead ? last : last + 1;
+        ctx.lineWidth = 1.3;
+        let px = null, py = null, po = 0;
+        for (let i = 0; i <= lastDraw; i++) {
+          let x, y, ageHere;
+          if (i <= last) { [x, y] = toXY(t.logT[i], t.logL[i]); ageHere = t.age[i]; }
+          else { x = hx; y = hy; ageHere = simAge; }
+          // opacity from age-behind-head, in log-age (clamped 0..1)
+          const behind = logA - Math.log10(Math.max(ageHere, 1));
+          const o = Math.max(0, 1 - behind / FADE) * 0.55;
+          if (px !== null && (o > 0.01 || po > 0.01)) {
+            ctx.strokeStyle = rgba((o + po) * 0.5);
+            ctx.beginPath(); ctx.moveTo(px, py); ctx.lineTo(x, y); ctx.stroke();
+          }
+          px = x; py = y; po = o;
+        }
+        // star head — disappears the instant the star dies
+        if (dead) continue;
+        ctx.fillStyle = rgba(0.92);
+        ctx.beginPath(); ctx.arc(hx, hy, 2.1, 0, Math.PI * 2); ctx.fill();
+      }
+
+      raf = visible && !reduce ? requestAnimationFrame(draw) : 0;
+    }
+
+    function start() { if (!raf) raf = requestAnimationFrame(draw); }
+    function stop() { if (raf) cancelAnimationFrame(raf); raf = 0; }
+
+    window.addEventListener("resize", resize);
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) stop(); else if (visible) start();
+    });
+    const io = new IntersectionObserver((entries) => {
+      visible = entries[0].isIntersecting;
+      if (visible) { if (reduce) draw(); else start(); } else stop();
+    }, { rootMargin: "100px" });
+
+    resize();
+    load().then(() => { if (reduce) draw(); });
+    io.observe(canvas);
+  }
+
+  function bootHR() { document.querySelectorAll("canvas.hrfield").forEach(initHR); }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", bootHR);
+  else bootHR();
+</script>
+
+<style>
+  /* Contained in the right-hand dead space: a clean rectangle that sits fully
+     within the viewport (no bleed off the edges). Soft fade only on the left
+     where it meets the prose column. */
+  .hrfield {
+    position: fixed; top: 12vh; right: 6vw; height: 84vh;
+    width: clamp(440px, 42vw, 720px);
+    z-index: 0; pointer-events: none;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 18%);
+    mask-image: linear-gradient(90deg, transparent 0%, #000 18%);
+  }
+  @media (max-width: 1080px) { .hrfield { display: none; } }
+</style>

@@ -1,6 +1,7 @@
 ---
 import Base from "../layouts/Base.astro";
 import PageHero from "../components/PageHero.astro";
+import HRDiagram from "../components/HRDiagram.astro";
 import frontiers from "../data/frontiers.json";
 import { url } from "../lib/url.js";
 
@@ -9,7 +10,8 @@ const programs = [...frontiers.programs].sort((a, b) => a.start.localeCompare(b.
 <Base title="Frontiers" description="The ITC Frontiers programs bring together experts for month-long residencies on unsolved problems in astrophysics.">
   <PageHero title="Frontiers" />
 
-  <section class="section">
+  <HRDiagram />
+  <section class="section frontiers-body">
     <div class="container">
       <div class="intro prose">
         <p>
@@ -39,6 +41,7 @@ const programs = [...frontiers.programs].sort((a, b) => a.start.localeCompare(b.
 </Base>
 
 <style>
+  .frontiers-body { position: relative; z-index: 1; }
   .intro { max-width: var(--maxw-prose); margin-bottom: clamp(2.5rem, 5vw, 3.5rem); }
   .intro p { font-size: 1.15rem; color: var(--ink-soft); line-height: 1.7; text-align: left; }
 
