@@ -585,10 +585,10 @@
     },
     {
       "name": "Daniel Baumann",
-      "placement": "Professor, University of Amsterdam",
+      "placement": "Professor, National Taiwan University",
       "yearOfDeparture": "2009",
       "currentTitle": "Professor",
-      "currentInstitution": "University of Amsterdam"
+      "currentInstitution": "National Taiwan University"
     },
     {
       "name": "Sukanya Chakrabarti",
@@ -606,9 +606,9 @@
     },
     {
       "name": "Gregory Dobler",
-      "placement": "Assistant Professor, University of Delaware",
+      "placement": "Associate Professor, University of Delaware",
       "yearOfDeparture": "2009",
-      "currentTitle": "Assistant Professor",
+      "currentTitle": "Associate Professor",
       "currentInstitution": "University of Delaware"
     },
     {
@@ -620,10 +620,10 @@
     },
     {
       "name": "David Weldrake",
-      "placement": "Director, GIS & Spatial Services, MBDA (Australia)",
+      "placement": "Spatial/Remote-Sensing Lead, Murray-Darling Basin Authority",
       "yearOfDeparture": "2009",
-      "currentTitle": "Director, GIS & Spatial Services",
-      "currentInstitution": "MBDA (Australia)"
+      "currentTitle": "Spatial/Remote-Sensing Lead",
+      "currentInstitution": "Murray-Darling Basin Authority"
     },
     {
       "name": "Amit Yadav",
@@ -631,10 +631,10 @@
     },
     {
       "name": "Beth Willman",
-      "placement": "CEO and Director for Science, LSST",
+      "placement": "CEO, LSST Discovery Alliance",
       "yearOfDeparture": "2008",
-      "currentTitle": "CEO and Director for Science",
-      "currentInstitution": "LSST"
+      "currentTitle": "CEO",
+      "currentInstitution": "LSST Discovery Alliance"
     },
     {
       "name": "Niayesh Afshordi",
@@ -1403,9 +1403,9 @@
     },
     {
       "name": "Claude-Andre Faucher-Giguere",
-      "placement": "Assistant Professor, Northwestern University",
+      "placement": "Professor, Northwestern University",
       "yearOfDeparture": "2010",
-      "currentTitle": "Assistant Professor",
+      "currentTitle": "Professor",
       "currentInstitution": "Northwestern University"
     },
     {
@@ -1417,59 +1417,59 @@
     },
     {
       "name": "Joey Munoz",
-      "placement": "Postdoctoral Fellow, UCSB",
+      "placement": "Assistant Group Leader, MIT Lincoln Laboratory",
       "yearOfDeparture": "2010",
-      "currentTitle": "Postdoctoral Fellow",
-      "currentInstitution": "UCSB"
+      "currentTitle": "Assistant Group Leader",
+      "currentInstitution": "MIT Lincoln Laboratory"
     },
     {
       "name": "Ryan O'Leary",
-      "placement": "Postdoctoral Fellow, UC Berkeley",
+      "placement": "Software Engineer, Google",
       "yearOfDeparture": "2010",
-      "currentTitle": "Postdoctoral Fellow",
-      "currentInstitution": "UC Berkeley"
+      "currentTitle": "Software Engineer",
+      "currentInstitution": "Google"
     },
     {
       "name": "Tracey Slatyer",
-      "placement": "Assistant Professor, M.I.T",
+      "placement": "Professor, MIT",
       "yearOfDeparture": "2010",
-      "currentTitle": "Assistant Professor",
-      "currentInstitution": "M.I.T"
+      "currentTitle": "Professor",
+      "currentInstitution": "MIT"
     },
     {
-      "name": "Alekandre (Sasha) Tchekhovskoi",
-      "placement": "Postdoctoral Fellow, UC Berkeley",
+      "name": "Aleksander Tchekhovskoy",
+      "placement": "Associate Professor, Northwestern University",
       "yearOfDeparture": "2010",
-      "currentTitle": "Postdoctoral Fellow",
-      "currentInstitution": "UC Berkeley"
+      "currentTitle": "Associate Professor",
+      "currentInstitution": "Northwestern University"
     },
     {
       "name": "Miguel de Val Borro",
-      "placement": "Postdoctoral Fellow, Princeton, HATSouth Survey",
+      "placement": "Research Scientist, NASA Goddard",
       "yearOfDeparture": "2009",
-      "currentTitle": "Postdoctoral Fellow",
-      "currentInstitution": "Princeton, HATSouth Survey"
+      "currentTitle": "Research Scientist",
+      "currentInstitution": "NASA Goddard"
     },
     {
       "name": "Matthew McQuinn",
-      "placement": "Assistant Professor, University of Washington",
+      "placement": "Professor, University of Washington",
       "yearOfDeparture": "2009",
-      "currentTitle": "Assistant Professor",
+      "currentTitle": "Professor",
       "currentInstitution": "University of Washington"
     },
     {
       "name": "Eliza (Miller-Ricci) Kempton",
-      "placement": "Assistant Professor, Grinnell College",
+      "placement": "Professor, University of Chicago",
       "yearOfDeparture": "2009",
-      "currentTitle": "Assistant Professor",
-      "currentInstitution": "Grinnell College"
+      "currentTitle": "Professor",
+      "currentInstitution": "University of Chicago"
     },
     {
       "name": "Kaloyan Penev",
-      "placement": "Associate Research Scholar, Princeton University",
+      "placement": "Associate Professor, University of Texas at Dallas",
       "yearOfDeparture": "2009",
-      "currentTitle": "Associate Research Scholar",
-      "currentInstitution": "Princeton University"
+      "currentTitle": "Associate Professor",
+      "currentInstitution": "University of Texas at Dallas"
     },
     {
       "name": "Randall Cooper",
