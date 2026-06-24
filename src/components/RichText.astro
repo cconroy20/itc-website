@@ -1,24 +1,47 @@
 ---
 // Renders our lightly-structured text: paragraphs split on blank lines,
-// "## " headings, and "- " bullet lists. Keeps it dependency-free.
+// "## " headings, "- " bullet lists, and inline [label](https://url) links.
+// Keeps it dependency-free.
 const { text = "" } = Astro.props;
 const blocks = text.split(/\n\n+/).map((b) => b.trim()).filter(Boolean);
+
+// Split a string into an array of plain strings and {href,label} link objects
+// so we can render links without injecting raw HTML.
+function inline(s) {
+  const out = [];
+  const re = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
+  let last = 0, m;
+  while ((m = re.exec(s)) !== null) {
+    if (m.index > last) out.push(s.slice(last, m.index));
+    out.push({ href: m[2], label: m[1] });
+    last = re.lastIndex;
+  }
+  if (last < s.length) out.push(s.slice(last));
+  return out;
+}
 
 function classify(block) {
   const lines = block.split("\n").map((l) => l.trim());
   if (lines.every((l) => l.startsWith("- "))) {
-    return { type: "ul", items: lines.map((l) => l.replace(/^- /, "")) };
+    return { type: "ul", items: lines.map((l) => inline(l.replace(/^- /, ""))) };
   }
   if (block.startsWith("## ")) return { type: "h", text: block.replace(/^##\s*/, "") };
-  return { type: "p", text: block };
+  return { type: "p", parts: inline(block) };
 }
 const rendered = blocks.map(classify);
+
+const Parts = (parts) =>
+  parts.map((p) =>
+    typeof p === "string"
+      ? p
+      : `<a href="${p.href}" target="_blank" rel="noopener">${p.label}</a>`
+  ).join("");
 ---
 <div class="richtext">
   {rendered.map((b) =>
     b.type === "h" ? <h3>{b.text}</h3>
-    : b.type === "ul" ? <ul>{b.items.map((i) => <li>{i}</li>)}</ul>
-    : <p>{b.text}</p>
+    : b.type === "ul" ? <ul>{b.items.map((parts) => <li set:html={Parts(parts)} />)}</ul>
+    : <p set:html={Parts(b.parts)} />
   )}
 </div>
 
