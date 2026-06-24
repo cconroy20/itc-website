@@ -9,6 +9,7 @@ const events = [
   {
     slug: "luncheon",
     name: "ITC Luncheon",
+    detail: "12:30–1:30, Philips Auditorium",
     sessions: [
       // Each session: date + up to three speakers, each { name, affiliation, title }.
       {
@@ -40,6 +41,7 @@ const events = [
       {events.map((e) => (
         <section id={e.slug} class="event">
           <h2>{e.name}</h2>
+          {e.detail && <p class="event__detail">{e.detail}</p>}
           {e.sessions.length > 0 ? (
             <ul class="sessions">
               {e.sessions.map((s) => (
@@ -82,7 +84,8 @@ const events = [
 
   .events { max-width: 900px; display: flex; flex-direction: column; gap: 3rem; }
   .event { scroll-margin-top: 192px; }
-  .event h2 { margin: 0 0 1.25rem; font-size: clamp(1.5rem, 2.6vw, 2rem); }
+  .event h2 { margin: 0 0 .4rem; font-size: clamp(1.5rem, 2.6vw, 2rem); }
+  .event__detail { margin: 0 0 1.25rem; color: var(--ink-soft); font-size: 1rem; }
 
   .sessions { list-style: none; margin: 0; padding: 0; }
   .session {
