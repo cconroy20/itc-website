@@ -46,10 +46,14 @@ const events = [
                 <li class="session">
                   <span class="session__date">{s.date}</span>
                   <ul class="speakers">
-                    {s.speakers.filter((sp) => sp.name || sp.title).map((sp) => (
-                      <li class="speaker">
-                        <span class="speaker__who">{sp.name}</span>{sp.affiliation && <span class="speaker__aff"> ({sp.affiliation})</span>}{sp.title && <span class="speaker__title"> “{sp.title}”</span>}
-                      </li>
+                    {s.speakers.map((sp) => (
+                      sp.name || sp.title ? (
+                        <li class="speaker">
+                          <span class="speaker__who">{sp.name}</span>{sp.affiliation && <span class="speaker__aff"> ({sp.affiliation})</span>}{sp.title && <span class="speaker__title"> “{sp.title}”</span>}
+                        </li>
+                      ) : (
+                        <li class="speaker speaker--empty">—</li>
+                      )
                     ))}
                   </ul>
                 </li>
@@ -96,6 +100,7 @@ const events = [
   .speaker__who { font-weight: 600; color: var(--ink); }
   .speaker__aff { color: var(--ink-soft); }
   .speaker__title { color: var(--ink-soft); font-style: italic; }
+  .speaker--empty { color: var(--ink-faint); }
 
   @media (max-width: 560px) {
     .session { grid-template-columns: 1fr; gap: .75rem; }
