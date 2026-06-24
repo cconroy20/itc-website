@@ -6,7 +6,12 @@
       "start": "2026-10-05",
       "end": "2026-10-23",
       "dates": "October 5 – 23, 2026",
-      "body": "The mass loss mechanisms of evolved, massive stars remain poorly understood. Do these stars primarily lose mass in steady winds, or dramatic eruptions? What are the drivers of late-stage stellar outbursts? What role do binary companion objects play in shaping the lives of these stars? Signatures of dusty outbursts in red supergiants like Betelgeuse and new observations of low-luminosity variability in supernovae – including “precursor” outbursts that announce the ultimate death of these stars – have motivated new theoretical work on both wind-driven and eruptive mass loss for single and binary systems. The coming years are expected to bring an exponential increase in such observations, thanks to missions/surveys like Rubin, DSA-2000 and Roman. This program aims to bring together experts in the internal and external lives of massive stars to better understand how mass loss episodes shape the lives of massive stars and the traces they leave in the time-domain sky."
+      "body": "The mass loss mechanisms of evolved, massive stars remain poorly understood. Do these stars primarily lose mass in steady winds, or dramatic eruptions? What are the drivers of late-stage stellar outbursts? What role do binary companion objects play in shaping the lives of these stars? Signatures of dusty outbursts in red supergiants like Betelgeuse and new observations of low-luminosity variability in supernovae – including “precursor” outbursts that announce the ultimate death of these stars – have motivated new theoretical work on both wind-driven and eruptive mass loss for single and binary systems. The coming years are expected to bring an exponential increase in such observations, thanks to missions/surveys like Rubin, DSA-2000 and Roman. This program aims to bring together experts in the internal and external lives of massive stars to better understand how mass loss episodes shape the lives of massive stars and the traces they leave in the time-domain sky.",
+      "organizers": [
+        "Morgan MacLeod",
+        "Ashley Villar",
+        "Daichi Tsuna"
+      ]
     },
     {
       "slug": "small-scale-probes-dark-matter",

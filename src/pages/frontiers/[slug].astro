@@ -12,14 +12,19 @@ export function getStaticPaths() {
 }
 
 const { program } = Astro.props;
-const { title, dates, body } = program;
+const { title, dates, body, organizers } = program;
 ---
 <Base title={`${title} · Frontiers`} description={`${title} — an ITC Frontiers program, ${dates}.`}>
   <article class="article">
     <div class="container article__head">
       <a href={url("/frontiers")} class="article__back">← Frontiers</a>
-      <span class="article__dates">{dates}</span>
       <h1>{title}</h1>
+      <p class="article__dates">{dates}</p>
+      {organizers && organizers.length > 0 && (
+        <p class="article__organizers">
+          <span class="article__organizers-label">Organizers:</span> {organizers.join(", ")}
+        </p>
+      )}
     </div>
 
     <div class="container article__body prose">
@@ -35,11 +40,13 @@ const { title, dates, body } = program;
     margin-bottom: 1.25rem;
   }
   .article__back:hover { color: var(--accent-ink); text-decoration: none; }
-  .article__dates {
-    display: block; font-size: .8rem; text-transform: uppercase; letter-spacing: .06em;
-    color: var(--ink-faint); margin-bottom: .6rem;
-  }
   .article__head h1 { margin: 0; font-size: clamp(1.7rem, 3.4vw, 2.5rem); letter-spacing: -0.028em; text-wrap: balance; }
+  .article__dates {
+    margin: .65rem 0 0; font-size: 1.1rem; color: var(--ink-soft);
+    font-variant-numeric: tabular-nums;
+  }
+  .article__organizers { margin: .5rem 0 0; font-size: 1rem; color: var(--ink-soft); }
+  .article__organizers-label { color: var(--ink-faint); }
 
   .article__body { max-width: var(--maxw-prose); padding-bottom: 4rem; }
   .article__body :global(p) { font-size: 1.05rem; }
