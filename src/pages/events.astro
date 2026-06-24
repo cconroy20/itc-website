@@ -2,40 +2,102 @@
 import Base from "../layouts/Base.astro";
 import PageHero from "../components/PageHero.astro";
 
+// Each event type has a list of dated sessions. A session has a `date` and an
+// array of `speakers`, each { name, affiliation, title }.
+// Luncheons typically have three speakers per session.
 const events = [
   {
+    slug: "luncheon",
     name: "ITC Luncheon",
-    desc: "Each week, members and visitors come together over lunch to present and debate new results across theoretical and computational astrophysics — an informal forum where ideas are shared and discussed in real time.",
+    sessions: [
+      // Each session: date + up to three speakers, each { name, affiliation, title }.
+      {
+        date: "Sep 10, 2026",
+        speakers: [
+          { name: "", affiliation: "", title: "" },
+          { name: "", affiliation: "", title: "" },
+          { name: "", affiliation: "", title: "" },
+        ],
+      },
+    ],
   },
   {
+    slug: "special-seminars",
     name: "Special Seminars",
-    desc: "Additional talks arranged throughout the year around visiting scientists and timely results, bringing leading researchers from around the world to present their work to the ITC community.",
+    sessions: [],
   },
 ];
 ---
 <Base title="Events" description="The ITC Luncheon and Special Seminars at the Institute for Theory and Computation.">
-  <PageHero
-    title="Events"
-    lead="The ITC brings leading scholars together through its weekly Luncheon and a program of Special Seminars."
-  />
+  <PageHero title="Events" />
+
+  <nav class="jump container" aria-label="Jump to event">
+    {events.map((e) => <a href={`#${e.slug}`} class="jump__link">{e.name}</a>)}
+  </nav>
 
   <section class="section">
-    <div class="container">
-      <div class="grid grid--2 events">
-        {events.map((e) => (
-          <article class="ev card">
-            <h2>{e.name}</h2>
-            <p>{e.desc}</p>
-          </article>
-        ))}
-      </div>
+    <div class="container events">
+      {events.map((e) => (
+        <section id={e.slug} class="event">
+          <h2>{e.name}</h2>
+          {e.sessions.length > 0 ? (
+            <ul class="sessions">
+              {e.sessions.map((s) => (
+                <li class="session">
+                  <span class="session__date">{s.date}</span>
+                  <ul class="speakers">
+                    {s.speakers.filter((sp) => sp.name || sp.title).map((sp) => (
+                      <li class="speaker">
+                        <span class="speaker__who">{sp.name}</span>{sp.affiliation && <span class="speaker__aff"> ({sp.affiliation})</span>}{sp.title && <span class="speaker__title"> “{sp.title}”</span>}
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p class="sessions-empty">Schedule coming soon.</p>
+          )}
+        </section>
+      ))}
     </div>
   </section>
 </Base>
 
 <style>
-  .events { align-items: start; }
-  .ev { padding: clamp(1.75rem, 3vw, 2.5rem); }
-  .ev h2 { margin: 0 0 .6rem; font-size: clamp(1.4rem, 2.4vw, 1.8rem); }
-  .ev p { color: var(--ink-soft); margin: 0; }
+  .jump {
+    display: flex; gap: .5rem; flex-wrap: wrap;
+    padding-block: 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 72px; background: transparent; backdrop-filter: blur(6px); z-index: 50;
+  }
+  .jump__link {
+    font-family: var(--font-sans); font-size: .85rem; font-weight: 500; color: var(--ink-soft);
+    padding: .4rem .8rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg-soft);
+  }
+  .jump__link:hover { color: var(--accent-ink); border-color: var(--accent-line); background: var(--accent-soft); text-decoration: none; }
+
+  .events { max-width: 900px; display: flex; flex-direction: column; gap: 3rem; }
+  .event { scroll-margin-top: 130px; }
+  .event h2 { margin: 0 0 1.25rem; font-size: clamp(1.5rem, 2.6vw, 2rem); }
+
+  .sessions { list-style: none; margin: 0; padding: 0; }
+  .session {
+    display: grid; grid-template-columns: 180px 1fr; gap: 1.5rem;
+    padding: 1.4rem 0; border-top: 1px solid var(--line);
+  }
+  .session:last-child { border-bottom: 1px solid var(--line); }
+  .session__date {
+    font-family: var(--font-serif); font-size: 1.25rem; color: var(--ink);
+    white-space: nowrap; padding-top: .1rem; font-variant-numeric: tabular-nums;
+  }
+
+  .speakers { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .65rem; }
+  .speaker { font-size: 1.02rem; line-height: 1.45; color: var(--ink-soft); }
+  .speaker__who { font-weight: 600; color: var(--ink); }
+  .speaker__aff { color: var(--ink-soft); }
+  .speaker__title { color: var(--ink-soft); font-style: italic; }
+
+  @media (max-width: 560px) {
+    .session { grid-template-columns: 1fr; gap: .75rem; }
+  }
 </style>
