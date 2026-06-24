@@ -78,8 +78,14 @@
     // split for that anomaly, so particles are caught at all phases of varied
     // ellipses rather than all starting at apoapsis.
     function newOrbit() {
-      const a = (0.12 + Math.random() * 0.32) * scale;     // semi-major axis
-      const e = Math.random() * 0.7;                       // eccentricity 0–0.7
+      // Draw eccentricity first, then size the orbit by its APOAPSIS so no
+      // orbit flings out past the field — this prevents high-e particles from
+      // shooting far away. Apoapsis = rApo is centrally concentrated (squared
+      // random biases inward) and reaches close to the center.
+      const e = Math.random() * 0.8;                       // eccentricity 0–0.8
+      const u = Math.random() * Math.random();             // ∝ centrally peaked
+      const rApo = (0.10 + u * 0.55) * scale;              // apoapsis radius
+      const a = rApo / (1 + e);                            // semi-major axis
       const nu = Math.random() * Math.PI * 2;              // true anomaly (phase)
       const dir = Math.random() < 0.5 ? 1 : -1;            // orbital sense
 
