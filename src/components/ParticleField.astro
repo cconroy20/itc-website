@@ -22,9 +22,9 @@
 
     // --- physics constants (world units; central mass at origin) ---
     const GM = 26000;      // central mass * G
-    const SOFT2 = 55 * 55; // softening length^2 (avoids singularity at center)
-    const DT = 0.1275;     // timestep (lower = slower orbits)
-    const SUB = 2;         // substeps per frame (accuracy near pericenter)
+    const SOFT2 = 10 * 10; // softening length^2 (avoids singularity at center)
+    const DT = 0.01275;    // timestep (lower = slower orbits)
+    const SUB = 6;         // substeps per frame (accuracy near pericenter)
     const TRAIL = 130;     // trail length (history samples)
     const CAM = 900;       // camera distance along +z (perspective strength)
 
@@ -77,48 +77,52 @@
     // in-plane argument of periapsis). Velocity uses the exact radial+tangential
     // split for that anomaly, so particles are caught at all phases of varied
     // ellipses rather than all starting at apoapsis.
-    function newOrbit() {
-      // Draw eccentricity first, then size the orbit by its APOAPSIS so no
-      // orbit flings out past the field — this prevents high-e particles from
-      // shooting far away. Apoapsis = rApo is centrally concentrated (squared
-      // random biases inward) and reaches close to the center.
-      const e = Math.random() * 0.8;                       // eccentricity 0–0.8
-      const u = Math.random() * Math.random();             // ∝ centrally peaked
-      const rApo = (0.10 + u * 0.55) * scale;              // apoapsis radius
-      const a = rApo / (1 + e);                            // semi-major axis
-      const nu = Math.random() * Math.PI * 2;              // true anomaly (phase)
-      const dir = Math.random() < 0.5 ? 1 : -1;            // orbital sense
+    // Softened potential Φ(r) = -GM / sqrt(r² + SOFT2). Building orbits directly
+    // in THIS potential (the one the integrator uses) guarantees bound orbits —
+    // the previous point-mass velocity was too fast for the softened inner force,
+    // so centrally-concentrated particles flew out. Here we pick periapsis &
+    // apoapsis, solve for the conserved L and E that put the turning points
+    // exactly there, then set the speed/direction at a random radius in between.
+    function phi(r) { return -GM / Math.sqrt(r * r + SOFT2); }
 
-      // random orientation: inclination, ascending node, argument of periapsis
-      const inc = Math.acos(2 * Math.random() - 1);        // uniform on sphere
+    function newOrbit() {
+      // apoapsis: strongly inward-peaked; periapsis: a random fraction inside it.
+      const u = Math.random() * Math.random();             // inward-peaked (gentle)
+      const ra = (0.08 + u * 0.57) * scale;                // apoapsis
+      const e = Math.random() * 0.8;                       // eccentricity 0–0.8
+      const rp = ra * (1 - e);                             // periapsis
+      const dir = Math.random() < 0.5 ? 1 : -1;
+
+      // angular momentum & energy that make rp, ra the radial turning points
+      const L2 = 2 * (phi(rp) - phi(ra)) / (1 / (ra * ra) - 1 / (rp * rp));
+      const E = phi(ra) + L2 / (2 * ra * ra);              // < 0 ⇒ bound
+
+      // pick a random radius along the orbit (uniform between turning points)
+      const r = rp + Math.random() * (ra - rp);
+      const v2 = Math.max(0, 2 * (E - phi(r)));            // total speed² ≥ 0
+      const vt = Math.sqrt(L2) / r;                        // tangential speed
+      const vrMag = Math.sqrt(Math.max(0, v2 - vt * vt));  // radial speed
+      const vr = (Math.random() < 0.5 ? 1 : -1) * vrMag;   // in- or out-bound
+
+      // random orientation: inclination (isotropic), node, argument of periapsis
+      const inc = Math.acos(2 * Math.random() - 1);
       const node = Math.random() * Math.PI * 2;
       const argp = Math.random() * Math.PI * 2;
-
-      // in-plane orthonormal basis P (toward periapsis), Q (along motion at peri),
-      // built by rotating (argp) within a plane tilted by (inc, node).
       const cn = Math.cos(node), sn = Math.sin(node);
       const ci = Math.cos(inc), si = Math.sin(inc);
       const cw = Math.cos(argp), sw = Math.sin(argp);
-      // columns of R = Rz(node) * Rx(inc) * Rz(argp)
-      const Px = cn * cw - sn * ci * sw;
-      const Py = sn * cw + cn * ci * sw;
-      const Pz = si * sw;
-      const Qx = -cn * sw - sn * ci * cw;
-      const Qy = -sn * sw + cn * ci * cw;
-      const Qz = si * cw;
+      // R (radial dir at this phase) and T (tangential dir, sense = dir)
+      const Rx = cn * cw - sn * ci * sw;
+      const Ry = sn * cw + cn * ci * sw;
+      const Rz = si * sw;
+      const Tx = dir * (-cn * sw - sn * ci * cw);
+      const Ty = dir * (-sn * sw + cn * ci * cw);
+      const Tz = dir * (si * cw);
 
-      const p = a * (1 - e * e);                           // semi-latus rectum
-      const r = p / (1 + e * Math.cos(nu));                // radius at this phase
-      const cosNu = Math.cos(nu), sinNu = Math.sin(nu);
-      const x = r * (cosNu * Px + sinNu * Qx);
-      const y = r * (cosNu * Py + sinNu * Qy);
-      const z = r * (cosNu * Pz + sinNu * Qz);
-      // velocity: v = sqrt(GM/p) * ( -sin(nu) P + (e + cos(nu)) Q )
-      const k = dir * Math.sqrt(GM / Math.max(p, 20));
-      const vr = -sinNu, vt = e + cosNu;
-      const vx = k * (vr * Px + vt * Qx);
-      const vy = k * (vr * Py + vt * Qy);
-      const vz = k * (vr * Pz + vt * Qz);
+      const x = r * Rx, y = r * Ry, z = r * Rz;
+      const vx = vr * Rx + vt * Tx;
+      const vy = vr * Ry + vt * Ty;
+      const vz = vr * Rz + vt * Tz;
       const [ax, ay, az] = accel(x, y, z);
       return { x, y, z, vx, vy, vz, ax, ay, az };
     }
