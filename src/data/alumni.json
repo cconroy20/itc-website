@@ -142,10 +142,10 @@
     },
     {
       "name": "John Forbes",
-      "placement": "Flatiron Research Fellow, Center for Computational Astrophysics",
+      "placement": "Postdoctoral Fellow, University of Canterbury",
       "yearOfDeparture": "2019",
-      "currentTitle": "Flatiron Research Fellow",
-      "currentInstitution": "Center for Computational Astrophysics"
+      "currentTitle": "Postdoctoral Fellow",
+      "currentInstitution": "University of Canterbury"
     },
     {
       "name": "Benedikt Diemer",
@@ -170,10 +170,10 @@
     },
     {
       "name": "Anastasia Fialkov",
-      "placement": "Senior Research Fellow, Kavli Institute for Cosmology (Cambridge, UK)",
+      "placement": "Professor, University of Cambridge",
       "yearOfDeparture": "2018",
-      "currentTitle": "Senior Research Fellow",
-      "currentInstitution": "Kavli Institute for Cosmology (Cambridge, UK)"
+      "currentTitle": "Professor",
+      "currentInstitution": "University of Cambridge"
     },
     {
       "name": "Federico Marinacci",
@@ -184,17 +184,17 @@
     },
     {
       "name": "Blakesley Burkhart",
-      "placement": "Assistant Professor, Rutgers",
+      "placement": "Associate Professor, Rutgers University",
       "yearOfDeparture": "2018",
-      "currentTitle": "Assistant Professor",
-      "currentInstitution": "Rutgers"
+      "currentTitle": "Associate Professor",
+      "currentInstitution": "Rutgers University"
     },
     {
       "name": "Caroline Morley",
-      "placement": "Assistant Professor, Univ Texas at Austin",
+      "placement": "Associate Professor, University of Texas at Austin",
       "yearOfDeparture": "2018",
-      "currentTitle": "Assistant Professor",
-      "currentInstitution": "Univ Texas at Austin"
+      "currentTitle": "Associate Professor",
+      "currentInstitution": "University of Texas at Austin"
     },
     {
       "name": "Gongjie Li",
@@ -205,9 +205,9 @@
     },
     {
       "name": "Ilse Cleeves",
-      "placement": "Assistant Professor, University of Virginia",
+      "placement": "Associate Professor, University of Virginia",
       "yearOfDeparture": "2018",
-      "currentTitle": "Assistant Professor",
+      "currentTitle": "Associate Professor",
       "currentInstitution": "University of Virginia"
     },
     {
@@ -1022,38 +1022,38 @@
     },
     {
       "name": "Peter Blanchard",
-      "placement": "Ciero Fellow, Northwestern",
+      "placement": "Research Scientist, Harvard University",
       "yearOfDeparture": "2019",
-      "currentTitle": "Ciero Fellow",
-      "currentInstitution": "Northwestern"
+      "currentTitle": "Research Scientist",
+      "currentInstitution": "Harvard University"
     },
     {
       "name": "Benjamin Cook",
-      "placement": "Junior Quantitative Researcher, Akuna Capitol (Boston)",
+      "placement": "Senior Quantitative Researcher, Walleye Capital",
       "yearOfDeparture": "2019",
-      "currentTitle": "Junior Quantitative Researcher",
-      "currentInstitution": "Akuna Capitol (Boston)"
+      "currentTitle": "Senior Quantitative Researcher",
+      "currentInstitution": "Walleye Capital"
     },
     {
       "name": "Lehman H. Garrison",
-      "placement": "Flatiron Research Fellow, CCA (Flatiron Institute)",
+      "placement": "Senior Software Engineer, Flatiron Institute",
       "yearOfDeparture": "2019",
-      "currentTitle": "Flatiron Research Fellow",
-      "currentInstitution": "CCA (Flatiron Institute)"
+      "currentTitle": "Senior Software Engineer",
+      "currentInstitution": "Flatiron Institute"
     },
     {
       "name": "Yutong Shan",
-      "placement": "Postdoc Fellow, University of Goettingen",
+      "placement": "Senior Academic Librarian, University of Oslo",
       "yearOfDeparture": "2019",
-      "currentTitle": "Postdoc Fellow",
-      "currentInstitution": "University of Goettingen"
+      "currentTitle": "Senior Academic Librarian",
+      "currentInstitution": "University of Oslo"
     },
     {
       "name": "Meng Gu",
-      "placement": "Russell Postdoc Fellow, Princeton",
+      "placement": "Assistant Professor, Tsinghua University",
       "yearOfDeparture": "2019",
-      "currentTitle": "Russell Postdoc Fellow",
-      "currentInstitution": "Princeton"
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "Tsinghua University"
     },
     {
       "name": "Xiawei Wang",
@@ -1064,17 +1064,17 @@
     },
     {
       "name": "Kate Alexander",
-      "placement": "Einstein Fellow, Northwestern",
+      "placement": "Assistant Professor, University of Arizona",
       "yearOfDeparture": "2018",
-      "currentTitle": "Einstein Fellow",
-      "currentInstitution": "Northwestern"
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "University of Arizona"
     },
     {
       "name": "How-Huan Chen",
-      "placement": "CNS Fellow, Univ Texas Austin",
+      "placement": "Quantitative Researcher, JQ Investments",
       "yearOfDeparture": "2018",
-      "currentTitle": "CNS Fellow",
-      "currentInstitution": "Univ Texas Austin"
+      "currentTitle": "Quantitative Researcher",
+      "currentInstitution": "JQ Investments"
     },
     {
       "name": "Jieun Choi",
@@ -1239,9 +1239,9 @@
     },
     {
       "name": "Gongjie Li",
-      "placement": "Assistant Professor, Georgia Tech",
+      "placement": "Associate Professor, Georgia Tech",
       "yearOfDeparture": "2016",
-      "currentTitle": "Assistant Professor",
+      "currentTitle": "Associate Professor",
       "currentInstitution": "Georgia Tech"
     },
     {
