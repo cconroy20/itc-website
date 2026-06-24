@@ -3,14 +3,6 @@ import { url } from "../lib/url.js";
 ---
 <footer class="site-footer">
   <div class="container site-footer__inner">
-    <div class="site-footer__brand">
-      <span class="brand__mark" aria-hidden="true">ITC</span>
-      <p>
-        <strong>Institute for Theory &amp; Computation</strong><br />
-        Center for Astrophysics | Harvard &amp; Smithsonian
-      </p>
-    </div>
-
     <div class="site-footer__col">
       <h4>Explore</h4>
       <a href={url("/about")}>About</a>
@@ -37,21 +29,10 @@ import { url } from "../lib/url.js";
   .site-footer a { color: var(--ink-soft); }
   .site-footer a:hover { color: var(--ink); }
   .site-footer__inner {
-    display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2.5rem;
+    display: flex; flex-wrap: wrap; gap: 2.5rem 5rem;
     padding-block: 3rem 3.25rem;
   }
-  .site-footer__brand { display: flex; gap: 1rem; align-items: center; }
-  .site-footer__brand p { white-space: nowrap; }
-  .site-footer__brand .brand__mark {
-    flex-shrink: 0; font-family: var(--font-serif); font-weight: 600;
-    font-size: 2.4rem; line-height: 1; letter-spacing: .005em; color: var(--ink);
-  }
-  .site-footer__brand strong { color: var(--ink); font-family: var(--font-serif); }
   .site-footer__col { display: flex; flex-direction: column; gap: .4rem; }
   .site-footer__col h4 { color: var(--ink); font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; margin-bottom: .5rem; font-family: var(--font-sans); }
   .site-footer__col a { font-size: .92rem; }
-  @media (max-width: 700px) {
-    .site-footer__inner { grid-template-columns: 1fr 1fr; }
-    .site-footer__brand { grid-column: 1 / -1; }
-  }
 </style>
