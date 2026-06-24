@@ -197,13 +197,6 @@
       "currentInstitution": "University of Texas at Austin"
     },
     {
-      "name": "Gongjie Li",
-      "placement": "Assistant Professor, Georgia Tech",
-      "yearOfDeparture": "2018",
-      "currentTitle": "Assistant Professor",
-      "currentInstitution": "Georgia Tech"
-    },
-    {
       "name": "Ilse Cleeves",
       "placement": "Associate Professor, University of Virginia",
       "yearOfDeparture": "2018",
@@ -240,23 +233,23 @@
     },
     {
       "name": "Cora Dvorkin",
-      "placement": "Associate Professor, Harvard University, Dept. of Physics",
+      "placement": "Professor, Harvard University",
       "yearOfDeparture": "2016",
-      "currentTitle": "Associate Professor",
-      "currentInstitution": "Harvard University, Dept. of Physics"
+      "currentTitle": "Professor",
+      "currentInstitution": "Harvard University"
     },
     {
       "name": "Yanfei Jiang",
-      "placement": "Associate Research Scientist, Planet Formation, CCA, Flatiron Institute",
+      "placement": "Research Scientist, CCA, Flatiron Institute",
       "yearOfDeparture": "2016",
-      "currentTitle": "Associate Research Scientist, Planet Formation",
+      "currentTitle": "Research Scientist",
       "currentInstitution": "CCA, Flatiron Institute"
     },
     {
       "name": "Lorenzo Sironi",
-      "placement": "Assistant Professor, Columbia University",
+      "placement": "Associate Professor, Columbia University",
       "yearOfDeparture": "2016",
-      "currentTitle": "Assistant Professor",
+      "currentTitle": "Associate Professor",
       "currentInstitution": "Columbia University"
     },
     {
@@ -282,10 +275,10 @@
     },
     {
       "name": "Michael McCourt",
-      "placement": "Principal Data Scientist, Invoca",
+      "placement": "Co-Founder & CEO, Sturdy Statistics",
       "yearOfDeparture": "2015",
-      "currentTitle": "Principal Data Scientist",
-      "currentInstitution": "Invoca"
+      "currentTitle": "Co-Founder & CEO",
+      "currentInstitution": "Sturdy Statistics"
     },
     {
       "name": "Thomas Greif",
@@ -295,10 +288,10 @@
     },
     {
       "name": "Laura Sales",
-      "placement": "Associate Professor, UC, Riverside",
+      "placement": "Professor, UC Riverside",
       "yearOfDeparture": "2015",
-      "currentTitle": "Associate Professor",
-      "currentInstitution": "UC, Riverside"
+      "currentTitle": "Professor",
+      "currentInstitution": "UC Riverside"
     },
     {
       "name": "Konstantin Batygin",
@@ -1211,31 +1204,31 @@
     },
     {
       "name": "Maria Drout",
-      "placement": "Hubble Postdoctoral Fellow, Carnegie Observatories",
+      "placement": "Associate Professor, University of Toronto",
       "yearOfDeparture": "2016",
-      "currentTitle": "Hubble Postdoctoral Fellow",
-      "currentInstitution": "Carnegie Observatories"
+      "currentTitle": "Associate Professor",
+      "currentInstitution": "University of Toronto"
     },
     {
       "name": "Douglas Ferrer",
-      "placement": "Robotics Software Engineer, iRobot",
+      "placement": "Software Engineer, Hyannis Port Research",
       "yearOfDeparture": "2016",
-      "currentTitle": "Robotics Software Engineer",
-      "currentInstitution": "iRobot"
+      "currentTitle": "Software Engineer",
+      "currentInstitution": "Hyannis Port Research"
     },
     {
       "name": "Gregory Green",
-      "placement": "Postdoctoral Fellow, Stanford University / KIPAC",
+      "placement": "Research Group Leader, Max Planck Institute for Astronomy",
       "yearOfDeparture": "2016",
-      "currentTitle": "Postdoctoral Fellow",
-      "currentInstitution": "Stanford University / KIPAC"
+      "currentTitle": "Research Group Leader",
+      "currentInstitution": "Max Planck Institute for Astronomy"
     },
     {
       "name": "Luke Zoltan Kelley",
-      "placement": "Astrophysics Research Fellow, Harvard University",
+      "placement": "Assistant Professor, UC Berkeley",
       "yearOfDeparture": "2016",
-      "currentTitle": "Astrophysics Research Fellow",
-      "currentInstitution": "Harvard University"
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "UC Berkeley"
     },
     {
       "name": "Gongjie Li",
@@ -1246,17 +1239,17 @@
     },
     {
       "name": "Dylan Nelson",
-      "placement": "Postdoctoral Fellow, Max Planck Institute for Astronomy, Garching",
+      "placement": "Research Group Leader, Heidelberg University",
       "yearOfDeparture": "2016",
-      "currentTitle": "Postdoctoral Fellow",
-      "currentInstitution": "Max Planck Institute for Astronomy, Garching"
+      "currentTitle": "Research Group Leader",
+      "currentInstitution": "Heidelberg University"
     },
     {
-      "name": "Vicente Rodrigues-Gomez",
-      "placement": "Postdoctoral Fellows, Space Telescope Science Institute",
+      "name": "Vicente Rodriguez-Gomez",
+      "placement": "Associate Professor, IRyA, UNAM",
       "yearOfDeparture": "2016",
-      "currentTitle": "Postdoctoral Fellows",
-      "currentInstitution": "Space Telescope Science Institute"
+      "currentTitle": "Associate Professor",
+      "currentInstitution": "IRyA, UNAM"
     },
     {
       "name": "Laura Schaefer",
