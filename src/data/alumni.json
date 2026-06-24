@@ -452,13 +452,6 @@
       "currentInstitution": "University of Cambridge"
     },
     {
-      "name": "Svetlin Tassev",
-      "placement": "Physics Teacher, Braintree High School, MA",
-      "yearOfDeparture": "2012",
-      "currentTitle": "Physics Teacher",
-      "currentInstitution": "Braintree High School, MA"
-    },
-    {
       "name": "Matija Cuk",
       "placement": "Research Scientist, SETI Institute",
       "yearOfDeparture": "2011",
@@ -481,9 +474,9 @@
     },
     {
       "name": "Uri Keshet",
-      "placement": "Associate Professor, Ben-Gurion University",
+      "placement": "Professor, Ben-Gurion University",
       "yearOfDeparture": "2011",
-      "currentTitle": "Associate Professor",
+      "currentTitle": "Professor",
       "currentInstitution": "Ben-Gurion University"
     },
     {
@@ -502,10 +495,10 @@
     },
     {
       "name": "Jonathan Pritchard",
-      "placement": "Senior Lecturer, Imperial College London, England",
+      "placement": "Professor, Imperial College London",
       "yearOfDeparture": "2011",
-      "currentTitle": "Senior Lecturer",
-      "currentInstitution": "Imperial College London, England"
+      "currentTitle": "Professor",
+      "currentInstitution": "Imperial College London"
     },
     {
       "name": "Yuval Birnboim",
@@ -530,17 +523,17 @@
     },
     {
       "name": "Daniel Fabrycky",
-      "placement": "Associate Professor, University of Chicago",
+      "placement": "Professor, University of Chicago",
       "yearOfDeparture": "2010",
-      "currentTitle": "Associate Professor",
+      "currentTitle": "Professor",
       "currentInstitution": "University of Chicago"
     },
     {
       "name": "Alison Farmer",
-      "placement": "Associate Director of Global Engineering, Vertex Pharmaceuticals",
+      "placement": "Vice President, i2SL",
       "yearOfDeparture": "2010",
-      "currentTitle": "Associate Director of Global Engineering",
-      "currentInstitution": "Vertex Pharmaceuticals"
+      "currentTitle": "Vice President",
+      "currentInstitution": "i2SL"
     },
     {
       "name": "Dusan Keres",
@@ -551,17 +544,17 @@
     },
     {
       "name": "Ruth Murray - Clay",
-      "placement": "Professor, UC Santa Cruz",
+      "placement": "Associate Professor, UC Santa Cruz",
       "yearOfDeparture": "2010",
-      "currentTitle": "Professor",
+      "currentTitle": "Associate Professor",
       "currentInstitution": "UC Santa Cruz"
     },
     {
       "name": "Desika Narayanan",
-      "placement": "Professor, Haverford College",
+      "placement": "Professor, University of Florida",
       "yearOfDeparture": "2010",
       "currentTitle": "Professor",
-      "currentInstitution": "Haverford College"
+      "currentInstitution": "University of Florida"
     },
     {
       "name": "Hiroshi Oda",
@@ -571,13 +564,16 @@
     },
     {
       "name": "Alicia Soderberg",
-      "yearOfDeparture": "2010"
+      "yearOfDeparture": "2010",
+      "currentTitle": "",
+      "currentInstitution": "Deceased",
+      "placement": "Deceased"
     },
     {
       "name": "Hy Trac",
-      "placement": "Professor, Carnegie Mellon University",
+      "placement": "Associate Professor, Carnegie Mellon University",
       "yearOfDeparture": "2010",
-      "currentTitle": "Professor",
+      "currentTitle": "Associate Professor",
       "currentInstitution": "Carnegie Mellon University"
     },
     {
@@ -1372,10 +1368,10 @@
     },
     {
       "name": "Sui Ann Mao",
-      "placement": "Postdoctoral Fellow, University of Wisconsin - Madison",
+      "placement": "Research Group Leader, Max Planck Institute for Radio Astronomy",
       "yearOfDeparture": "2011",
-      "currentTitle": "Postdoctoral Fellow",
-      "currentInstitution": "University of Wisconsin - Madison"
+      "currentTitle": "Research Group Leader",
+      "currentInstitution": "Max Planck Institute for Radio Astronomy"
     },
     {
       "name": "Robert Marcus",
@@ -1386,10 +1382,10 @@
     },
     {
       "name": "Roman Shcherbakov",
-      "placement": "Software Engineer, Teradata",
+      "placement": "Staff Software Engineer, Google",
       "yearOfDeparture": "2011",
-      "currentTitle": "Software Engineer",
-      "currentInstitution": "Teradata"
+      "currentTitle": "Staff Software Engineer",
+      "currentInstitution": "Google"
     },
     {
       "name": "Svetlin Tassev",
