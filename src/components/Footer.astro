@@ -40,7 +40,8 @@ import { url } from "../lib/url.js";
     display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2.5rem;
     padding-block: 3rem 3.25rem;
   }
-  .site-footer__brand { display: flex; gap: 1rem; align-items: flex-start; max-width: 360px; }
+  .site-footer__brand { display: flex; gap: 1rem; align-items: center; }
+  .site-footer__brand p { white-space: nowrap; }
   .site-footer__brand .brand__mark {
     flex-shrink: 0; font-family: var(--font-serif); font-weight: 600;
     font-size: 2.4rem; line-height: 1; letter-spacing: .005em; color: var(--ink);
