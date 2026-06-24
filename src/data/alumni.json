@@ -302,9 +302,9 @@
     },
     {
       "name": "Simeon Bird",
-      "placement": "Professor, UC Riverside",
+      "placement": "Associate Professor, UC Riverside",
       "yearOfDeparture": "2014",
-      "currentTitle": "Professor",
+      "currentTitle": "Associate Professor",
       "currentInstitution": "UC Riverside"
     },
     {
@@ -316,9 +316,9 @@
     },
     {
       "name": "Smadar Naoz",
-      "placement": "Associate Professor, UCLA",
+      "placement": "Professor, UCLA",
       "yearOfDeparture": "2014",
-      "currentTitle": "Associate Professor",
+      "currentTitle": "Professor",
       "currentInstitution": "UCLA"
     },
     {
@@ -344,10 +344,10 @@
     },
     {
       "name": "Tassos Fragos",
-      "placement": "Assistant Professor, Geneva Observatory, University of Geneva",
+      "placement": "Associate Professor, University of Geneva",
       "yearOfDeparture": "2013",
-      "currentTitle": "Assistant Professor",
-      "currentInstitution": "Geneva Observatory, University of Geneva"
+      "currentTitle": "Associate Professor",
+      "currentInstitution": "University of Geneva"
     },
     {
       "name": "Bence Kocsis",
@@ -362,9 +362,9 @@
     },
     {
       "name": "Matthew Walker",
-      "placement": "Associate Professor, Carnegie Mellon University",
+      "placement": "Professor, Carnegie Mellon University",
       "yearOfDeparture": "2013",
-      "currentTitle": "Associate Professor",
+      "currentTitle": "Professor",
       "currentInstitution": "Carnegie Mellon University"
     },
     {
@@ -1267,66 +1267,66 @@
     },
     {
       "name": "Nathan Sanders",
-      "placement": "Senior Director of Quantitative Analysis, Legendary Entertainment",
+      "placement": "Head of Data Science, Montai Health",
       "yearOfDeparture": "2014",
-      "currentTitle": "Senior Director of Quantitative Analysis",
-      "currentInstitution": "Legendary Entertainment"
+      "currentTitle": "Head of Data Science",
+      "currentInstitution": "Montai Health"
     },
     {
       "name": "Paul Torrey",
-      "placement": "Postdoctoral Fellow, MIT",
+      "placement": "Associate Professor, University of Virginia",
       "yearOfDeparture": "2014",
-      "currentTitle": "Postdoctoral Fellow",
-      "currentInstitution": "MIT"
+      "currentTitle": "Associate Professor",
+      "currentInstitution": "University of Virginia"
     },
     {
       "name": "Rebekah Dawson",
-      "placement": "Assistant Professor, Penn State University",
+      "placement": "Program Scientist, NASA Headquarters",
       "yearOfDeparture": "2013",
-      "currentTitle": "Assistant Professor",
-      "currentInstitution": "Penn State University"
+      "currentTitle": "Program Scientist",
+      "currentInstitution": "NASA Headquarters"
     },
     {
       "name": "Diego Munoz",
-      "placement": "Research Associate, Cornell University",
+      "placement": "Assistant Professor, Northern Arizona University",
       "yearOfDeparture": "2013",
-      "currentTitle": "Research Associate",
-      "currentInstitution": "Cornell University"
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "Northern Arizona University"
     },
     {
       "name": "Tony Pan",
-      "placement": "Princial Scientists, Invention Science Fund",
+      "placement": "Co-Founder & CEO, Modern Hydrogen",
       "yearOfDeparture": "2013",
-      "currentTitle": "Princial Scientists",
-      "currentInstitution": "Invention Science Fund"
+      "currentTitle": "Co-Founder & CEO",
+      "currentInstitution": "Modern Hydrogen"
     },
     {
       "name": "Robert Penna",
-      "placement": "Postdoctoral Fellow, M.I.T.",
+      "placement": "Assistant Professor, SUNY Polytechnic Institute",
       "yearOfDeparture": "2013",
-      "currentTitle": "Postdoctoral Fellow",
-      "currentInstitution": "M.I.T."
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "SUNY Polytechnic Institute"
     },
     {
       "name": "Gregory Snyder",
-      "placement": "Postdoctoral Fellow, Space Telescope Science Institute",
+      "placement": "Archive Scientist, Space Telescope Science Institute",
       "yearOfDeparture": "2013",
-      "currentTitle": "Postdoctoral Fellow",
+      "currentTitle": "Archive Scientist",
       "currentInstitution": "Space Telescope Science Institute"
     },
     {
       "name": "Nick Stone",
-      "placement": "Postdoctoral Fellow, Columbia University",
+      "placement": "Associate Professor, Hebrew University of Jerusalem",
       "yearOfDeparture": "2013",
-      "currentTitle": "Postdoctoral Fellow",
-      "currentInstitution": "Columbia University"
+      "currentTitle": "Associate Professor",
+      "currentInstitution": "Hebrew University of Jerusalem"
     },
     {
       "name": "Eli Visbal",
-      "placement": "Postdoctoral Fellow, Columbia University",
+      "placement": "Associate Professor, University of Toledo",
       "yearOfDeparture": "2013",
-      "currentTitle": "Postdoctoral Fellow",
-      "currentInstitution": "Columbia University"
+      "currentTitle": "Associate Professor",
+      "currentInstitution": "University of Toledo"
     },
     {
       "name": "Gurtina Besla",
