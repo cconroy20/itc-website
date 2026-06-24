@@ -1,0 +1,230 @@
+---
+// Right-margin decoration: N massless test particles orbiting a central mass
+// under Newtonian gravity, each leaving a fading trail of its past orbit.
+// Velocity-Verlet (symplectic) integration keeps the ellipses stable.
+// Canvas-based; pauses when off-screen or tab hidden; honors reduced-motion.
+---
+<canvas class="pfield" aria-hidden="true"></canvas>
+
+<script>
+  function initParticleField(canvas) {
+    if (!canvas || !canvas.getContext || canvas.dataset.pfInit) return;
+    canvas.dataset.pfInit = "1";
+    const ctx = canvas.getContext("2d");
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const accent = getComputedStyle(document.documentElement)
+      .getPropertyValue("--accent").trim() || "#a78bfa";
+    const ar = parseInt(accent.replace("#", "").slice(0, 2), 16) || 167;
+    const ag = parseInt(accent.replace("#", "").slice(2, 4), 16) || 139;
+    const ab = parseInt(accent.replace("#", "").slice(4, 6), 16) || 250;
+    const rgba = (a) => `rgba(${ar},${ag},${ab},${a})`;
+
+    // --- physics constants (world units; central mass at origin) ---
+    const GM = 26000;      // central mass * G
+    const SOFT2 = 55 * 55; // softening length^2 (avoids singularity at center)
+    const DT = 0.17;       // timestep (lower = slower orbits)
+    const SUB = 2;         // substeps per frame (accuracy near pericenter)
+    const TRAIL = 130;     // trail length (history samples)
+    const CAM = 900;       // camera distance along +z (perspective strength)
+
+    let w = 0, h = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
+    let cx = 0, cy = 0, scale = 1;  // screen center + world->screen scale
+    let bodies = [];
+    // scroll-driven rotation about the vertical (y) axis: full page = 180°
+    let rot = 0, rotTarget = 0;
+    let cosR = 1, sinR = 0;
+    function updateScrollRot() {
+      const doc = document.documentElement;
+      const max = (doc.scrollHeight - window.innerHeight) || 1;
+      const prog = Math.min(1, Math.max(0, window.scrollY / max));
+      rotTarget = prog * Math.PI; // 0 -> 180°
+    }
+    let raf = 0, visible = false;
+
+    function resize() {
+      const rect = canvas.getBoundingClientRect();
+      w = rect.width; h = rect.height;
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.max(1, Math.round(w * dpr));
+      canvas.height = Math.max(1, Math.round(h * dpr));
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      // projected center of the system within the canvas
+      cx = w * 0.46; cy = h * 0.5;
+      scale = Math.min(w, 0.5 * h);
+      seed();
+    }
+
+    // 3D acceleration toward the origin (central mass)
+    function accel(x, y, z) {
+      const r2 = x * x + y * y + z * z + SOFT2;
+      const inv = -GM / (r2 * Math.sqrt(r2));  // points toward origin
+      return [x * inv, y * inv, z * inv];
+    }
+
+    // perspective projection with a y-axis rotation (scroll-driven).
+    // world (x,y,z) -> rotate about y -> perspective -> screen (sx,sy) + depth f
+    function project(x, y, z) {
+      const rx = x * cosR + z * sinR;
+      const rz = -x * sinR + z * cosR;
+      const f = CAM / (CAM - rz);  // nearer => f>1 (bigger), far => f<1
+      return { sx: cx + rx * f, sy: cy + y * f, f };
+    }
+
+    // Proper Keplerian ICs: random semi-major axis `a`, independent random
+    // eccentricity `e`, and a random true anomaly `nu` (phase along the
+    // ellipse). The orbit plane is randomly oriented (inclination + node + an
+    // in-plane argument of periapsis). Velocity uses the exact radial+tangential
+    // split for that anomaly, so particles are caught at all phases of varied
+    // ellipses rather than all starting at apoapsis.
+    function newOrbit() {
+      const a = (0.12 + Math.random() * 0.32) * scale;     // semi-major axis
+      const e = Math.random() * 0.7;                       // eccentricity 0–0.7
+      const nu = Math.random() * Math.PI * 2;              // true anomaly (phase)
+      const dir = Math.random() < 0.5 ? 1 : -1;            // orbital sense
+
+      // random orientation: inclination, ascending node, argument of periapsis
+      const inc = Math.acos(2 * Math.random() - 1);        // uniform on sphere
+      const node = Math.random() * Math.PI * 2;
+      const argp = Math.random() * Math.PI * 2;
+
+      // in-plane orthonormal basis P (toward periapsis), Q (along motion at peri),
+      // built by rotating (argp) within a plane tilted by (inc, node).
+      const cn = Math.cos(node), sn = Math.sin(node);
+      const ci = Math.cos(inc), si = Math.sin(inc);
+      const cw = Math.cos(argp), sw = Math.sin(argp);
+      // columns of R = Rz(node) * Rx(inc) * Rz(argp)
+      const Px = cn * cw - sn * ci * sw;
+      const Py = sn * cw + cn * ci * sw;
+      const Pz = si * sw;
+      const Qx = -cn * sw - sn * ci * cw;
+      const Qy = -sn * sw + cn * ci * cw;
+      const Qz = si * cw;
+
+      const p = a * (1 - e * e);                           // semi-latus rectum
+      const r = p / (1 + e * Math.cos(nu));                // radius at this phase
+      const cosNu = Math.cos(nu), sinNu = Math.sin(nu);
+      const x = r * (cosNu * Px + sinNu * Qx);
+      const y = r * (cosNu * Py + sinNu * Qy);
+      const z = r * (cosNu * Pz + sinNu * Qz);
+      // velocity: v = sqrt(GM/p) * ( -sin(nu) P + (e + cos(nu)) Q )
+      const k = dir * Math.sqrt(GM / Math.max(p, 20));
+      const vr = -sinNu, vt = e + cosNu;
+      const vx = k * (vr * Px + vt * Qx);
+      const vy = k * (vr * Py + vt * Qy);
+      const vz = k * (vr * Pz + vt * Qz);
+      const [ax, ay, az] = accel(x, y, z);
+      return { x, y, z, vx, vy, vz, ax, ay, az };
+    }
+
+    function seed() {
+      const n = Math.max(28, Math.min(60, Math.round((w * h) / 6500)));
+      bodies = Array.from({ length: n }, () => ({
+        ...newOrbit(),
+        r: 1.3 + Math.random() * 1.7,
+        a: 0.5 + Math.random() * 0.45,
+        trail: [],
+      }));
+    }
+
+    function step() {
+      for (let s = 0; s < SUB; s++) {
+        for (const b of bodies) {
+          b.x += b.vx * DT + 0.5 * b.ax * DT * DT;
+          b.y += b.vy * DT + 0.5 * b.ay * DT * DT;
+          b.z += b.vz * DT + 0.5 * b.az * DT * DT;
+          const [nax, nay, naz] = accel(b.x, b.y, b.z);
+          b.vx += 0.5 * (b.ax + nax) * DT;
+          b.vy += 0.5 * (b.ay + nay) * DT;
+          b.vz += 0.5 * (b.az + naz) * DT;
+          b.ax = nax; b.ay = nay; b.az = naz;
+        }
+      }
+      for (const b of bodies) {
+        b.trail.push(b.x, b.y, b.z);
+        if (b.trail.length > TRAIL * 3) b.trail.splice(0, 3);
+        const d2 = b.x * b.x + b.y * b.y + b.z * b.z;
+        if (d2 > (scale * 1.5) ** 2) { Object.assign(b, newOrbit()); b.trail.length = 0; }
+      }
+    }
+
+    function draw() {
+      if (!reduce) step();
+      ctx.clearRect(0, 0, w, h);
+
+      // ease rotation toward scroll target, update rotation matrix
+      rot += (rotTarget - rot) * 0.10;
+      cosR = Math.cos(rot); sinR = Math.sin(rot);
+
+      // depth-sort by ROTATED z (far first so near draws on top)
+      const order = bodies
+        .map((b, i) => [-b.x * sinR + b.z * cosR, i])
+        .sort((a, c) => a[0] - c[0]);
+
+      for (const [, i] of order) {
+        const b = bodies[i];
+        // trail (projected, fading from tail to head, with per-point depth)
+        const t = b.trail, n = t.length / 3;
+        ctx.lineWidth = 1.1;
+        let prev = null;
+        for (let k = 0; k < n; k++) {
+          const pr = project(t[k * 3], t[k * 3 + 1], t[k * 3 + 2]);
+          if (prev) {
+            const o = (k / n) * 0.6 * b.a * (0.5 + 0.5 * pr.f);
+            ctx.strokeStyle = rgba(o);
+            ctx.beginPath();
+            ctx.moveTo(prev.sx, prev.sy);
+            ctx.lineTo(pr.sx, pr.sy);
+            ctx.stroke();
+          }
+          prev = pr;
+        }
+        // (particle head dots disabled — only the orbit tracks are shown)
+      }
+
+      raf = visible && !reduce ? requestAnimationFrame(draw) : 0;
+    }
+
+    function start() { if (!raf) raf = requestAnimationFrame(draw); }
+    function stop() { if (raf) cancelAnimationFrame(raf); raf = 0; }
+
+    window.addEventListener("resize", () => { resize(); updateScrollRot(); });
+    window.addEventListener("scroll", updateScrollRot, { passive: true });
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) stop(); else if (visible) start();
+    });
+    updateScrollRot();
+
+    const io = new IntersectionObserver((entries) => {
+      visible = entries[0].isIntersecting;
+      if (visible) { if (reduce) draw(); else start(); } else stop();
+    }, { rootMargin: "100px" });
+
+    resize();
+    io.observe(canvas);
+  }
+
+  function bootParticleFields() {
+    document.querySelectorAll("canvas.pfield").forEach(initParticleField);
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", bootParticleFields);
+  } else {
+    bootParticleFields();
+  }
+</script>
+
+<style>
+  .pfield {
+    /* Tall canvas; the JS draws the system center at 50% of canvas height.
+       height:150vh with top:-20vh puts that center at 55vh of the viewport
+       (the lower position you had), while the extra height lets the field
+       extend much further up/down before the radial fade. */
+    position: fixed; top: -20vh; right: -6vw; height: 150vh;
+    width: clamp(520px, 56%, 900px);
+    z-index: 0; pointer-events: none;
+    -webkit-mask-image: radial-gradient(52% 60% at 46% 50%, #000 34%, transparent 92%);
+    mask-image: radial-gradient(52% 60% at 46% 50%, #000 34%, transparent 92%);
+  }
+  @media (max-width: 1080px) { .pfield { display: none; } }
+</style>
