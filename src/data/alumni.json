@@ -23,17 +23,17 @@
     },
     {
       "name": "Matthew Liska",
-      "placement": "Einstein Fellow and Research Faculty, Georgia Tech",
+      "placement": "Research Scientist, Georgia Tech",
       "yearOfDeparture": "2023",
-      "currentTitle": "Einstein Fellow and Research Faculty",
+      "currentTitle": "Research Scientist",
       "currentInstitution": "Georgia Tech"
     },
     {
       "name": "Aaron Smith",
-      "placement": "Assistant Professor, University of Texas Austin",
+      "placement": "Assistant Professor, University of Texas at Dallas",
       "yearOfDeparture": "2023",
       "currentTitle": "Assistant Professor",
-      "currentInstitution": "University of Texas Austin"
+      "currentInstitution": "University of Texas at Dallas"
     },
     {
       "name": "Rahul Kannan",
@@ -51,30 +51,30 @@
     },
     {
       "name": "Bryan Terrazas",
-      "placement": "Postdoctoral Researcher, Columbia",
+      "placement": "Assistant Professor, Oberlin College",
       "yearOfDeparture": "2022",
-      "currentTitle": "Postdoctoral Researcher",
-      "currentInstitution": "Columbia"
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "Oberlin College"
     },
     {
       "name": "Anna Rosen",
-      "placement": "Assistant Professor, UCSD",
+      "placement": "Assistant Professor, San Diego State University",
       "yearOfDeparture": "2022",
       "currentTitle": "Assistant Professor",
-      "currentInstitution": "UCSD"
+      "currentInstitution": "San Diego State University"
     },
     {
       "name": "Rainer Weinberger",
-      "placement": "CITA Postdoctoral Fellow, University of Toronto",
+      "placement": "Research Group Leader, Leibniz Institute for Astrophysics Potsdam",
       "yearOfDeparture": "2021",
-      "currentTitle": "CITA Postdoctoral Fellow",
-      "currentInstitution": "University of Toronto"
+      "currentTitle": "Research Group Leader",
+      "currentInstitution": "Leibniz Institute for Astrophysics Potsdam"
     },
     {
       "name": "Sownak Bose",
-      "placement": "Assistant Professor, Durham University",
+      "placement": "Associate Professor, Durham University",
       "yearOfDeparture": "2021",
-      "currentTitle": "Assistant Professor",
+      "currentTitle": "Associate Professor",
       "currentInstitution": "Durham University"
     },
     {
@@ -114,17 +114,17 @@
     },
     {
       "name": "Daniel D'Orazio",
-      "placement": "Assistant Professor, University of Copenhagen",
+      "placement": "Assistant Astronomer, Space Telescope Science Institute",
       "yearOfDeparture": "2020",
-      "currentTitle": "Assistant Professor",
-      "currentInstitution": "University of Copenhagen"
+      "currentTitle": "Assistant Astronomer",
+      "currentInstitution": "Space Telescope Science Institute"
     },
     {
       "name": "Michelle Ntampaka",
-      "placement": "Data Scientist and Assistant Astronomer, STScI",
+      "placement": "Associate Astronomer, Space Telescope Science Institute",
       "yearOfDeparture": "2020",
-      "currentTitle": "Data Scientist and Assistant Astronomer",
-      "currentInstitution": "STScI"
+      "currentTitle": "Associate Astronomer",
+      "currentInstitution": "Space Telescope Science Institute"
     },
     {
       "name": "Antonija Oklopcic",
@@ -917,10 +917,10 @@
     },
     {
       "name": "Floor Broekgaarden",
-      "placement": "Junior Fellow, Simons Society of Fellows",
+      "placement": "Assistant Professor, UC San Diego",
       "yearOfDeparture": "2023",
-      "currentTitle": "Junior Fellow",
-      "currentInstitution": "Simons Society of Fellows"
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "UC San Diego"
     },
     {
       "name": "Chantanelle Nava",
@@ -938,38 +938,38 @@
     },
     {
       "name": "Nina Maksimova",
-      "placement": "David Foundation Scholar, St. Andrews University",
+      "placement": "Postdoctoral Fellow, University of St Andrews",
       "yearOfDeparture": "2022",
-      "currentTitle": "David Foundation Scholar",
-      "currentInstitution": "St. Andrews University"
+      "currentTitle": "Postdoctoral Fellow",
+      "currentInstitution": "University of St Andrews"
     },
     {
       "name": "Boryana Hadzhiyska",
-      "placement": "Miller Postdoctoral Fellow, UC Berkeley",
+      "placement": "Assistant Professor, University of Cambridge",
       "yearOfDeparture": "2022",
-      "currentTitle": "Miller Postdoctoral Fellow",
-      "currentInstitution": "UC Berkeley"
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "University of Cambridge"
     },
     {
       "name": "Xiaohan Wu",
-      "placement": "Postdoctoral Fellow, CITA",
+      "placement": "Scientific Software Engineer, industry",
       "yearOfDeparture": "2022",
-      "currentTitle": "Postdoctoral Fellow",
-      "currentInstitution": "CITA"
+      "currentTitle": "Scientific Software Engineer",
+      "currentInstitution": "industry"
     },
     {
       "name": "Rohan Naidu",
-      "placement": "Papalardo Fellow, MIT",
+      "placement": "Assistant Professor, University of Hawaiʻi",
       "yearOfDeparture": "2022",
-      "currentTitle": "Papalardo Fellow",
-      "currentInstitution": "MIT"
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "University of Hawaiʻi"
     },
     {
-      "name": "Loana Zelko",
-      "placement": "Postdoctoral Fellow, CITA, University of Toronto",
+      "name": "Ioana Zelko",
+      "placement": "Schmidt AI in Science Postdoctoral Fellow, University of Toronto",
       "yearOfDeparture": "2021",
-      "currentTitle": "Postdoctoral Fellow",
-      "currentInstitution": "CITA, University of Toronto"
+      "currentTitle": "Schmidt AI in Science Postdoctoral Fellow",
+      "currentInstitution": "University of Toronto"
     },
     {
       "name": "Ana-Roxana Pop",
@@ -980,45 +980,45 @@
     },
     {
       "name": "Seth Gossage",
-      "placement": "CIERA PostDoctoral Fellow, Northwestern University",
+      "placement": "Research Associate, Northwestern University",
       "yearOfDeparture": "2021",
-      "currentTitle": "CIERA PostDoctoral Fellow",
+      "currentTitle": "Research Associate",
       "currentInstitution": "Northwestern University"
     },
     {
       "name": "Sihan Yuan",
-      "placement": "KIPAC Postdoctoral Fellow, Stanford University",
+      "placement": "AI Researcher, Fireworks.ai",
       "yearOfDeparture": "2021",
-      "currentTitle": "KIPAC Postdoctoral Fellow",
-      "currentInstitution": "Stanford University"
+      "currentTitle": "AI Researcher",
+      "currentInstitution": "Fireworks.ai"
     },
     {
       "name": "Ellen Price",
-      "placement": "51 Pegasi b PostDoctoral Fellow, University of Chicago",
+      "placement": "Postdoctoral Scholar, University of Chicago",
       "yearOfDeparture": "2021",
-      "currentTitle": "51 Pegasi b PostDoctoral Fellow",
+      "currentTitle": "Postdoctoral Scholar",
       "currentInstitution": "University of Chicago"
     },
     {
       "name": "Josh Speagle",
-      "placement": "Dunlap Postdoctoral Fellowship, Univ Toronto",
+      "placement": "Assistant Professor, University of Toronto",
       "yearOfDeparture": "2020",
-      "currentTitle": "Dunlap Postdoctoral Fellowship",
-      "currentInstitution": "Univ Toronto"
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "University of Toronto"
     },
     {
       "name": "Jane Huang",
-      "placement": "Sagan Fellow, Univ of Michigan",
+      "placement": "Assistant Professor, Columbia University",
       "yearOfDeparture": "2020",
-      "currentTitle": "Sagan Fellow",
-      "currentInstitution": "Univ of Michigan"
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "Columbia University"
     },
     {
       "name": "Zoe Todd",
-      "placement": "Sagan Fellow, Univ of Washington",
+      "placement": "Assistant Professor, University of Wisconsin–Madison",
       "yearOfDeparture": "2020",
-      "currentTitle": "Sagan Fellow",
-      "currentInstitution": "Univ of Washington"
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "University of Wisconsin–Madison"
     },
     {
       "name": "Peter Blanchard",
@@ -1582,7 +1582,10 @@
     },
     {
       "name": "Sarah Jeffreson",
-      "yearOfDeparture": "2024"
+      "yearOfDeparture": "2024",
+      "currentTitle": "Postdoctoral Fellow",
+      "currentInstitution": "Princeton University",
+      "placement": "Postdoctoral Fellow, Princeton University"
     },
     {
       "name": "Razieh Meibody",
