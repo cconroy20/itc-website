@@ -212,23 +212,23 @@
     },
     {
       "name": "Xuening Bai",
-      "placement": "Faculty (Associate Professor), Institute for Advanced Study at Tsinghua University (IASTU) and Tsinghua Center for Astrophysics (THCA).",
+      "placement": "Professor, Tsinghua University",
       "yearOfDeparture": "2017",
-      "currentTitle": "Faculty (Associate Professor)",
-      "currentInstitution": "Institute for Advanced Study at Tsinghua University (IASTU) and Tsinghua Center for Astrophysics (THCA)."
+      "currentTitle": "Professor",
+      "currentInstitution": "Tsinghua University"
     },
     {
       "name": "Marion Dierickx",
-      "placement": "Research Associate, J. Kovac Lab, CfA",
+      "placement": "Program Director, Antarctic Sciences, National Science Foundation",
       "yearOfDeparture": "2017",
-      "currentTitle": "Research Associate, J. Kovac Lab",
-      "currentInstitution": "CfA"
+      "currentTitle": "Program Director, Antarctic Sciences",
+      "currentInstitution": "National Science Foundation"
     },
     {
-      "name": "Danny Milisavlevic",
-      "placement": "Assistant Professor, Purdue University",
+      "name": "Danny Milisavljevic",
+      "placement": "Associate Professor, Purdue University",
       "yearOfDeparture": "2017",
-      "currentTitle": "Assistant Professor",
+      "currentTitle": "Associate Professor",
       "currentInstitution": "Purdue University"
     },
     {
@@ -1092,45 +1092,45 @@
     },
     {
       "name": "Philip S. Cowperthwaite",
-      "placement": "Hubble Fellow, Carnegie Observatories",
+      "placement": "Senior Data Scientist, Toppan Merrill",
       "yearOfDeparture": "2018",
-      "currentTitle": "Hubble Fellow",
-      "currentInstitution": "Carnegie Observatories"
+      "currentTitle": "Senior Data Scientist",
+      "currentInstitution": "Toppan Merrill"
     },
     {
       "name": "Christopher Faesi",
-      "placement": "NSF Fellow, UMass Amherst",
+      "placement": "Assistant Professor, University of Connecticut",
       "yearOfDeparture": "2018",
-      "currentTitle": "NSF Fellow",
-      "currentInstitution": "UMass Amherst"
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "University of Connecticut"
     },
     {
       "name": "Pierre Christian",
-      "placement": "Physics Faculty, Fairfield University",
+      "placement": "Senior Data Scientist, WattTime",
       "yearOfDeparture": "2018",
-      "currentTitle": "Physics Faculty",
-      "currentInstitution": "Fairfield University"
+      "currentTitle": "Senior Data Scientist",
+      "currentInstitution": "WattTime"
     },
     {
       "name": "Ryan Loomis",
-      "placement": "Jansky Fellow, NRAO",
+      "placement": "Associate Scientist, NRAO",
       "yearOfDeparture": "2018",
-      "currentTitle": "Jansky Fellow",
+      "currentTitle": "Associate Scientist",
       "currentInstitution": "NRAO"
     },
     {
       "name": "Anjali Tripathi",
-      "placement": "Scientist, Raytheon",
+      "placement": "Astrophysicist, NASA JPL",
       "yearOfDeparture": "2018",
-      "currentTitle": "Scientist",
-      "currentInstitution": "Raytheon"
+      "currentTitle": "Astrophysicist",
+      "currentInstitution": "NASA JPL"
     },
     {
       "name": "Stephen Portillo",
-      "placement": "DIRAC Fellow & UW Data Science Fellow, Univ of Washington",
+      "placement": "Assistant Professor, Concordia University of Edmonton",
       "yearOfDeparture": "2018",
-      "currentTitle": "DIRAC Fellow & UW Data Science Fellow",
-      "currentInstitution": "Univ of Washington"
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "Concordia University of Edmonton"
     },
     {
       "name": "Xinyi Guo",
@@ -1141,73 +1141,73 @@
     },
     {
       "name": "Philip Mocz",
-      "placement": "Einstein Fellow, Princeton",
+      "placement": "Quantitative Software Engineer, Two Sigma",
       "yearOfDeparture": "2017",
-      "currentTitle": "Einstein Fellow",
-      "currentInstitution": "Princeton"
+      "currentTitle": "Quantitative Software Engineer",
+      "currentInstitution": "Two Sigma"
     },
     {
       "name": "Dawn Graninger",
-      "placement": "Senior Professinal Staff, Applied Physics Lab, The Johns Hopkins University",
+      "placement": "Physicist, Johns Hopkins University Applied Physics Lab",
       "yearOfDeparture": "2017",
-      "currentTitle": "Senior Professinal Staff, Applied Physics Lab",
-      "currentInstitution": "The Johns Hopkins University"
+      "currentTitle": "Physicist",
+      "currentInstitution": "Johns Hopkins University Applied Physics Lab"
     },
     {
       "name": "Kirit Karkare",
-      "placement": "Postdoc Researcher, Physics, Univ of Chicago",
+      "placement": "Assistant Professor, Boston University",
       "yearOfDeparture": "2017",
-      "currentTitle": "Postdoc Researcher, Physics",
-      "currentInstitution": "Univ of Chicago"
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "Boston University"
     },
     {
       "name": "Meredith A. MacGregor",
-      "placement": "Assistant Professor, Boulder",
+      "placement": "Assistant Professor, Johns Hopkins University",
       "yearOfDeparture": "2017",
       "currentTitle": "Assistant Professor",
-      "currentInstitution": "Boulder"
+      "currentInstitution": "Johns Hopkins University"
     },
     {
       "name": "Natalie Mashian Fisher",
-      "placement": "Visiting Professor of Phsyics & Astronomy, Pomona College",
+      "placement": "Visiting Assistant Professor, Pomona College",
       "yearOfDeparture": "2017",
-      "currentTitle": "Visiting Professor of Phsyics & Astronomy",
+      "currentTitle": "Visiting Assistant Professor",
       "currentInstitution": "Pomona College"
     },
     {
       "name": "Sukrit Ranjan",
-      "placement": "SCOL Fellow, MIT",
+      "placement": "Assistant Professor, University of Arizona",
       "yearOfDeparture": "2017",
-      "currentTitle": "SCOL Fellow",
-      "currentInstitution": "MIT"
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "University of Arizona"
     },
     {
       "name": "Joshua Suresh",
-      "placement": "Research Scientist, Institute for Disease Modeling",
+      "placement": "Senior Research Scientist, Institute for Disease Modeling",
       "yearOfDeparture": "2017",
-      "currentTitle": "Research Scientist",
+      "currentTitle": "Senior Research Scientist",
       "currentInstitution": "Institute for Disease Modeling"
     },
     {
       "name": "Yuan-Sen Ting",
-      "placement": "Hubble Fellow, IAS",
+      "placement": "Associate Professor, Ohio State University",
       "yearOfDeparture": "2017",
-      "currentTitle": "Hubble Fellow",
-      "currentInstitution": "IAS"
+      "currentTitle": "Associate Professor",
+      "currentInstitution": "Ohio State University"
     },
     {
       "name": "Andrew Vanderburg",
-      "placement": "Assistant Professor, U Wisconsin-Madison",
+      "placement": "Assistant Professor, Harvard University",
       "yearOfDeparture": "2017",
       "currentTitle": "Assistant Professor",
-      "currentInstitution": "U Wisconsin-Madison"
+      "currentInstitution": "Harvard University"
     },
     {
       "name": "Sarah Wellons",
-      "placement": "CIERA Fellow, Northwestern",
+      "placement": "Assistant Professor, Wesleyan University",
       "yearOfDeparture": "2017",
-      "currentTitle": "CIERA Fellow",
-      "currentInstitution": "Northwestern"
+      "currentTitle": "Assistant Professor",
+      "currentInstitution": "Wesleyan University"
     },
     {
       "name": "Maria Drout",
