@@ -4,11 +4,16 @@ import PageHero from "../components/PageHero.astro";
 import alumniData from "../data/alumni.json";
 
 // Sort by year of departure, most recent first; undated entries last.
-const alumni = [...alumniData.alumni].sort((a, b) => {
-  const ya = parseInt(a.yearOfDeparture) || 0;
-  const yb = parseInt(b.yearOfDeparture) || 0;
-  return yb - ya;
-});
+const byYear = (a, b) => (parseInt(b.yearOfDeparture) || 0) - (parseInt(a.yearOfDeparture) || 0);
+
+// Split into the two categories the ITC tracks, each sorted by departure year.
+const fellows = alumniData.alumni.filter((a) => a.category !== "Graduate Student").sort(byYear);
+const students = alumniData.alumni.filter((a) => a.category === "Graduate Student").sort(byYear);
+
+const sections = [
+  { title: "Postdoctoral Fellows", slug: "fellows", people: fellows },
+  { title: "Graduate Students", slug: "students", people: students },
+];
 ---
 <Base title="Alumni" description="ITC alumni and where they are now — a record of our training and placement.">
   <PageHero
@@ -16,29 +21,55 @@ const alumni = [...alumniData.alumni].sort((a, b) => {
     lead="Over 200 former ITC members hold research and faculty positions around the world. The breadth of this record reflects the ITC's role in training the next generation of astrophysicists."
   />
 
+  <nav class="jump container" aria-label="Jump to category">
+    {sections.map((s) => <a href={`#${s.slug}`} class="jump__link">{s.title}</a>)}
+  </nav>
+
   <section class="section">
     <div class="container">
-      <table class="alumni-table">
-        <thead>
-          <tr><th>Name</th><th>Departed</th><th>Current position</th><th>Institution</th></tr>
-        </thead>
-        <tbody id="alumni-rows">
-          {alumni.map((a) => (
-            <tr>
-              <td class="al-name">{a.name}</td>
-              <td class="al-year">{a.yearOfDeparture || "—"}</td>
-              <td>{a.currentTitle || "—"}</td>
-              <td>{a.currentInstitution || "—"}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      {sections.map((s) => (
+        <div class="alumni-group" id={s.slug}>
+          <h2 class="alumni-heading">{s.title}</h2>
+          <table class="alumni-table">
+            <thead>
+              <tr><th>Name</th><th class="th-departed">Departed</th><th>Current position</th><th>Institution</th></tr>
+            </thead>
+            <tbody>
+              {s.people.map((a) => (
+                <tr>
+                  <td class="al-name">{a.name}</td>
+                  <td class="al-year">{a.yearOfDeparture || "—"}</td>
+                  <td>{a.currentTitle || "—"}</td>
+                  <td>{a.currentInstitution || "—"}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ))}
     </div>
   </section>
 </Base>
 
 <style>
+  .jump {
+    display: flex; gap: .5rem; flex-wrap: wrap;
+    padding-block: 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 72px; background: transparent; backdrop-filter: blur(6px); z-index: 50;
+  }
+  .jump__link {
+    font-family: var(--font-sans); font-size: .85rem; font-weight: 500;
+    color: var(--ink-soft);
+    padding: .4rem .8rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg-soft);
+  }
+  .jump__link:hover { color: var(--accent-ink); border-color: var(--accent-line); background: var(--accent-soft); text-decoration: none; }
 
+  .alumni-group { scroll-margin-top: 184px; }
+  .alumni-group + .alumni-group { margin-top: clamp(2.5rem, 5vw, 4rem); }
+  .alumni-heading {
+    font-size: 1.9rem; margin: 0 0 1.25rem;
+    padding-bottom: .85rem; border-bottom: 2px solid var(--accent-line);
+  }
   .alumni-table { width: 100%; border-collapse: collapse; font-size: 1.02rem; }
   .alumni-table thead th {
     text-align: left; font-family: var(--font-sans); font-weight: 700; font-size: .95rem;
@@ -47,6 +78,7 @@ const alumni = [...alumniData.alumni].sort((a, b) => {
   }
   .alumni-table td { padding: .8rem .85rem; border-bottom: 1px solid var(--line); vertical-align: top; }
   .alumni-table tbody tr:hover { background: var(--bg-soft); }
+  .alumni-table thead th.th-departed { text-align: center; }
   .al-name { font-weight: 600; }
   .al-year { white-space: nowrap; color: var(--ink-faint); }
   @media (max-width: 640px) {
