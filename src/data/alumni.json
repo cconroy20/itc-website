@@ -736,10 +736,10 @@
     },
     {
       "name": "James Bullock",
-      "placement": "Professor, UC Irvine",
+      "placement": "Dean & Professor, University of Southern California",
       "yearOfDeparture": "2004",
-      "currentTitle": "Professor",
-      "currentInstitution": "UC Irvine"
+      "currentTitle": "Dean & Professor",
+      "currentInstitution": "University of Southern California"
     },
     {
       "name": "Naoki Yoshida",
@@ -757,17 +757,17 @@
     },
     {
       "name": "Feng Yuan",
-      "placement": "Professor and Director of Astrophysics Division, Shanghai Astronomical Observatory",
+      "placement": "Professor & Director, Fudan University",
       "yearOfDeparture": "2003",
-      "currentTitle": "Professor and Director of Astrophysics Division",
-      "currentInstitution": "Shanghai Astronomical Observatory"
+      "currentTitle": "Professor & Director",
+      "currentInstitution": "Fudan University"
     },
     {
       "name": "Stuart Wyithe",
-      "placement": "Professor, University of Melbourne",
+      "placement": "Deputy Vice-Chancellor (Research), Australian National University",
       "yearOfDeparture": "2002",
-      "currentTitle": "Professor",
-      "currentInstitution": "University of Melbourne"
+      "currentTitle": "Deputy Vice-Chancellor (Research)",
+      "currentInstitution": "Australian National University"
     },
     {
       "name": "Tom Abel",
@@ -777,7 +777,7 @@
       "currentInstitution": "Stanford"
     },
     {
-      "name": "Robert Croft",
+      "name": "Rupert Croft",
       "placement": "Professor, Carnegie Mellon",
       "yearOfDeparture": "2001",
       "currentTitle": "Professor",
@@ -827,10 +827,10 @@
     },
     {
       "name": "Ue-Li Pen",
-      "placement": "Professor, Canadian Institute for Theoretical Astrophysics",
+      "placement": "Director, Academia Sinica (ASIAA)",
       "yearOfDeparture": "1999",
-      "currentTitle": "Professor",
-      "currentInstitution": "Canadian Institute for Theoretical Astrophysics"
+      "currentTitle": "Director",
+      "currentInstitution": "Academia Sinica (ASIAA)"
     },
     {
       "name": "Charles Gammie",
@@ -855,17 +855,17 @@
     },
     {
       "name": "Shude Mao",
-      "placement": "Professor and Chair, Tsinghua University",
+      "placement": "Professor, Westlake University",
       "yearOfDeparture": "1995",
-      "currentTitle": "Professor and Chair",
-      "currentInstitution": "Tsinghua University"
+      "currentTitle": "Professor",
+      "currentInstitution": "Westlake University"
     },
     {
       "name": "David Clarke",
-      "placement": "Professor, Saint Mary's University, Nova Scotia, Canada",
+      "placement": "Professor Emeritus, Saint Mary's University",
       "yearOfDeparture": "1993",
-      "currentTitle": "Professor",
-      "currentInstitution": "Saint Mary's University, Nova Scotia, Canada"
+      "currentTitle": "Professor Emeritus",
+      "currentInstitution": "Saint Mary's University"
     },
     {
       "name": "B. Scott Gaudi",
@@ -886,9 +886,9 @@
     },
     {
       "name": "Eric Woods",
-      "placement": "Visiting Assistant Professor, State University of New York, Albany",
-      "currentTitle": "Visiting Assistant Professor",
-      "currentInstitution": "State University of New York, Albany"
+      "placement": "Lecturer, University at Albany (SUNY)",
+      "currentTitle": "Lecturer",
+      "currentInstitution": "University at Albany (SUNY)"
     },
     {
       "name": "Daniel Palumbo",
@@ -1522,44 +1522,37 @@
     },
     {
       "name": "Hannah Jang-Condell",
-      "placement": "Assistant Professor, University of Wyoming",
+      "placement": "Program Scientist, NASA Headquarters",
       "yearOfDeparture": "2004",
-      "currentTitle": "Assistant Professor",
-      "currentInstitution": "University of Wyoming"
+      "currentTitle": "Program Scientist",
+      "currentInstitution": "NASA Headquarters"
     },
     {
       "name": "Feryal Ozel",
-      "placement": "Professor, University of Arizona",
+      "placement": "Professor & Chair, Georgia Tech",
       "yearOfDeparture": "2002",
-      "currentTitle": "Professor",
-      "currentInstitution": "University of Arizona"
+      "currentTitle": "Professor & Chair",
+      "currentInstitution": "Georgia Tech"
     },
     {
       "name": "Kristen Menou",
-      "placement": "Associate Professor, Columbia University",
+      "placement": "Associate Professor, University of Toronto Scarborough",
       "yearOfDeparture": "1999",
       "currentTitle": "Associate Professor",
-      "currentInstitution": "Columbia University"
-    },
-    {
-      "name": "Rosalba Perna",
-      "placement": "Associate Professor, University of Colorado",
-      "yearOfDeparture": "1999",
-      "currentTitle": "Associate Professor",
-      "currentInstitution": "University of Colorado"
+      "currentInstitution": "University of Toronto Scarborough"
     },
     {
       "name": "Eliot Quataert",
-      "placement": "Professor, Director, Theoretical Astrophysics Center, UC Berkeley",
+      "placement": "Professor, Princeton University",
       "yearOfDeparture": "1999",
-      "currentTitle": "Professor, Director",
-      "currentInstitution": "Theoretical Astrophysics Center, UC Berkeley"
+      "currentTitle": "Professor",
+      "currentInstitution": "Princeton University"
     },
     {
       "name": "Ann Esin",
-      "placement": "Professor, Director, Harvey Mudd College",
+      "placement": "Associate Professor, Harvey Mudd College",
       "yearOfDeparture": "1998",
-      "currentTitle": "Professor, Director",
+      "currentTitle": "Associate Professor",
       "currentInstitution": "Harvey Mudd College"
     },
     {
