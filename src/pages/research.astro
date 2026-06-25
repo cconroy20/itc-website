@@ -18,7 +18,21 @@ const areas = research.areas;
     {areas.map((a) => (
       <section class="area" id={a.slug} data-reveal>
         <div class="area__media">
-          <img src={url(`/research/${a.slug}.jpg`)} alt={`${a.name} — illustrative astrophysics imagery`} loading="lazy" />
+          <button type="button" class="area__imgbtn" aria-expanded="false" aria-label={`About the ${a.name} image`}>
+            <img src={url(`/research/${a.slug}.jpg`)} alt={`${a.name} — illustrative astrophysics imagery`} loading="lazy" />
+          </button>
+          {a.caption && (
+            <div class="area__caption" role="note" hidden>
+              <p>{a.caption}</p>
+              {a.credit && a.credit.text && (
+                <p class="area__credit">
+                  {a.credit.url
+                    ? <a href={a.credit.url} target="_blank" rel="noopener">{a.credit.text}</a>
+                    : a.credit.text}
+                </p>
+              )}
+            </div>
+          )}
         </div>
         <div class="area__body">
           <h2>{a.name}</h2>
@@ -33,6 +47,40 @@ const areas = research.areas;
     ))}
   </div>
 </Base>
+
+<script>
+  // Click an image to reveal its caption card; click again / outside / Esc to close.
+  function setup() {
+    const btns = Array.from(document.querySelectorAll(".area__imgbtn"));
+    const close = (btn) => {
+      btn.setAttribute("aria-expanded", "false");
+      const card = btn.parentElement.querySelector(".area__caption");
+      if (card) card.classList.remove("is-open");
+    };
+    const closeAll = (except) => btns.forEach((b) => { if (b !== except) close(b); });
+
+    btns.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const card = btn.parentElement.querySelector(".area__caption");
+        if (!card) return;
+        const open = btn.getAttribute("aria-expanded") === "true";
+        closeAll(btn);
+        btn.setAttribute("aria-expanded", String(!open));
+        if (open) {
+          card.classList.remove("is-open");        // animate out (stays in DOM)
+        } else {
+          card.hidden = false;                     // ensure visible, then…
+          requestAnimationFrame(() => card.classList.add("is-open"));  // …animate in
+        }
+      });
+    });
+    document.addEventListener("click", () => closeAll(null));
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeAll(null); });
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", setup);
+  else setup();
+</script>
 
 <style>
   .jump {
@@ -64,10 +112,40 @@ const areas = research.areas;
     aspect-ratio: 4 / 3; background: #0a0918;
     box-shadow: 0 10px 40px rgba(20,21,26,.12);
   }
+  .area__imgbtn {
+    display: block; width: 100%; height: 100%; padding: 0; border: 0; margin: 0;
+    background: none; cursor: pointer; position: absolute; inset: 0;
+  }
   .area__media img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
   .area:hover .area__media img { transform: scale(1.04); }
+  /* caption card — floats over the lower part of the image, animates in on click */
+  .area__caption {
+    position: absolute; left: .7rem; right: .7rem; bottom: .7rem; z-index: 4;
+    padding: .9rem 1rem; border-radius: var(--radius);
+    background: rgba(10, 9, 18, .62); backdrop-filter: blur(10px);
+    box-shadow: 0 8px 28px rgba(0,0,0,.45), inset 0 0 0 1px rgba(255,255,255,.1);
+    /* start state: lifted up, slightly scaled down & transparent */
+    opacity: 0; transform: translateY(14px) scale(.97); transform-origin: bottom center;
+    transition: opacity .32s ease, transform .42s cubic-bezier(.2,.9,.25,1.2);
+    pointer-events: none;   /* don't block image clicks while closed */
+  }
+  .area__caption.is-open { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+  /* contents rise in with a small stagger */
+  .area__caption p {
+    margin: 0; font-size: .9rem; line-height: 1.5; color: var(--ink);
+    opacity: 0; transform: translateY(6px);
+    transition: opacity .3s ease .08s, transform .3s ease .08s;
+  }
+  .area__caption .area__credit { transition-delay: .16s; }
+  .area__caption.is-open p { opacity: 1; transform: translateY(0); }
+  .area__credit { margin-top: .5rem !important; font-size: .8rem !important; color: var(--ink-faint) !important; }
+  .area__credit a { color: var(--accent-ink); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .area__caption, .area__caption p { transition: opacity .15s ease; transform: none; }
+  }
   .area__media::after {
-    content: ""; position: absolute; inset: 0;
+    content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 2;
     box-shadow: inset 0 0 0 1px rgba(255,255,255,.06);
     background: linear-gradient(180deg, transparent 60%, rgba(8,7,18,.25));
   }

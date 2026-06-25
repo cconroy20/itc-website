@@ -4,32 +4,62 @@
     {
       "name": "Cosmology",
       "slug": "cosmology",
-      "body": "Description coming soon."
+      "body": "Description coming soon.",
+      "caption": "Caption",
+      "credit": {
+        "text": "Image Credit",
+        "url": ""
+      }
     },
     {
       "name": "Galaxy Formation",
       "slug": "galaxy-formation",
-      "body": "Description coming soon."
+      "body": "Description coming soon.",
+      "caption": "Caption",
+      "credit": {
+        "text": "Image Credit",
+        "url": ""
+      }
     },
     {
       "name": "Black Holes",
       "slug": "black-holes-accretion",
-      "body": "Description coming soon."
+      "body": "Description coming soon.",
+      "caption": "Caption",
+      "credit": {
+        "text": "Image Credit",
+        "url": ""
+      }
     },
     {
       "name": "Stellar Evolution & Death",
       "slug": "stellar-evolution-death",
-      "body": "Description coming soon."
+      "body": "Description coming soon.",
+      "caption": "Caption",
+      "credit": {
+        "text": "Image Credit",
+        "url": ""
+      }
     },
     {
       "name": "Planet Formation & Evolution",
       "slug": "planet-formation",
-      "body": "Description coming soon."
+      "body": "Description coming soon.",
+      "caption": "Caption",
+      "credit": {
+        "text": "Image Credit",
+        "url": ""
+      }
     },
     {
       "name": "Data-Driven Discovery",
       "slug": "big-data",
-      "body": "Description coming soon."
+      "body": "Description coming soon.",
+      "caption": "Caption",
+      "credit": {
+        "text": "Image Credit",
+        "url": ""
+      }
     }
   ]
 }
