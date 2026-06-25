@@ -15,6 +15,13 @@ const areas = research.areas;
       <img src={url("/hero-bg.jpg")} alt="" fetchpriority="high" />
       <div class="hero__scrim"></div>
     </div>
+    <div class="hero__credit-wrap">
+      <button type="button" class="hero__credit-btn" aria-expanded="false" aria-label="About the hero image">i</button>
+      <div class="hero__credit-card" role="note" hidden>
+        <p>Caption</p>
+        <p class="hero__credit-line">Image Credit</p>
+      </div>
+    </div>
     <div class="container hero__inner">
       <h1 class="hero__title">Resolving<br /><span class="hero__accent">the Universe.</span></h1>
       <p class="hero__lead">
@@ -63,9 +70,65 @@ const areas = research.areas;
 
 </Base>
 
+<script>
+  // Hero image credit: click the corner trigger to reveal an animated card.
+  function setupHeroCredit() {
+    const btn = document.querySelector(".hero__credit-btn");
+    const card = document.querySelector(".hero__credit-card");
+    if (!btn || !card) return;
+    const close = () => { btn.setAttribute("aria-expanded", "false"); card.classList.remove("is-open"); };
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const open = btn.getAttribute("aria-expanded") === "true";
+      if (open) { close(); return; }
+      btn.setAttribute("aria-expanded", "true");
+      card.hidden = false;
+      requestAnimationFrame(() => card.classList.add("is-open"));
+    });
+    document.addEventListener("click", close);
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", setupHeroCredit);
+  else setupHeroCredit();
+</script>
+
 <style>
   /* Hero — full-bleed cosmic image */
   .hero { position: relative; overflow: hidden; background: #0a0918; isolation: isolate; }
+
+  /* hero image credit — faint corner trigger + animated card */
+  .hero__credit-wrap { position: absolute; right: 1rem; bottom: 1rem; z-index: 3; text-align: right; }
+  .hero__credit-btn {
+    border: 0; cursor: pointer; padding: 0;
+    width: 1.6rem; height: 1.6rem; border-radius: 50%;
+    display: grid; place-items: center;
+    font-family: var(--font-serif); font-style: italic; font-size: 1rem; line-height: 1;
+    color: rgba(255,255,255,.85); background: rgba(10,9,18,.45); backdrop-filter: blur(6px);
+    box-shadow: 0 1px 6px rgba(0,0,0,.35), inset 0 0 0 1px rgba(255,255,255,.18);
+    transition: background .15s ease, color .15s ease;
+  }
+  .hero__credit-btn:hover { background: var(--accent); color: #0a0918; }
+  .hero__credit-card {
+    position: absolute; right: 0; bottom: calc(100% + .5rem); z-index: 4;
+    width: max-content; max-width: 280px; text-align: left;
+    padding: .8rem 1rem; border-radius: var(--radius);
+    background: rgba(10, 9, 18, .62); backdrop-filter: blur(10px);
+    box-shadow: 0 8px 28px rgba(0,0,0,.45), inset 0 0 0 1px rgba(255,255,255,.1);
+    opacity: 0; transform: translateY(10px) scale(.97); transform-origin: bottom right;
+    transition: opacity .32s ease, transform .42s cubic-bezier(.2,.9,.25,1.2);
+    pointer-events: none;
+  }
+  .hero__credit-card.is-open { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+  .hero__credit-card p {
+    margin: 0; font-size: .9rem; line-height: 1.5; color: var(--ink);
+    opacity: 0; transform: translateY(6px);
+    transition: opacity .3s ease .08s, transform .3s ease .08s;
+  }
+  .hero__credit-card.is-open p { opacity: 1; transform: translateY(0); }
+  .hero__credit-line { margin-top: .45rem !important; font-size: .8rem !important; color: var(--ink-faint) !important; transition-delay: .16s !important; }
+  @media (prefers-reduced-motion: reduce) {
+    .hero__credit-card, .hero__credit-card p { transition: opacity .15s ease; transform: none; }
+  }
   .hero__media { position: absolute; inset: 0; z-index: 0; }
   .hero__media img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
   .hero__scrim {
