@@ -28,6 +28,7 @@ const dataUrl = url("/tracks/mist.json");
     let tracks = [];           // [{m, logT:[], logL:[]}] (null where star has died)
     let bounds = null;         // {tMin,tMax,lMin,lMax}
     let logA = 0;              // current sim age, in log10(years)
+    let fadeT = 0;             // end-of-loop fade-out progress (0→1)
     let raf = 0, visible = false, ready = false;
 
     const PADX = 0.07;         // horizontal plot inset fraction
@@ -37,6 +38,10 @@ const dataUrl = url("/tracks/mist.json");
     const LOGA_MAX = Math.log10(5.0e10);  // 50 Gyr
     const SPEED = (LOGA_MAX - LOGA_MIN) / 1400; // base log-age advanced per frame
     const FADE = 0.6;          // trail length in dex of log-age (older → vanishes)
+    const FADE_SECONDS = 3.5;  // duration of the end-of-loop fade-out
+    // Begin fading this fraction (of the full log-age span) before the end, so
+    // the animation is still advancing while it dims rather than freezing first.
+    const FADE_START = LOGA_MIN + (LOGA_MAX - LOGA_MIN) * 0.93;
     // Gradual slowdown of the clock at late times (so old-age evolution lingers).
     const SLOW_KNEE = 9.0;     // logA where slowdown sets in
     const SLOW_WIDTH = 0.5;    // dex over which the easing happens
@@ -97,16 +102,20 @@ const dataUrl = url("/tracks/mist.json");
       if (!ready) { raf = visible ? requestAnimationFrame(draw) : 0; return; }
 
       if (!reduce) {
-        // Advance the log-age clock, but slow down gradually past logA~9 so the
-        // late-time evolution doesn't zoom by. Speed factor eases from 1 toward
-        // SLOW_MIN as logA crosses SLOW_KNEE over a SLOW_WIDTH-dex transition.
+        // Keep advancing the log-age clock the whole time — slowing down past
+        // logA~9 so late-time evolution doesn't zoom by — and begin the fade-out
+        // BEFORE the clock reaches the end, so motion continues as it dims (no
+        // freeze-then-fade). Once fully faded, restart from the beginning.
         const ramp = (logA - SLOW_KNEE) / SLOW_WIDTH;
         const ease = 1 / (1 + Math.exp(ramp));            // logistic 1→0
         const factor = SLOW_MIN + (1 - SLOW_MIN) * ease;  // 1 below knee → SLOW_MIN above
-        logA += SPEED * factor;
-        if (logA >= LOGA_MAX) logA = LOGA_MIN;   // loop
+        logA = Math.min(LOGA_MAX, logA + SPEED * factor);
+
+        if (logA >= FADE_START) fadeT += 1 / (FADE_SECONDS * 60);  // ~60fps
+        if (fadeT >= 1) { fadeT = 0; logA = LOGA_MIN; }            // restart
       }
       const simAge = Math.pow(10, logA);
+      const gAlpha = Math.max(0, 1 - fadeT);   // global fade-out multiplier
 
       // Draw each star's PAST path at native resolution: the track points with
       // age <= simAge, plus an interpolated head exactly at simAge. The native
@@ -147,14 +156,14 @@ const dataUrl = url("/tracks/mist.json");
           const behind = logA - Math.log10(Math.max(ageHere, 1));
           const o = Math.max(0, 1 - behind / FADE) * 0.55;
           if (px !== null && (o > 0.01 || po > 0.01)) {
-            ctx.strokeStyle = rgba((o + po) * 0.5);
+            ctx.strokeStyle = rgba((o + po) * 0.5 * gAlpha);
             ctx.beginPath(); ctx.moveTo(px, py); ctx.lineTo(x, y); ctx.stroke();
           }
           px = x; py = y; po = o;
         }
         // star head — disappears the instant the star dies
         if (dead) continue;
-        ctx.fillStyle = rgba(0.92);
+        ctx.fillStyle = rgba(0.92 * gAlpha);
         ctx.beginPath(); ctx.arc(hx, hy, 2.1, 0, Math.PI * 2); ctx.fill();
       }
 
