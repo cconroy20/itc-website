@@ -282,9 +282,10 @@
     },
     {
       "name": "Thomas Greif",
-      "placement": "Deceased",
+      "placement": "Senior Software Developer, Hofmann & Stirner",
       "yearOfDeparture": "2015",
-      "currentInstitution": "Deceased"
+      "currentInstitution": "Hofmann & Stirner",
+      "currentTitle": "Senior Software Developer"
     },
     {
       "name": "Laura Sales",
