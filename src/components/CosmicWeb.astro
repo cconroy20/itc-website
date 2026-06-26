@@ -1,0 +1,126 @@
+---
+// Right-margin decoration for the Opportunities page: a precomputed cosmological
+// N-body "cosmic web" (large-scale structure formation). Scroll position scrubs
+// through cosmic time — scroll down assembles the web, scroll up rewinds.
+// Loads a gzipped binary of per-frame GRAYSCALE DENSITY maps (baked offline from
+// the full 2.1M-particle sim), decompresses via DecompressionStream, cross-fades
+// between frames and tone-maps to violet. Honors reduced-motion; hidden <1080px.
+import { url } from "../lib/url.js";
+const dataUrl = url("/sim/cosmic-web.czb");   // gzipped density frames (neutral ext)
+---
+<canvas class="cweb" aria-hidden="true" data-src={dataUrl}></canvas>
+
+<script>
+  function initCosmicWeb(canvas) {
+    if (!canvas || !canvas.getContext || canvas.dataset.cwInit) return;
+    canvas.dataset.cwInit = "1";
+    const ctx = canvas.getContext("2d");
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const accent = getComputedStyle(document.documentElement)
+      .getPropertyValue("--accent").trim() || "#a78bfa";
+    const ar = parseInt(accent.slice(1,3),16)||167, ag = parseInt(accent.slice(3,5),16)||139, ab = parseInt(accent.slice(5,7),16)||250;
+
+    let w=0, h=0, dpr=Math.min(window.devicePixelRatio||1, 2);
+    let M=0, G=0, dens=null;       // M frames of G x G uint8 density (CWDN format)
+    let gcan=null, gctx=null, gimg=null;   // offscreen GxG canvas for bilinear upscaling
+    let ready=false, raf=0, visible=false;
+    let frame=0, frameTarget=0;    // fractional frame index, eased toward target
+
+    async function load() {
+      try {
+        const resp = await fetch(canvas.dataset.src);
+        if (!resp.ok) return;
+        // decompress the gzipped density binary (DecompressionStream is built-in)
+        const stream = resp.body.pipeThrough(new DecompressionStream("gzip"));
+        const buf = await new Response(stream).arrayBuffer();
+        if (!buf) return;
+        const dv = new DataView(buf);
+        // 'CWDN' = pre-binned grayscale density frames (full-res sim baked offline)
+        if (dv.getUint8(0)!==67||dv.getUint8(1)!==87||dv.getUint8(2)!==68||dv.getUint8(3)!==78) return;
+        G = dv.getUint16(6, true); M = dv.getUint16(8, true);
+        dens = new Uint8Array(buf, 11);                  // M * G*G uint8
+        // offscreen GxG canvas: write the density frame here, then drawImage-scale
+        gcan = document.createElement("canvas"); gcan.width = G; gcan.height = G;
+        gctx = gcan.getContext("2d"); gimg = gctx.createImageData(G, G);
+        ready = true;
+        updateScroll();
+        if (reduce) draw(); else start();
+      } catch {}
+    }
+
+    function resize() {
+      const rect = canvas.getBoundingClientRect();
+      w = rect.width; h = rect.height;
+      dpr = Math.min(window.devicePixelRatio||1, 2);
+      canvas.width = Math.max(1, Math.round(w*dpr));
+      canvas.height = Math.max(1, Math.round(h*dpr));
+    }
+
+    // scroll fraction (0 top -> 1 bottom of page) maps LINEARLY to the frame index.
+    // The frames themselves are warp-distributed (dense at late cosmic times) in the
+    // shipped asset, so linear playback already dwells on the late-time web assembly
+    // AND scrubs smoothly there (no big frame gaps under the warp).
+    function updateScroll() {
+      const max = (document.documentElement.scrollHeight - window.innerHeight) || 1;
+      const prog = Math.min(1, Math.max(0, window.scrollY / max));
+      frameTarget = prog * (M - 1);
+    }
+
+    const BRIGHT = 4.5;   // tone-curve gain (live brightness knob)
+    const GAMMA  = 0.82;  // <1 lifts the faint voids relative to the bright nodes
+    function draw() {
+      const W = canvas.width, H = canvas.height;
+      if (!ready) { raf = visible ? requestAnimationFrame(draw) : 0; return; }
+
+      // ease displayed frame toward the scroll target
+      frame += (frameTarget - frame) * 0.12;
+      const fi = Math.max(0, Math.min(M-1, frame));
+      const f0 = Math.floor(fi), f1 = Math.min(M-1, f0+1), t = fi - f0;
+      const b0 = f0*G*G, b1 = f1*G*G;
+
+      // Cross-fade (interpolate) the two bracketing density frames, then tone-map
+      // to violet. Blending density grids is artifact-free (no streaks), so this
+      // gives smooth scrubbing at any frame count. (Brightness/tint stay live.)
+      const gd = gimg.data;
+      for (let p=0, q=0; p<G*G; p++, q+=4){
+        const raw = (dens[b0+p]*(1-t) + dens[b1+p]*t) / 255;
+        const v = Math.pow(raw, GAMMA);          // gamma lifts faint regions (voids)
+        const a = raw>0 ? 1 - Math.exp(-v*BRIGHT) : 0;
+        gd[q]=ar; gd[q+1]=ag; gd[q+2]=ab; gd[q+3]=(a*255)|0;
+      }
+      gctx.putImageData(gimg, 0, 0);
+
+      // bilinear-scale the GxG image up to the canvas (smooth, GPU-accelerated)
+      ctx.clearRect(0, 0, W, H);
+      ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = "high";
+      ctx.drawImage(gcan, 0, 0, W, H);
+      raf = visible && !reduce ? requestAnimationFrame(draw) : 0;
+    }
+
+    function start(){ if(!raf) raf=requestAnimationFrame(draw); }
+    function stop(){ if(raf) cancelAnimationFrame(raf); raf=0; }
+
+    window.addEventListener("resize", () => { resize(); updateScroll(); });
+    window.addEventListener("scroll", updateScroll, { passive:true });
+    document.addEventListener("visibilitychange", () => { if(document.hidden) stop(); else if(visible) start(); });
+    const io = new IntersectionObserver((e)=>{ visible=e[0].isIntersecting; if(visible){ if(reduce) draw(); else start(); } else stop(); }, { rootMargin:"100px" });
+
+    resize(); io.observe(canvas); load();
+  }
+
+  function boot(){ document.querySelectorAll("canvas.cweb").forEach(initCosmicWeb); }
+  if (document.readyState==="loading") document.addEventListener("DOMContentLoaded", boot);
+  else boot();
+</script>
+
+<style>
+  .cweb {
+    position: fixed; top: 12vh; right: 4vw; height: 84vh;
+    width: clamp(440px, 46vw, 760px);
+    z-index: 0; pointer-events: none;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 20%);
+    mask-image: linear-gradient(90deg, transparent 0%, #000 20%);
+  }
+  @media (max-width: 1080px) { .cweb { display: none; } }
+</style>
