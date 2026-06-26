@@ -7,12 +7,30 @@ import { url } from "../lib/url.js";
 
 const recentNews = news.items.slice(0, 3);
 const areas = research.areas;
+
+// Hero carousel: "Resolving" stays fixed; the colored accent line and its gradient
+// (c1->c2, echoing a bright tone in each image) change with the BACKGROUND IMAGE.
+const heroSlides = [
+  { img: "/hero-bg.jpg",   accent: "the Universe", c1: "#fcd34d", c2: "#fb923c" },
+  { img: "/hero-bg-2.jpg", accent: "our Galaxy",   c1: "#fde047", c2: "#f59e0b" },  // Local Bubble
+  { img: "/hero-bg-3.jpg", accent: "Cosmic Accretion", c1: "#ffc09a", c2: "#fb9b5f" },
+];
 ---
 <Base title={null}>
   <!-- Hero -->
   <section class="hero">
     <div class="hero__media" aria-hidden="true">
-      <img src={url("/hero-bg.jpg")} alt="" fetchpriority="high" />
+      <div class="hero__slides">
+        {heroSlides.map((s, i) => (
+          <img
+            class:list={["hero__slide", { "is-active": i === 0, "hero__slide--square": s.square }]}
+            src={url(s.img)}
+            alt=""
+            fetchpriority={i === 0 ? "high" : undefined}
+            loading={i === 0 ? "eager" : "lazy"}
+          />
+        ))}
+      </div>
       <div class="hero__scrim"></div>
     </div>
     <div class="hero__credit-wrap">
@@ -23,7 +41,9 @@ const areas = research.areas;
       </div>
     </div>
     <div class="container hero__inner">
-      <h1 class="hero__title">Resolving<br /><span class="hero__accent">the Universe.</span></h1>
+      <h1 class="hero__title">Resolving<br /><span class="hero__accent-stack">{heroSlides.map((s, i) => (
+        <span class:list={["hero__accent", { "is-active": i === 0 }]} style={`--c1:${s.c1};--c2:${s.c2}`}>{s.accent}</span>
+      ))}</span></h1>
       <p class="hero__lead">
         The Institute for Theory and Computation brings together leading researchers to
         understand how the universe works — from the Big Bang and cosmic structure to
@@ -88,8 +108,34 @@ const areas = research.areas;
     document.addEventListener("click", close);
     document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
   }
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", setupHeroCredit);
-  else setupHeroCredit();
+  // Hero background carousel: cross-fade the background images and their matching
+  // accent line (text + color) in sync.
+  function setupHeroCarousel() {
+    const slides = Array.from(document.querySelectorAll(".hero__slide"));
+    const accents = Array.from(document.querySelectorAll(".hero__accent"));
+    if (slides.length < 2) return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) return;
+    let i = 0, timer = 0;
+    const HOLD = 5000;
+    const setActive = (n, on) => {
+      slides[n] && slides[n].classList.toggle("is-active", on);
+      accents[n] && accents[n].classList.toggle("is-active", on);
+    };
+    const tick = () => {
+      setActive(i, false);
+      do { i = (i + 1) % slides.length; } while (slides[i].naturalWidth === 0); // skip missing
+      setActive(i, true);
+    };
+    const start = () => { if (!timer) timer = setInterval(tick, HOLD); };
+    const stop = () => { if (timer) { clearInterval(timer); timer = 0; } };
+    document.addEventListener("visibilitychange", () => document.hidden ? stop() : start());
+    start();
+  }
+
+  function bootHero() { setupHeroCredit(); setupHeroCarousel(); }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", bootHero);
+  else bootHero();
 </script>
 
 <style>
@@ -130,12 +176,27 @@ const areas = research.areas;
     .hero__credit-card, .hero__credit-card p { transition: opacity .15s ease; transform: none; }
   }
   .hero__media { position: absolute; inset: 0; z-index: 0; }
-  .hero__media img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+  .hero__slides { position: absolute; inset: 0; }
+  /* stacked cross-fading background slides */
+  .hero__slide {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%; object-fit: cover; object-position: center;
+    opacity: 0; transition: opacity 1.8s ease-in-out;
+  }
+  .hero__slide.is-active { opacity: 1; }
+  @media (prefers-reduced-motion: reduce) { .hero__slide { transition: none; } }
+  /* square images: anchor to the right and fade their left edge into the dark bg,
+     so the text side stays black (no full-bleed crop of a square source) */
+  .hero__slide--square {
+    object-fit: contain; object-position: right center;
+    -webkit-mask-image: linear-gradient(90deg, transparent 22%, #000 52%);
+    mask-image: linear-gradient(90deg, transparent 22%, #000 52%);
+  }
   .hero__scrim {
     position: absolute; inset: 0;
     background:
-      linear-gradient(90deg, rgba(8,7,18,.92) 0%, rgba(8,7,18,.78) 38%, rgba(8,7,18,.35) 68%, rgba(8,7,18,.15) 100%),
-      linear-gradient(0deg, rgba(8,7,18,.55) 0%, transparent 45%);
+      linear-gradient(90deg, rgba(8,7,18,.85) 0%, rgba(8,7,18,.55) 40%, rgba(8,7,18,.18) 72%, transparent 100%),
+      linear-gradient(0deg, rgba(8,7,18,.4) 0%, transparent 45%);
   }
   .hero__inner {
     position: relative; z-index: 1;
@@ -148,11 +209,21 @@ const areas = research.areas;
     letter-spacing: -0.035em; color: #fff;
     text-shadow: 0 2px 30px rgba(0,0,0,.5);
   }
+  /* the colored accent line: per-slide spans stacked, cross-fading in sync with
+     the background image (text + color both change with the active slide) */
+  .hero__accent-stack { position: relative; display: inline-grid; }
   .hero__accent {
-    background: linear-gradient(90deg, #fcd34d, #fb923c);
+    grid-area: 1 / 1;          /* stack all accent variants in one cell */
+    white-space: nowrap;
+    /* extra bottom room so descenders (y, g) aren't clipped by the text-clip box */
+    padding-bottom: .12em; margin-bottom: -.12em;
+    background: linear-gradient(90deg, var(--c1, #fcd34d), var(--c2, #fb923c));
     -webkit-background-clip: text; background-clip: text;
     -webkit-text-fill-color: transparent; color: transparent;
+    opacity: 0; transition: opacity 1.8s ease-in-out;
   }
+  .hero__accent.is-active { opacity: 1; }
+  @media (prefers-reduced-motion: reduce) { .hero__accent { transition: none; } }
   .hero__lead {
     font-size: clamp(1.05rem, 1.6vw, 1.3rem); color: rgba(255,255,255,.82);
     max-width: 600px; text-shadow: 0 1px 16px rgba(0,0,0,.4);
