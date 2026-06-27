@@ -1,0 +1,22 @@
+{
+  "recipients": [
+    { "year": "2026", "names": ["Hyerin Cho"] },
+    { "year": "2025", "names": ["Jesse Han"] },
+    { "year": "2024", "names": ["Andrew Saydjari", "Magdalena Siwek"] },
+    { "year": "2023", "names": ["Floor Broekgaarden"] },
+    { "year": "2022", "names": ["Boryana Tsvetanova Hadzhiyska"] },
+    { "year": "2021", "names": ["Ellen M. Price"] },
+    { "year": "2020", "names": ["Joshua Shen Speagle"] },
+    { "year": "2019", "names": ["Andrew Chael", "Lehman H. Garrison"] },
+    { "year": "2018", "names": ["Pierre Christian"] },
+    { "year": "2017", "names": ["Philip Mocz"] },
+    { "year": "2016", "names": ["Zachary Slepian"] },
+    { "year": "2015", "names": ["Gongjie Li"] },
+    { "year": "2014", "names": ["Katherine Deck", "Paul Torrey"] },
+    { "year": "2013", "names": ["Robert Penna"] },
+    { "year": "2012", "names": ["Laura Blecha"] },
+    { "year": "2011", "names": ["Gurtina Besla"] },
+    { "year": "2010", "names": ["Claude-André Faucher-Giguère"] },
+    { "year": "2009", "names": ["Matt McQuinn", "Rebecca Shafee"] }
+  ]
+}
