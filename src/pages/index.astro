@@ -125,10 +125,15 @@ const heroSlides = [
       slides[n] && slides[n].classList.toggle("is-active", on);
       accents[n] && accents[n].classList.toggle("is-active", on);
       if (!on && slides[n]) {
-        // reset morph to FDM instantly (no reverse fade) once the slide leaves
-        const m = slides[n].querySelector(".hero__img--morph");
-        if (m) { m.style.transition = "none"; slides[n].classList.remove("is-morphing");
-                 requestAnimationFrame(() => { m.style.transition = ""; }); }
+        // reset morph to FDM for next cycle, but ONLY after this slide has fully
+        // faded out (>1.8s), so the CDM->FDM reset isn't visible during the fade.
+        const sl = slides[n], m = sl.querySelector(".hero__img--morph");
+        if (m) setTimeout(() => {
+          if (!sl.classList.contains("is-active")) {   // still hidden -> safe to reset
+            m.style.transition = "none"; sl.classList.remove("is-morphing");
+            requestAnimationFrame(() => { m.style.transition = ""; });
+          }
+        }, 2000);
       }
     };
     const tick = () => {
@@ -201,9 +206,9 @@ const heroSlides = [
     position: absolute; inset: 0;
     width: 100%; height: 100%; object-fit: cover; object-position: center;
   }
-  /* morph overlay (CDM over FDM): hold FDM ~2s, cross-fade 1s, then hold CDM ~2s
-     (5s slide window). The 2s delay + 1s duration place the fade in seconds 2-3. */
-  .hero__img--morph { opacity: 0; transition: opacity 1s linear 2s; }
+  /* morph overlay (CDM over FDM): hold FDM 2s, cross-fade 1.5s, then hold CDM 1.5s
+     (5s slide window). The 2s delay + 1.5s duration place the fade in seconds 2-3.5. */
+  .hero__img--morph { opacity: 0; transition: opacity 1.5s linear 2s; }
   .hero__slide.is-morphing .hero__img--morph { opacity: 1; }
   @media (prefers-reduced-motion: reduce) {
     .hero__slide, .hero__img--morph { transition: none; }
