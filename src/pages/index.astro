@@ -14,6 +14,7 @@ const heroSlides = [
   { img: "/hero-bg.jpg",   accent: "the Universe", c1: "#fcd34d", c2: "#fb923c" },
   { img: "/hero-bg-2.jpg", accent: "our Galaxy",   c1: "#fde047", c2: "#f59e0b" },  // Local Bubble
   { img: "/hero-bg-3.jpg", accent: "Cosmic Accretion", c1: "#ffc096", c2: "#fc853b" },
+  { img: "/hero-bg-4.jpg", morph: "/hero-bg-4b.jpg", accent: "Dark Matter", c1: "#fdb37b", c2: "#f48169" },
 ];
 ---
 <Base title={null}>
@@ -22,13 +23,14 @@ const heroSlides = [
     <div class="hero__media" aria-hidden="true">
       <div class="hero__slides">
         {heroSlides.map((s, i) => (
-          <img
-            class:list={["hero__slide", { "is-active": i === 0, "hero__slide--square": s.square }]}
-            src={url(s.img)}
-            alt=""
-            fetchpriority={i === 0 ? "high" : undefined}
-            loading={i === 0 ? "eager" : "lazy"}
-          />
+          <div class:list={["hero__slide", { "is-active": i === 0 }]}>
+            <img class="hero__img" src={url(s.img)} alt=""
+                 fetchpriority={i === 0 ? "high" : undefined}
+                 loading={i === 0 ? "eager" : "lazy"} />
+            {s.morph && (
+              <img class="hero__img hero__img--morph" src={url(s.morph)} alt="" loading="lazy" />
+            )}
+          </div>
         ))}
       </div>
       <div class="hero__scrim"></div>
@@ -108,8 +110,9 @@ const heroSlides = [
     document.addEventListener("click", close);
     document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
   }
-  // Hero background carousel: cross-fade the background images and their matching
-  // accent line (text + color) in sync.
+  // Hero background carousel: cross-fade the background slides and their matching
+  // accent line (text + color) in sync. A slide with a morph overlay (e.g. the
+  // dark-matter FDM->CDM pair) fades that overlay in across the hold time.
   function setupHeroCarousel() {
     const slides = Array.from(document.querySelectorAll(".hero__slide"));
     const accents = Array.from(document.querySelectorAll(".hero__accent"));
@@ -121,11 +124,22 @@ const heroSlides = [
     const setActive = (n, on) => {
       slides[n] && slides[n].classList.toggle("is-active", on);
       accents[n] && accents[n].classList.toggle("is-active", on);
+      if (!on && slides[n]) {
+        // reset morph to FDM instantly (no reverse fade) once the slide leaves
+        const m = slides[n].querySelector(".hero__img--morph");
+        if (m) { m.style.transition = "none"; slides[n].classList.remove("is-morphing");
+                 requestAnimationFrame(() => { m.style.transition = ""; }); }
+      }
     };
     const tick = () => {
       setActive(i, false);
-      do { i = (i + 1) % slides.length; } while (slides[i].naturalWidth === 0); // skip missing
+      i = (i + 1) % slides.length;
       setActive(i, true);
+      // if this slide has a morph overlay, start its fade-in after it appears
+      const cur = slides[i];
+      if (cur.querySelector(".hero__img--morph")) {
+        requestAnimationFrame(() => requestAnimationFrame(() => cur.classList.add("is-morphing")));
+      }
     };
     const start = () => { if (!timer) timer = setInterval(tick, HOLD); };
     const stop = () => { if (timer) { clearInterval(timer); timer = 0; } };
@@ -177,20 +191,22 @@ const heroSlides = [
   }
   .hero__media { position: absolute; inset: 0; z-index: 0; }
   .hero__slides { position: absolute; inset: 0; }
-  /* stacked cross-fading background slides */
+  /* stacked cross-fading background slides (each holds 1-2 layered images) */
   .hero__slide {
     position: absolute; inset: 0;
-    width: 100%; height: 100%; object-fit: cover; object-position: center;
     opacity: 0; transition: opacity 1.8s ease-in-out;
   }
   .hero__slide.is-active { opacity: 1; }
-  @media (prefers-reduced-motion: reduce) { .hero__slide { transition: none; } }
-  /* square images: anchor to the right and fade their left edge into the dark bg,
-     so the text side stays black (no full-bleed crop of a square source) */
-  .hero__slide--square {
-    object-fit: contain; object-position: right center;
-    -webkit-mask-image: linear-gradient(90deg, transparent 22%, #000 52%);
-    mask-image: linear-gradient(90deg, transparent 22%, #000 52%);
+  .hero__img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%; object-fit: cover; object-position: center;
+  }
+  /* morph overlay (CDM over FDM): hold FDM ~2s, cross-fade 1s, then hold CDM ~2s
+     (5s slide window). The 2s delay + 1s duration place the fade in seconds 2-3. */
+  .hero__img--morph { opacity: 0; transition: opacity 1s linear 2s; }
+  .hero__slide.is-morphing .hero__img--morph { opacity: 1; }
+  @media (prefers-reduced-motion: reduce) {
+    .hero__slide, .hero__img--morph { transition: none; }
   }
   .hero__scrim {
     position: absolute; inset: 0;
