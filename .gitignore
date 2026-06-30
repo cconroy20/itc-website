@@ -6,3 +6,4 @@ dist/
 # Local-only offline sim masters (huge; web assets are derived from these)
 offline/*.bin
 public/sim/cosmic-web.bin
+*.mp4
