@@ -19,7 +19,19 @@
       "start": "2026-11-02",
       "end": "2026-11-20",
       "dates": "November 2 – 20, 2026",
-      "body": "More details coming soon."
+      "body": "The fundamental nature of dark matter remains largely unconstrained on sub-galactic scales, though early results from strong lensing and stellar streams are now exploring the regime of million-solar-mass dark subhalos. While initial constraints appear in tension with standard CDM predictions, there has been little exploration into how to combine or test the consistency of different probes of small-scale structure. The coming years are expected to bring a transformative increase in our ability to test dark matter on small scales, thanks to unprecedented wide-field kinematics and high-resolution imaging from surveys like Rubin, DESI, Via, JWST, and Roman. The goal of this program is to bring together experts in strong lensing, stellar stream modeling, and dark matter microphysics to advance these small-scale probes and work toward joint constraints."
+    },
+    {
+      "slug": "cosmic-baryons",
+      "title": "Cosmic Baryons",
+      "start": "2027-02-08",
+      "end": "2027-02-26",
+      "dates": "February 8 – 26, 2027",
+      "body": "More details coming soon.",
+      "organizers": [
+        "Liam Connor",
+        "Sam McCarty"
+      ]
     }
   ]
 }
